@@ -1,0 +1,29 @@
+.m-input{
+    border-radius: 4px;
+    height: 36px;
+    border: 1px solid #bbbbbb;
+    color: #000000;
+    padding-left: 40px;
+}
+
+.m-input:focus{
+    outline: none;
+    border: 1px solid #019160;
+}
+
+::placeholder{
+    font-size: 12px;
+    color: #BBBBBB;
+    
+}
+
+.m-input:focus::placeholder{
+    opacity: 0;
+}
+
+.m-input-icon{
+    background-image: url('../../assests/icon/search.png');
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    background-size: 16px 16px;
+}

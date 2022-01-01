@@ -1,0 +1,20 @@
+.m-loading{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+.m-loading .m-loading-gif{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../../assests/img/loading.gif');
+    background-size: 24px;
+    background-repeat: no-repeat;
+}

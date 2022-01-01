@@ -1,0 +1,183 @@
+/* Danh sách nhân viên */
+*{
+    margin: 0;
+}
+
+.m-container{
+    display: flex;
+    width: 100%;
+}
+
+.m-menu{
+    width: 250px;
+}
+
+.m-main{
+    border-left: solid 1px #bbb;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.m-main .m-header{
+    display: flex;
+    height: 48px;
+    line-height: 48px;
+    border-bottom: solid 1px #bbb;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.m-header button{
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+}
+.m-header .m-label-name{
+    padding-left: 24px;
+    font-weight: bold;
+}
+
+.m-header .m-name{
+    display: flex;
+}
+.m-name .m-avatar img{
+    width: 24px;
+    height: 24px;
+    padding: 12px 16px;
+}
+.m-name .m-option{
+    padding: 12px 16px;
+    height: 24px;
+    width: 24px;
+    background-image: url('../assests/icon/option.png');
+    background-repeat: no-repeat;
+    background-position:  center;
+    cursor: pointer;
+    background-color: unset;
+}
+
+.m-dsnv, .m-filter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.m-dsnv .m-title{
+    padding: 16px 12px;
+}
+.m-dsnv .m-add-employee{
+    padding: 12px;
+}
+
+.m-filter .m-filter-group{
+    display: flex;
+}
+.m-filter .m-filter-group .m-filter-input .m-input{
+    width: 280px;
+}
+.m-filter .m-filter-group > div{
+    padding-left: 12px;
+}
+.m-filter .m-refresh{
+    padding-right: 12px;
+}
+.m-filter .m-refresh button{
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: unset;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.m-filter .m-refresh button#btnReload{
+    font-size: 16px;
+}
+.m-filter .m-refresh button#btnXoaNv i{
+    color: red;
+    font-size: 16px;
+}   
+
+
+.m-table-employee{
+    height: 590px;
+    overflow: scroll;
+}
+
+.m-table-employee{
+    margin: 12px;
+}
+.m-table-employee table thead th{
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+/* form thêm nhân viên */
+.m-dialog .m-dialog-content{
+    width: auto;
+}
+.m-dialog .m-dialog-content .m-dialog-header{
+    padding-bottom: 0;
+}
+.m-title{
+    padding-left: 0;
+}
+ .m-dialog-body{
+    display: flex;
+}
+.m-avt-employee{
+    width: 200px;
+    padding-right: 20px;
+}
+.m-add-avt{
+    height: 200px;
+    width: 200px;
+    background-image: url('../assests/img/default-avatar.jpg');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    margin-top: 16px;
+}
+
+ .m-info-employee .m-form{
+    display: flex;
+}
+ .m-info-employee .m-form .m-label{
+    padding: 8px 0 4px 0;
+}
+ .m-info-employee .m-form span{
+    color: red;
+}
+.m-info-employee .m-form .m-form-left~div{
+    padding-left: 12px;
+    width: 100%;
+}
+.m-info-employee .m-form .m-input{
+   padding: 0 16px 0 16px;
+   width: 300px;
+}
+.m-info-employee .m-form .m-combobox{
+    width: 334px;
+    border: 1px solid #bbbbbb;
+}
+.m-form .m-input-phone{
+    padding-top: 65px;
+}
+
+.m-foot{
+    width: 88px;
+    border: 2px solid #019160;
+    background-color: #019160;
+}
+#btnDelete{
+    background-color: #F65454;
+}
+.m-refresh button:hover{
+    background-color: aliceblue;
+}
+.m-refresh button:active{
+    background-color: #bbb;
+}

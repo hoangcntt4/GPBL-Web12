@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assests/font/fontawesome-5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="m-row">
+        <div class="m-label">1.1 Button</div>
+        <button class="m-button">Thêm mới</button>
+    </div>
+
+    <div class="m-row">
+        <div class="m-label">1.2 Button Icon</div>
+        <button class="m-button m-button-icon">Thêm mới</button>
+    </div>
+
+    <div class="m-row">
+        <div class="m-label">2. Combobox</div>
+        <select class="m-combobox" name="" id="">
+            <option value="1">Trạng thái 1</option>
+            <option value="1">Trạng thái 2</option>
+            <option value="1">Trạng thái 3</option>
+        </select>
+        <div class="m-row">
+            <div class="m-label"></div>
+            <div class="m-combobox">
+                <input type="text">
+                <button id="btnCombobox"><i class="fas fa-angle-down"></i></button>
+                <div class="m-combobox-data">
+                    <div class="m-combobox-item">Trạng thái 1</div>
+                    <div class="m-combobox-item">Trạng thái 2</div>
+                    <div class="m-combobox-item m-combobox-item-selected">Trạng thái 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-row">
+        <div class="m-label">3. Input</div>
+        <input class="m-input m-input-icon" type="text" placeholder="Tìm kiếm theo tên, hồ sơ">
+      
+    </div>
+
+    <div class="m-row">
+        <div class="m-label">4. Checkbox</div>
+        <input class="m-checkbox" type="checkbox" name="" id="ip-checkbox">
+        <label for="ip-checkbox"></label>
+    </div>
+
+    <div class="m-row">
+        <div class="m-label">5. Radio</div>
+        <input class="m-radio" type="radio" name="answer" id="ip-radio-yes">
+        <label for="ip-radio-yes">Có</label>
+        <input class="m-radio" type="radio" name="answer" id="ip-radio-no">
+        <label for="ip-radio-no">Không</label>
+    </div>
+
+    <div class="m-row">
+        <div class="m-label">6. Table</div>
+        <table class="m-table">
+            <thead>
+                <tr>
+                    <th style="width: 80px">Mã nhân viên</th>
+                    <th>Họ và tên</th>
+                    <th class="text-align-center">Ngày sinh</th>
+                    <th class="text-align-right">Mức lương cơ bản</th>
+                    <th>Vị trí/Chức vụ</th>
+                    <th>Bộ phận/Phòng ban</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0123455513</td>
+                    <td>Nguyễn Hương Giang</td>
+                    <td class="text-align-center">22/3/1998</td>
+                    <td class="text-align-right">1.000.000</td>
+                    <td>Tổng giám đốc</td>
+                    <td>Khối sản xuất</td>
+                </tr>
+                <tr>
+                    <td>0987568788</td>
+                    <td>Nguyễn Tuấn Hưng </td>
+                    <td class="text-align-center">22/3/1998</td>
+                    <td class="text-align-right">800.000</td>
+                    <td>Tổng giám đốc</td>
+                    <td>Văn phòng Sale</td>
+                </tr>
+                <tr>
+                    <td>0989448699</td>
+                    <td>Nam Thành</td>
+                    <td class="text-align-center">22/3/1998</td>
+                    <td class="text-align-right">1.000.000</td>
+                    <td>Tổng giám đốc</td>
+                    <td>Tổng Công ty</td>
+                </tr>
+                <tr class="m-row-selected">
+                    <td>0989448699</td>
+                    <td>Nam Thành</td>
+                    <td class="text-align-center">22/3/1998</td>
+                    <td class="text-align-right">1.000.000</td>
+                    <td>Tổng giám đốc</td>
+                    <td>Tổng Công ty</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="m-table-paging">
+            <div class="m-paging-left">Hiển thị 01-20/123 lao động</div>
+            <div class="m-paging-center">
+                <button class="m-paging-button m-first-page"></button>
+                <button class="m-paging-button m-pre-page"></button>
+                <div class="m-page-number-group">
+                    <button class="m-page-number m-page-number-active">1</button>
+                    <button class="m-page-number">2</button>
+                    <button class="m-page-number">3</button>
+                    <button class="m-page-number">4</button>
+                </div>
+                <button class="m-paging-button m-next-page"></button>
+                <button class="m-paging-button m-last-page"></button>
+            </div>
+            <div class="m-paging-right">
+                <select class="m-combobox" name="" id="">
+                    <option value="1">10 nhân viên/trang</option>
+                    <option value="2">20 nhân viên/trang</option>
+                    <option value="3">30 nhân viên/trang</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-row">
+        <div class="m-label">7. Menu Left</div>
+        <div class="m-menu-left">
+            <div class="m-menu-logo">
+                <button class="m-toggle"></button>
+                <div class="m-logo">
+                    <img src="assests/img/cukcuk-logo.png" alt="" height="24px">
+                </div>
+            </div>
+            <div class="m-menu-item-group">
+                <ul>
+                    <li>
+                        <img src="assests/icon/dashboard.png" alt="">
+                        <div class="m-label">
+                            Hồ sơ điện tử
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assests/icon/dashboard.png" alt="">
+                        <div class="m-label">
+                            Hồ sơ giấy
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assests/icon/dashboard.png" alt="">
+                        <div class="m-label">
+                            Theo dõi chi
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assests/icon/dashboard.png" alt="">
+                        <div class="m-label">
+                            Theo dõi đóng
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assests/icon/dashboard.png" alt="">
+                        <div class="m-label">
+                            Quản lý lao động
+                        </div>
+                    </li>
+                    <li>
+                        <img src="assests/icon/dashboard.png" alt="">
+                        <div class="m-label">
+                            Thiết lập
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-row">
+        <div class="m-label">8. Toast Message</div>
+        <div class="m-toast-box">
+            <div class="m-toast-msg m-toast-error">
+                <div class="m-toast-msg-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="m-toast-msg-text">Nội dung đi kèm tiêu đề</div>
+                <div class="m-toast-msg-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="m-toast-msg m-toast-warning">
+                <div class="m-toast-msg-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="m-toast-msg-text">Nội dung đi kèm tiêu đề</div>
+                <div class="m-toast-msg-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="m-toast-msg m-toast-success">
+                <div class="m-toast-msg-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="m-toast-msg-text">Nội dung đi kèm tiêu đề</div>
+                <div class="m-toast-msg-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+
+            <div class="m-toast-msg m-toast-info">
+                <div class="m-toast-msg-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="m-toast-msg-text">Nội dung đi kèm tiêu đề</div>
+                <div class="m-toast-msg-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-row">
+        <div class="m-label">9. Dialog</div>
+        <button id="btnShowDialog" class="m-button">Hiện dialog</button>
+        <div class="m-dialog" id="dialog">
+            <div class="m-dialog-content">
+                <div class="m-dialog-header">
+                    <div class="m-dialog-title">
+                        Thêm mới lao động
+                    </div>
+                    <button class="m-dialog-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="m-dialog-body">
+                    Đây là phần nội dung của Dialog
+                </div>
+                <div class="m-dialog-footer">
+                    <button class="m-button">Hủy</button>
+                    <button class="m-button">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/combobox.js"></script>
+    <script src="js/dialog.js"></script>
+</body>
+
+</html>

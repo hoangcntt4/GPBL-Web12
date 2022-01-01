@@ -1,0 +1,59 @@
+
+@import url('./base/button.css');
+@import url('./base/combobox.css');
+@import url('./base/dropdown.css');
+@import url('./base/input.css');
+@import url('./base/checkbox-radio.css');
+@import url('./base/table.css');
+@import url('./base/common.css');
+@import url('./base/paging.css');
+@import url('./base/menu.css');
+@import url('./base/toast.css');
+@import url('./base/dialog.css');
+@import url('./base/loading.css');
+body{
+    font-family: GoogleSans;
+    font-size: 13px;
+    color: #454545;
+}
+
+@font-face {
+    font-family: GoogleSans;
+    src: url('../assests/font/GoogleSans-Regular.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Bold;
+    src: url('../assests/font/GoogleSans-Bold.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Medium;
+    src: url('../assests/font/GoogleSans-Medium.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Italic;
+    src: url('../assests/font/GoogleSans-Italic.otf');
+}
+
+.m-headding{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+.m-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+.m-label{
+    font-size: 13px;
+    font-weight: 500;
+    color: #454545;
+}
+
+.m-row{
+    padding-top: 8px;
+}
+
