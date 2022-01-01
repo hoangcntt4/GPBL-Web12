@@ -1,0 +1,126 @@
+.m-table {
+    font-family: GoogleSans-Regular;
+    min-width: 100%;
+    border-spacing: unset;
+    border: 0;
+}
+
+.m-table tr td,
+.m-table th {
+    border-collapse: collapse;
+    height: 48px;
+}
+
+.m-table tbody tr:nth-child(2n - 1) {
+    background-color: #e5e5e5;
+}
+
+.m-table tbody tr:hover {
+    background-color: #EBF9F4;
+}
+
+.m-table tr td {
+    font-size: 1;
+    padding: 0 16px;
+}
+
+table.m-table th {
+    text-align: left;
+    padding: 0 16px;
+}
+
+.m-table-page {
+    width: 100%;
+    display: flex;
+    height: 56px;
+    position: relative;
+}
+
+.m-table-page .m-page-left {
+    line-height: 56px;
+    width: 30%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-family: GoogleSans-Regular;
+}
+
+.m-table-page .m-page-center {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.m-table-page .m-page-right {
+    display: flex;
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.m-page-right .m-combox {
+    position: absolute;
+    right: 10px;
+}
+
+.m-page-button {
+    width: 40px;
+    height: 40px;
+    border: unset;
+    background: unset;
+    cursor: pointer;
+    opacity: .7;
+}
+
+.m-page-button:hover {
+    opacity: 1;
+}
+
+.m-first-page {
+    background-image: url('../../assets/icon/btn-firstpage.svg');
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
+
+.m-prev-page {
+    background-image: url('../../assets/icon/btn-prev-page.svg');
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
+
+.m-next-page {
+    background-image: url('../../assets/icon/btn-next-page.svg');
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
+
+.m-last-page {
+    background-image: url('../../assets/icon/btn-lastpage.svg');
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
+
+.m-page-number {
+    border-radius: 50%;
+    border: 1px solid #bbb;
+    width: 35px;
+    height: 35px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.m-page-number:hover {
+    background-color: #fff;
+}
+
+.m-page-number.m-page-number-active {
+    background-color: #019160 !important;
+    color: #fff;
+}

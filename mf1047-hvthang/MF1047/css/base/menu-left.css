@@ -1,0 +1,94 @@
+.menu-left {
+    float: left;
+    width: 220px;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #e5e5e5;
+    font-family: GoogleSans-Medium;
+    font-size: 13px;
+    position: relative;
+}
+
+.menu-left .m-logo {
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+
+.menu-left .m-logo-box {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    top: 11px;
+    left: 16px;
+}
+
+.menu-left .m-logo-box .m-toggle-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url('../../assets/img/toggle.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-right: 10px;
+}
+
+.menu-left .m-menu-content {
+    position: absolute;
+    width: 100%;
+}
+
+.menu-left .m-menu-content .menu-item {
+    font-family: GoogleSans-Medium;
+    height: 44px;
+    font-size: 13px;
+    cursor: pointer;
+    line-height: 44px;
+    display: flex;
+    padding-left: 16px;
+}
+
+.menu-left .m-menu-content .menu-item-selected {
+    background-color: #019160 !important;
+}
+
+.menu-left .m-menu-content .menu-item-selected .menu-item-text {
+    color: #ffffff !important;
+}
+
+.menu-left .m-menu-content .menu-item:hover {
+    background-color: #e5e5e5;
+}
+
+.menu-left .m-menu-content .menu-item:hover .menu-item-text {
+    color: #000000;
+}
+
+.menu-item .menu-item-icon {
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+    margin: auto 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.menu-item .menu-item-text {
+    font-size: 13px;
+    color: #515252;
+    font-family: GoogleSans-Regular;
+}
+
+.float-left-icon {
+    position: absolute;
+    background-color: #EBF4FF !important;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    bottom: 16px;
+    right: 0;
+    border-radius: 4px 0 0 4px;
+    background-image: url('../../assets/icon/btn-prev-page.svg');
+    cursor: pointer;
+}

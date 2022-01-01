@@ -1,0 +1,136 @@
+.m-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(8, 8, 8, 0.342);
+}
+
+.dialog-content {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+
+.dialog-content .dialog-close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 0;
+    top: 0;
+    background-image: url(../../assets/icon/x.svg);
+    opacity: .5;
+    border-radius: 0 4px 0 4px;
+    border: unset;
+    background-color: unset;
+    font-size: 16px;
+    color: #80828f;
+    cursor: pointer;
+}
+
+.dialog-content .dialog-close:hover {
+    opacity: .7;
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.dialog-content .dialog-header {
+    position: relative;
+    padding: 24px;
+    display: flex;
+}
+
+.dialog-header .dialog-header-title {
+    font-size: 24px;
+    font-family: GoogleSans-Medium;
+    display: flex;
+}
+
+.dialog-header .dialog-header-title .m-form-check {
+    display: flex;
+    align-items: center;
+}
+
+.dialog-content .dialog-body {
+    padding: 0 24px 24px 24px;
+    display: flex;
+}
+
+.dialog-body .customer-avt {
+    font-family: GoogleSans-Regular;
+    font-size: 12px;
+    width: 150px;
+    padding-right: 16px;
+}
+
+.dialog-body .customer-avt img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #e5e5e5;
+}
+
+.dialog-body .customer-info {
+    width: 100%;
+}
+
+.info-title {
+    font-family: GoogleSans-Regular;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+}
+
+.line {
+    width: 80px;
+    height: 5px;
+    background-color: #019160;
+    display: block;
+}
+
+.infor-form {
+    display: flex;
+}
+
+.infor-form .infor-form-left {
+    width: 100%;
+    padding-right: 16px;
+}
+
+.infor-form-input p {
+    font-family: GoogleSans-Regular;
+    margin-bottom: 5px;
+}
+
+.infor-form-input input {
+    font-family: GoogleSans-Regular;
+}
+
+.infor-form .infor-form-right {
+    width: 100%;
+}
+
+.dialog-body .customer-info .work-info {
+    padding-top: 24px;
+}
+
+.dialog-content .dialog-footer {
+    display: flex;
+    height: 60px;
+    padding: 10px 24px;
+    box-sizing: border-box;
+    background-color: #e5e5e5;
+    align-items: center;
+    justify-content: end;
+    border-radius: 0 0 4px 4px;
+}
+
+.dialog-footer button~button {
+    margin-left: 10px;
+}

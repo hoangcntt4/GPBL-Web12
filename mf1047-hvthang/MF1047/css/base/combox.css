@@ -1,0 +1,66 @@
+.m-combox {
+    position: relative;
+    color: #000000;
+    height: 40px;
+    border: 1px solid #BBBBBB;
+    box-sizing: border-box;
+    display: flex;
+    width: 200px;
+    padding-left: 16px;
+    border-radius: 4px;
+}
+
+.m-combox input {
+    border: unset;
+    width: auto;
+    width: 100%;
+}
+
+.m-combox input:focus {
+    outline: unset;
+}
+
+.m-combox button {
+    right: 20px;
+    padding: 0 12px;
+    height: 40px;
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+}
+
+.m-combox-data {
+    display: none;
+    position: absolute;
+    top: 120%;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+}
+
+.m-combox .m-combox-data .m-combox-item {
+    font-family: GoogleSans-Regular;
+    height: 40px;
+    font-size: 13px;
+    text-align: left;
+    border: 1px solid #EEEEEE;
+    color: #000000;
+    line-height: 40px;
+    padding-left: 36px;
+}
+
+.m-combox .m-combox-data .m-combox-item:hover {
+    background-color: #E9EBEE;
+    border-radius: 1px solid #E9EBEE;
+    cursor: pointer;
+}
+
+.m-combox .m-combox-data .m-combox-item.m-combox-item-selected {
+    background-color: #019160;
+    border-radius: 1px solid #019160;
+    background-image: url(../../assets/img/checked.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 10px 13px;
+    color: #fff;
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='../css/style.css'>
+    <link rel='stylesheet' type='text/css' href='../assets/font/fontawesome-5.15.1/css/all.css'>
+
+
+</head>
+
+<body>
+
+    <div class="menu-left">
+        <div class="float-left-icon"></div>
+        <div class="m-logo">
+            <div class="m-logo-box">
+                <div class="m-toggle-icon"> </div>
+                <img src="../assets/cukcuk-logo.png" style="height: 38px; align-items: center;">
+            </div>
+        </div>
+        <div class="m-menu-content">
+            <div class="menu-item menu-item-selected">
+                <div class="menu-item-icon" style="background-image: url('../assets/icon/dashboard.png');">
+
+                </div>
+                <div class="menu-item-text">
+                    Hồ Sơ Điện Tử
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon" style="background-image: url('../assets/icon/document-online.png');">
+
+                </div>
+                <div class="menu-item-text">
+                    Hồ Sơ Giấy
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon" style="background-image: url('../assets/icon/report.png');">
+
+                </div>
+                <div class="menu-item-text">
+                    Theo Dõi Chi
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon" style="background-image: url('../assets/icon/dic-employee.png');">
+
+                </div>
+                <div class="menu-item-text">
+                    Theo Dõi Đóng
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-icon" style="background-image: url('../assets/icon/setting.png');">
+
+                </div>
+                <div class="menu-item-text">
+                    Quản lí lao động
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-header">
+        <div class="m-header-left">
+            <div class="m-branch-name">
+                Chi nhánh Misa miền Bắc
+            </div>
+            <div class="m-branch-icon"><i class="fas fa-angle-down"></i></div>
+        </div>
+        <div class="m-header-right">
+            <div class="head-right-icon"><i class="far fa-bell"></i></div>
+            <div class="head-right-img"></div>
+            <div class="head-right-content">Hoàng Văn Thắng</div>
+            <div class="right-icon"></div>
+        </div>
+    </div>
+    <div class="m-content">
+        <div class="filter">
+            <div class="filter-content">
+                <h3>Danh sách nhân viên</h3>
+                <button id="btnAddEmployee" class="m-button m-button-icon">Thêm Nhân Viên</button>
+            </div>
+            <div class="filter-option">
+                <div class="filter-option-left">
+                    <input type="text" class="m-search m-search-icon" placeholder="Tìm kiếm..">
+                    <div class="m-combox">
+                        <input type="text" value="Tất cả phòng ban">
+
+                        <button><i class="fas fa-chevron-down"></i></button>
+                        <div class="m-combox-data">
+                            <div class="m-combox-item">Trạng thái 1</div>
+                            <div class="m-combox-item">Trạng thái 1</div>
+                            <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                        </div>
+                    </div>
+                    <div class="m-combox">
+                        <input type="text" value="Tất cả vị trí">
+
+                        <button><i class="fas fa-chevron-down"></i></button>
+                        <div class="m-combox-data">
+                            <div class="m-combox-item">Trạng thái 1</div>
+                            <div class="m-combox-item">Trạng thái 1</div>
+                            <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-option-right">
+                    <button id="btnDelete" style="margin-right:50px; color: red; background-color: #fff;" class="button-only-icon"><i class="fas fa-user-times"></i></button>
+                    <button id="btnRefresh" class="button-only-icon"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-grid" style="padding-left:10px; overflow: scroll; height: calc(100vh - 217px);">
+            <table class="m-table" id="tbCustomer">
+                <thead>
+                    <tr>
+
+                        <th style="width: 80px;" fieldValue="EmployeeCode">Mã nhân viên</th>
+                        <th fieldValue="FullName">Họ Tên</th>
+                        <th style="width: 60px;" fieldValue="GenderName" formatType="gender">Giới Tính</th>
+                        <th style="width: 70px;" class="text-align-center" fieldValue="DateOfBirth" formatType="date">Ngày Sinh</th>
+                        <th style="width: 80px;" fieldValue="PhoneNumber">Điện Thoại</th>
+                        <th style="width: 120px;" fieldValue="Email">Email</th>
+                        <th style="width: 60px;" fieldValue="PositionName">Chức Vụ</th>
+                        <th style="width: 80px;" fieldValue="DepartmentName">Phòng Ban</th>
+                        <th style="width: 115px;" class="text-align-right" fieldValue="Salary" formatType="money">Mức Lương Cơ Bản</th>
+                        <th style="width: 120px;" fieldValue="WorkStatus" formatType="workstatus">Tình Trạng Công Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="m-table-page" style="width: 100%;">
+            <div class=" m-page-left">Hiển thị 10/10000 lao động</div>
+            <div class=" m-page-center">
+                <button class="m-page-button m-first-page"></button>
+                <button class="m-page-button m-prev-page"></button>
+                <button class="m-page-number m-page-number-active">1</button>
+                <button class="m-page-number">2</button>
+                <button class="m-page-number">3</button>
+                <button class="m-page-number">4</button>
+                <button class="m-page-button m-next-page"></button>
+                <button class="m-page-button m-last-page"></button>
+            </div>
+            <div class="m-page-right">
+                <div class="m-combox">
+                    <input type="text">
+
+                    <button><i class="fas fa-chevron-down"></i></button>
+                    <div class="m-combox-data">
+                        <div class="m-combox-item">Trạng thái 1</div>
+                        <div class="m-combox-item">Trạng thái 1</div>
+                        <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- dialog -->
+    <div id="dialogAdd" class="m-dialog">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <div class="dialog-header-title">Thông Tin Nhân Viên</div>
+                <button id="btnClose" class="dialog-close"></button>
+            </div>
+            <div class="dialog-body">
+                <div class="customer-avt">
+                    <img src="../assets/img/default-avatar.jpg">
+                    <p style="text-align: center;">(Vui lòng chọn ảnh có định </br>dạng </br>.jpg, .jpeg, .png, .gif.)</p>
+                </div>
+                <div class="customer-info">
+                    <div class="gerenal-info">
+                        <div class="info-title">A. Thông Tin Chung:</div>
+                        <div class="line"></div>
+                        <div class="infor-form">
+                            <div class="infor-form-left">
+                                <div class="infor-form-input">
+                                    <p>Mã Nhân Viên(<sub style="color: red;">*</sub>)</p>
+                                    <input type="text" class="m-search" fieldName="EmployeeCode">
+                                </div>
+                                <div class="infor-form-input">
+                                    <p>Ngày sinh</p>
+                                    <input type="date" value="mm/dd/yyyy" fieldName="DateOfBirth" class="m-search">
+                                </div>
+                                <div class="infor-form-input">
+                                    <p>Email(<sub style="color: red;">*</sub>)</p>
+                                    <input type="email" fieldName="Email" class="m-search">
+                                </div>
+
+                            </div>
+                            <div class="infor-form-right">
+                                <div class="infor-form-input">
+                                    <p>Họ và tên(<sub style="color: red;">*</sub>)</p>
+                                    <input type="text" class="m-search" fieldName="FullName" id="txtFullName">
+                                </div>
+                                <div class="infor-form-input">
+                                    <p>Giới tính</p>
+                                    <div class="m-combox">
+                                        <input type="text" fieldName="Gender">
+
+                                        <button><i class="fas fa-chevron-down"></i></button>
+                                        <div class="m-combox-data">
+                                            <div class="m-combox-item">Trạng thái 1</div>
+                                            <div class="m-combox-item">Trạng thái 1</div>
+                                            <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="infor-form-input">
+                                    <p>Số điện thoại(<sub style="color: red;">*</sub>)</p>
+                                    <input type="text" class="m-search" fieldName="PhoneNumber">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-info">
+                        <div class="info-title">B. Thông Tin Công Việc:</div>
+                        <div class="line"></div>
+                        <div class="infor-form">
+                            <div class="infor-form-left">
+                                <div class="infor-form-input">
+                                    <p>Chức Vụ</p>
+                                    <input type="text" class="m-search" fieldName="PositionName">
+                                </div>
+                                <div class="infor-form-input">
+                                    <p>Tình trạng công tác</p>
+                                    <div class="m-combox">
+                                        <input type="text" fieldName="WorkStatus">
+
+                                        <button id="chervon-down"><i class="fas fa-chevron-down"></i></button>
+                                        <div class="m-combox-data">
+                                            <div class="m-combox-item">Trạng thái 1</div>
+                                            <div class="m-combox-item">Trạng thái 1</div>
+                                            <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="infor-form-right">
+                                <div class="infor-form-input">
+                                    <p>Phòng ban</p>
+                                    <div class="m-combox">
+                                        <input type="text" fieldName="DepartmentName">
+
+                                        <button id="chervon-down"><i class="fas fa-chevron-down"></i></button>
+                                        <div class="m-combox-data">
+                                            <div class="m-combox-item">Trạng thái 1</div>
+                                            <div class="m-combox-item">Trạng thái 1</div>
+                                            <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="infor-form-input">
+                                    <p>Mức lương cơ bản</p>
+                                    <input type="text" class="m-search" fieldName="Salary">
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="dialog-footer">
+
+                <button id="btnCancel" class="m-second-button">Hủy</button>
+                <button class="m-button" id="btnSave">Lưu</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="m-toast-box add">
+        <div class="m-toast-mess m-toast-mess-success">
+            <div class="toast-icon"><i class="fas fa-check-circle"></i> </div>
+            <div class="toast-text">Đã lưu</div>
+            <div class="toast-close"><i class="fas fa-times"></i></div>
+        </div>
+    </div>
+    <div class="m-toast-box delete">
+        <div class="m-toast-mess m-toast-mess-success">
+            <div class="toast-icon"><i class="fas fa-check-circle"></i> </div>
+            <div class="toast-text">Xóa thành công</div>
+            <div class="toast-close"><i class="fas fa-times"></i></div>
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/employee.js"></script>
+</body>
+
+</html>

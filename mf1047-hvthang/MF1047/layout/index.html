@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='../css/style.css'>
+    <link rel='stylesheet' type='text/css' href='../assets/font/fontawesome-5.15.1/css/all.css'>
+
+
+</head>
+
+<body>
+    <div class="m-row">
+        <div class="m-label">1.1. Button</div>
+        <button class="m-button">Thêm Mới</button>
+    </div>
+    <div class="m-row">
+        <div class="m-label">1.2. Second Button</div>
+        <button class="m-second-button">Thêm Mới</button>
+    </div>
+    <div class="m-row">
+        <div class="m-label">1.3. Icon-Button</div>
+        <button class="button-only-icon"></button>
+    </div>
+    <div class="m-row">
+        <div class="m-label">1.4. Button + Icon</div>
+        <button class="m-button m-button-icon">Thêm Nhân Viên</button>
+    </div>
+    <div class="m-row">
+        <div class="m-label " style="display: none !important;"> 2. Dialog</div>
+        <div class="m-dialog">
+            <div class="dialog-content">
+                <div class="dialog-header">
+                    <div class="dialog-header-title">Thông Tin Nhân Viên</div>
+                    <button class="dialog-close"></button>
+                </div>
+                <div class="dialog-body">
+                    <div class="customer-avt">
+                        <img src="../assets/img/default-avatar.jpg">
+                        <p style="text-align: center;">(Vui lòng chọn ảnh có định </br>dạng </br>.jpg, .jpeg, .png, .gif.)</p>
+                    </div>
+                    <div class="customer-info">
+                        <div class="gerenal-info">
+                            <div class="info-title">A. Thông Tin Chung:</div>
+                            <div class="line"></div>
+                            <div class="infor-form">
+                                <div class="infor-form-left">
+                                    <div class="infor-form-input">
+                                        <p>Mã Nhân Viên(<sub style="color: red;">*</sub>)</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+                                    <div class="infor-form-input">
+                                        <p>Ngày sinh</p>
+                                        <input type="date" class="m-search">
+                                    </div>
+                                    <div class="infor-form-input">
+                                        <p>Email(<sub style="color: red;">*</sub>)</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+
+                                </div>
+                                <div class="infor-form-right">
+                                    <div class="infor-form-input">
+                                        <p>Họ và tên(<sub style="color: red;">*</sub>)</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+                                    <div class="infor-form-input">
+                                        <p>Giới tính</p>
+                                        <div class="m-combox">
+                                            <input type="text">
+
+                                            <button><i class="fas fa-chevron-down"></i></button>
+                                            <div class="m-combox-data">
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="infor-form-input">
+                                        <p>Số điện thoại(<sub style="color: red;">*</sub>)</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="info-title">B. Thông Tin Công Việc:</div>
+                            <div class="line"></div>
+                            <div class="infor-form">
+                                <div class="infor-form-left">
+                                    <div class="infor-form-input">
+                                        <p>Vị trí</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+                                    <div class="infor-form-input">
+                                        <p>Tình trạng công tác</p>
+                                        <div class="m-combox">
+                                            <input type="text">
+
+                                            <button id="btnCombox"><i class="fas fa-chevron-down"></i></button>
+                                            <div class="m-combox-data">
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="infor-form-right">
+                                    <div class="infor-form-input">
+                                        <p>Phòng ban</p>
+                                        <div class="m-combox">
+                                            <input type="text">
+
+                                            <button><i class="fas fa-chevron-down"></i></button>
+                                            <div class="m-combox-data">
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="infor-form-input">
+                                        <p>Mức lương cơ bản</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="dialog-footer">
+                    <button class="m-second-button">Hủy</button>
+                    <button class="m-button">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-row">
+        <div class="m-label">2. Combox</div>
+        <div class="m-combox">
+            <input type="text">
+
+            <button id="btnCombox"><i class="fas fa-chevron-down"></i></button>
+            <div class="m-combox-data">
+                <div class="m-combox-item">Trạng thái 1</div>
+                <div class="m-combox-item">Trạng thái 1</div>
+                <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+            </div>
+        </div>
+    </div>
+    <div class="m-row">
+        <div class="m-label">3.1. Form-search</div>
+        <!-- <div class="m-search"> -->
+        <input type="text" class="m-search">
+        <!-- </div> -->
+    </div>
+    <div class="m-row">
+        <div class="m-label">3.2. Form-search</div>
+        <!-- <div class="m-search"> -->
+        <input type="text" class="m-search m-search-icon">
+        <!-- </div> -->
+    </div>
+    <div class="m-row">
+        <div class="m-label">4. Checkbox</div>
+        <div class="m-checkbox">
+
+        </div>
+        <div class="m-checkbox m-checkbox-selected ">
+
+        </div>
+    </div>
+    <div class="m-row">
+        <div class="m-label">5. Radio Button</div>
+        <div class="m-radio">
+
+        </div>
+        <div class="m-radio m-radio-selected ">
+
+        </div>
+    </div>
+    <div class="m-row">
+        <div class="m-label">6. Toast-Message</div>
+        <div class="m-toast-box">
+            <div class="m-toast-mess m-toast-mess-error">
+                <div class="toast-icon"> <i class="fas fa-exclamation-circle"></i> </div>
+                <div class="toast-text">Đây là cảnh báo lỗi</div>
+                <div class="toast-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="m-toast-mess m-toast-mess-warning">
+                <div class="toast-icon"> <i class="fas fa-exclamation-triangle"></i> </div>
+                <div class="toast-text">Đây là cảnh báo lỗi</div>
+                <div class="toast-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="m-toast-mess m-toast-mess-success">
+                <div class="toast-icon"><i class="fas fa-check-circle"></i> </div>
+                <div class="toast-text">Đây là cảnh báo lỗi</div>
+                <div class="toast-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="m-toast-mess m-toast-mess-note">
+                <div class="toast-icon"> <i class="fas fa-info-circle"></i> </div>
+                <div class="toast-text">Đây là cảnh báo lỗi</div>
+                <div class="toast-close"><i class="fas fa-times"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="m-row">
+        <div class="m-label">7.Table</div>
+        <div class="m-grid">
+            <table border="0" class="m-table">
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">Mã nhân viên</th>
+                        <th>Họ Tên</th>
+                        <th style="width: 60px;">Giới Tính</th>
+                        <th style="width: 80px;" class="text-align-center">Ngày Sinh</th>
+                        <th style="width: 80px;">Điện Thoại</th>
+                        <th style="width: 120px;">Email</th>
+                        <th style="width: 60px;">Chức Vụ</th>
+                        <th style="width: 115px;">Phòng Ban</th>
+                        <th style="width: 80px;" class="text-align-right">Mức Lương Cơ Bản</th>
+                        <th style="width: 80px;">Tình Trạng Công Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MF1047</td>
+                        <td>Hoàng Văn Thắng</td>
+                        <td>Nam</td>
+                        <td class="text-align-center">11/06/2000</td>
+                        <td>0988888888</td>
+                        <td>thangptit31@gmail.com</td>
+                        <td>NV</td>
+                        <td>Phòng Công Nghệ</td>
+                        <td class="text-align-right">8.888.888</td>
+                        <td>Trainning</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="m-row">
+        <div class="m-label">8. Paging Page</div>
+        <div class="m-table-page">
+            <div class=" m-page-left">Hiển thị 10/10000 lao động</div>
+            <div class=" m-page-center">
+                <button class="m-page-button m-first-page"></button>
+                <button class="m-page-button m-prev-page"></button>
+                <button class="m-page-number m-page-number-active">1</button>
+                <button class="m-page-number">2</button>
+                <button class="m-page-number">3</button>
+                <button class="m-page-number">4</button>
+                <button class="m-page-button m-next-page"></button>
+                <button class="m-page-button m-last-page"></button>
+            </div>
+            <div class="m-page-right">
+                <div class="m-combox">
+                    <input type="text">
+
+                    <button><i class="fas fa-chevron-down"></i></button>
+                    <div class="m-combox-data">
+                        <div class="m-combox-item">Trạng thái 1</div>
+                        <div class="m-combox-item">Trạng thái 1</div>
+                        <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Amis-Form-Information -->
+    <div class="m-row">
+        <div class="m-label">9. Amis-Form</div>
+        <div class="m-dialog" style="display: none;">
+            <div class="dialog-content">
+                <div class="dialog-header">
+                    <div class="dialog-header-title">
+                        <p>Thông Tin Nhân Viên</p>
+                        <div class="m-form-check">
+                            <div class="m-checkbox"></div>
+                            <label>Là Khách Hàng</label>
+                        </div>
+                        <div class="m-form-check">
+                            <div class="m-checkbox"></div>
+                            <label>Là nhà cung cấp</label>
+                        </div>
+                    </div>
+                    <div class="dialog-header-icon">
+                        <button class="dialog-help"></button>
+                        <button class="dialog-close"></button>
+                    </div>
+                </div>
+                <div class="dialog-body">
+                    <div class="customer-avt">
+                        <g xmlns="http://www.w3.org/2000/svg" id="Group_12312-2" data-name="Group 12312">
+                            <rect id="Rectangle_1559-2" data-name="Rectangle 1559" class="cls-13" x="88" y="144" width="24" height="24" />
+                            <g id="Group_12311-2" data-name="Group 12311">
+                                <circle id="Ellipse_50-2" data-name="Ellipse 50" class="cls-17" cx="100" cy="156" r="10" />
+                                <circle id="Ellipse_51-2" data-name="Ellipse 51" class="cls-36" cx="100" cy="161" r="1" />
+                            </g>
+                        </g>
+                        <img src="../assets/img/default-avatar.jpg">
+                        <p style="text-align: center;">(Vui lòng chọn ảnh có định </br>dạng </br>.jpg, .jpeg, .png, .gif.)</p>
+                    </div>
+                    <div class="customer-info">
+                        <div class="gerenal-info">
+                            <div class="info-title">A. Thông Tin Chung:</div>
+                            <div class="line"></div>
+                            <div class="infor-form">
+                                <div class="infor-form-left">
+                                    <div class="infor-form-input">
+                                        <p>Mã Nhân Viên(<sub style="color: red;">*</sub>)</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+                                    <div class="infor-form-input">
+                                        <p>Ngày sinh</p>
+                                        <input type="date" class="m-search">
+                                    </div>
+                                    <div class="infor-form-input">
+                                        <p>Email(<sub style="color: red;">*</sub>)</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+
+                                </div>
+                                <div class="infor-form-right">
+                                    <div class="infor-form-input">
+                                        <p>Họ và tên(<sub style="color: red;">*</sub>)</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+                                    <div class="infor-form-input">
+                                        <p>Giới tính</p>
+                                        <div class="m-combox">
+                                            <input type="text">
+
+                                            <button><i class="fas fa-chevron-down"></i></button>
+                                            <div class="m-combox-data">
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="infor-form-input">
+                                        <p>Số điện thoại(<sub style="color: red;">*</sub>)</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <div class="info-title">B. Thông Tin Công Việc:</div>
+                            <div class="line"></div>
+                            <div class="infor-form">
+                                <div class="infor-form-left">
+                                    <div class="infor-form-input">
+                                        <p>Vị trí</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+                                    <div class="infor-form-input">
+                                        <p>Tình trạng công tác</p>
+                                        <div class="m-combox">
+                                            <input type="text">
+
+                                            <button><i class="fas fa-chevron-down"></i></button>
+                                            <div class="m-combox-data">
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="infor-form-right">
+                                    <div class="infor-form-input">
+                                        <p>Phòng ban</p>
+                                        <div class="m-combox">
+                                            <input type="text">
+
+                                            <button><i class="fas fa-chevron-down"></i></button>
+                                            <div class="m-combox-data">
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item">Trạng thái 1</div>
+                                                <div class="m-combox-item m-combox-item-selected ">Trạng thái 1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="infor-form-input">
+                                        <p>Mức lương cơ bản</p>
+                                        <input type="text" class="m-search">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="dialog-footer">
+
+                    <button class="m-second-button">Hủy</button>
+                    <button class="m-button">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("btnCombox").addEventListener("click", function() {
+            document.getElementsByClassName('m-combox-data')[0].style.display = 'block';
+        })
+    </script>
+    <!-- <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/main.js"></script> -->
+</body>
+
+</html>

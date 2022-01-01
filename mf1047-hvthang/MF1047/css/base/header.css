@@ -1,0 +1,65 @@
+.m-header {
+    position: relative;
+    display: flex;
+    width: calc(100% - 221px);
+    height: 60px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.m-header-left {
+    display: flex;
+    padding-left: 24px;
+    width: 100%;
+}
+
+.m-header-left .m-branch-name {
+    line-height: 60px;
+    font-family: GoogleSans-Medium;
+}
+
+.m-header-left .m-branch-icon {
+    line-height: 60px;
+    padding-left: 10px;
+    cursor: pointer;
+    opacity: .7;
+}
+
+.m-header .m-header-right {
+    position: absolute;
+    float: right;
+    display: flex;
+    right: 0;
+    line-height: 60px;
+}
+
+.m-header-right .m-head-right-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.m-header-right .head-right-content {
+    font-family: GoogleSans-Medium;
+    cursor: pointer;
+}
+
+.m-header-right .head-right-img {
+    width: 24px;
+    height: 24px;
+    padding: 18px 16px;
+    background-image: url('../../assets/icon/avatar-default.png');
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.m-header-right .right-icon {
+    width: 16px;
+    height: 16px;
+    padding: 22px 16px;
+    background-image: url('../../assets/icon/option.png');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}

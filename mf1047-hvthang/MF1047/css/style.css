@@ -1,0 +1,59 @@
+@import url('./base/button.css');
+@import url('./base/combox.css');
+@import url('./base/form-search.css');
+@import url('./base/checkbox.css');
+@import url('./base/menu-left.css');
+@import url('./base/header.css');
+@import url('./base/content.css');
+@import url('./base/table.css');
+@import url('./base/common.css');
+@import url('./base/toast-messanger.css');
+@import url('./base/dialog.css');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: GoogleSans;
+    font-size: 13px;
+}
+
+@font-face {
+    font-family: GoogleSans-Regular;
+    src: url('../assets/font/GoogleSans-Regular.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Bold;
+    src: url('../assets/font/GoogleSans-Bold.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Medium;
+    src: url('../assets/font/GoogleSans-Medium.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Italic;
+    src: url('../assets/font/GoogleSans-Italic.otf');
+}
+
+.m-heading {
+    font-size: 24px;
+    font-weight: 500px;
+    color: #000000;
+}
+
+.m-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.m-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.m-row {
+    margin: 10px;
+}

@@ -1,0 +1,37 @@
+    .m-checkbox {
+        display: block;
+        border-radius: 4px;
+        position: relative;
+        height: 20px;
+        width: 20px;
+        border: 1px solid #BBBBBB;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+    
+    .m-checkbox-selected {
+        background-color: #019160;
+        background-image: url(../../assets/img/checked.png);
+        background-position: center;
+        background-size: 16px;
+        background-repeat: no-repeat;
+    }
+    
+    .m-radio {
+        display: block;
+        border-radius: 50%;
+        position: relative;
+        height: 20px;
+        width: 20px;
+        border: 1px solid #BBBBBB;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+    
+    .m-radio-selected {
+        background-image: url(../../assets/icon/radio-checked.png);
+        background-position: center;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        border: unset;
+    }
