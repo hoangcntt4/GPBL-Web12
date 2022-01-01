@@ -1,0 +1,45 @@
+.c-heading {
+  font-weight: bolder;
+  font-size: 24px;
+  color: var(--black);
+}
+.c-title {
+  font-weight: bolder;
+  font-size: 20px;
+  color: var(--black);
+}
+.c-heading {
+  font-weight: bolder;
+  font-size: 24px;
+  color: var(--black);
+}
+.c-title2 {
+  font-weight: bolder;
+  font-size: 15px;
+  color: var(--black);
+}
+.c-field-label {
+  font-weight: bold;
+  font-size: 13px;
+  color: var(--black);
+}
+.c-label {
+  font-weight: normal;
+  font-size: 13px;
+  color: #454545;
+}
+.c-content-details {
+  font-weight: bold;
+  font-size: 13px;
+  color: var(--black);
+}
+.c-body-content {
+  font-weight: normal;
+  font-size: 13px;
+  color: #454545;
+}
+.c-sub-text {
+  font-weight: normal;
+  font-size: 11px;
+  color: var(--black-light);
+}

@@ -1,0 +1,329 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../asset/font/fontawesome-5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body>
+    <div class="mb-10">
+      <div class="c-title">Button</div>
+      <button class="c-btn c-btn-primary">Nộp hồ sơ</button>
+      <button class="c-btn c-btn-secondary">Nộp hồ sơ</button>
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Icon button</div>
+      <button class="c-btn c-btn-primary c-btn-icon">
+        <i class="fas fa-plus"></i> Lập hồ sơ
+      </button>
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Icon button group</div>
+      <div class="c-btn-group mb-10">
+        <button class="c-btn c-btn-primary c-btn-icon">
+          <i class="fas fa-plus"></i> Lập hồ sơ
+        </button>
+        <button style="min-width: unset" class="c-btn c-btn-primary">
+          <i class="fas fa-angle-down"></i>
+        </button>
+      </div>
+      <div class="c-btn-group">
+        <button class="c-btn c-btn-primary c-btn-icon">
+          <i class="fas fa-plus"></i> Lập hồ sơ
+        </button>
+        <button class="c-btn c-btn-primary c-btn-icon">
+          <i class="fas fa-save"></i> Lưu và thêm mới
+        </button>
+        <button style="min-width: unset" class="c-btn c-btn-primary">
+          <i class="fas fa-angle-down"></i>
+        </button>
+      </div>
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Combox box</div>
+      <label for="month" class=".c-field-input">Chọn tháng</label>
+      <div class="c-combo-box" style="width: 213px">
+        <input type="text" id="month" placeholder="Chọn/Nhập thông tin" />
+        <button data-trigger-for="#monthList">
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <ul id="monthList" class="c-combo-box-options">
+          <li class="c-combo-box-item c-combo-box-item-selected">Tháng 1</li>
+          <li class="c-combo-box-item">Tháng 2</li>
+          <li class="c-combo-box-item">Tháng 3</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Field input</div>
+      <div class="c-field-input" style="width: 213px">
+        <input type="text" placeholder="Field input" />
+        <button class="c-field-input-reset"></button>
+      </div>
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Field input with icon</div>
+      <div class="c-field-input c-field-input-icon" style="width: 213px">
+        <input type="text" placeholder="Field input" />
+        <button class="c-field-input-reset"></button>
+      </div>
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Check box</div>
+      <input type="checkbox" class="c-check-box" />
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Radio</div>
+      <input type="radio" class="c-radio" />
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Table</div>
+      <table class="c-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>#</th>
+            <th>Mã nhân viên <i></i></th>
+            <th>Họ và tên</th>
+            <th>Vị trí/Chức vụ</th>
+            <th>Bộ phận/Phòng ban</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="checkbox" class="c-check-box" />
+            </td>
+            <td>1</td>
+            <td>0123456789</td>
+            <td>Nguyễn Văn A</td>
+            <td>Tổng giám đốc</td>
+            <td>Khối sản xuất</td>
+          </tr>
+          <tr class="c-table-row-selected">
+            <td>
+              <input checked type="checkbox" class="c-check-box" />
+            </td>
+            <td>1</td>
+            <td>0123456789</td>
+            <td>Nguyễn Văn A</td>
+            <td>Tổng giám đốc</td>
+            <td>Khối sản xuất</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Page navigation</div>
+      <ul class="c-page-list">
+        <li class="c-page-item">
+          <a href="#" class="c-page-link-arrow">
+            <i class="fas fa-backward"></i>
+          </a>
+        </li>
+        <li class="c-page-item">
+          <a href="#" class="c-page-link-arrow">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+        </li>
+        <li class="c-page-item">
+          <a href="#" class="c-page-link"> 1 </a>
+        </li>
+        <li class="c-page-item">
+          <a href="#" class="c-page-link c-page-link"> 2 </a>
+        </li>
+        <li class="c-page-item">
+          <a href="#" class="c-page-link"> 3 </a>
+        </li>
+        <li class="c-page-item">
+          <a href="#" class="c-page-link-arrow">
+            <i class="fas fa-forward"></i>
+          </a>
+        </li>
+        <li class="c-page-item">
+          <a href="#" class="c-page-link-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Chip</div>
+      <div class="c-chip c-chip-danger">Bị từ chối</div>
+      <div class="c-chip c-chip-warning">Thiếu thông tin</div>
+      <div class="c-chip c-chip-primary">Đã duyệt</div>
+      <div class="c-chip c-chip-info">Đã gửi</div>
+      <div class="c-chip c-chip-secondary">Chưa gửi</div>
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Toast message</div>
+      <div class="c-toast c-toast-danger mb-10">
+        <div class="c-toast-icon">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="c-toast-text">Nội dung kèm tiêu đề</div>
+        <button class="c-toast-close"></button>
+      </div>
+      <div class="c-toast c-toast-warning mb-10">
+        <div class="c-toast-icon">
+          <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="c-toast-text">Nội dung kèm tiêu đề</div>
+        <button class="c-toast-close"></button>
+      </div>
+      <div class="c-toast c-toast-primary mb-10">
+        <div class="c-toast-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <div class="c-toast-text">Nội dung kèm tiêu đề</div>
+        <button class="c-toast-close"></button>
+      </div>
+      <div class="c-toast c-toast-info mb-10">
+        <div class="c-toast-icon">
+          <i class="fas fa-exclamation"></i>
+        </div>
+        <div class="c-toast-text">Nội dung kèm tiêu đề</div>
+        <button class="c-toast-close"></button>
+      </div>
+    </div>
+    <div class="mb-10">
+      <div class="c-title">Popup</div>
+      <div class="c-popup mb-10">
+        <div class="c-popup-header">
+          <button class="c-popup-close"></button>
+        </div>
+        <div class="c-popup-body">
+          <div class="c-popup-title">Đóng Form thông tin chung</div>
+          <div class="c-popup-content">
+            <div class="c-popup-icon">
+              <i
+                style="color: var(--orange)"
+                class="fas fa-exclamation-triangle"
+              ></i>
+            </div>
+            <div class="c-popup-text">
+              Bạn có chắc muốn đóng form nhập
+              <b>"Thông tin chung của thủ tục 603"</b> hay không?
+            </div>
+          </div>
+        </div>
+        <div class="c-popup-footer">
+          <button class="c-btn c-btn-secondary">Tiếp tục nhập</button>
+          <button class="c-btn c-btn-primary">Đóng</button>
+        </div>
+      </div>
+      <div class="c-popup mb-10">
+        <div class="c-popup-header">
+          <button class="c-popup-close"></button>
+        </div>
+        <div class="c-popup-body">
+          <div class="c-popup-title">Popup thông báo</div>
+          <div class="c-popup-content">
+            <div class="c-popup-text">
+              Hiện bạn chưa thiết lập USB Token. Vui lòng thiết lập và kết nối
+              với USB Token để ký nộp các hồ sơ
+            </div>
+          </div>
+        </div>
+        <div class="c-popup-footer">
+          <button class="c-btn c-btn-secondary">Tiếp tục nhập</button>
+          <button class="c-btn c-btn-primary">Đóng</button>
+        </div>
+      </div>
+      <div class="c-popup-backdrop active">
+        <div class="c-popup mb-10">
+          <div class="c-popup-header">
+            <button class="c-popup-close"></button>
+          </div>
+          <div class="c-popup-body">
+            <div class="c-popup-title">Lý do bị từ chối</div>
+            <div class="c-popup-content">
+              <div class="c-popup-text">
+                <ul class="c-list">
+                  <li class="c-list-item">
+                    <div class="c-list-item-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="c-list-item-text">
+                      CE029: "Tờ khai không có nội dung."
+                    </div>
+                  </li>
+                  <li class="c-list-item">
+                    <div class="c-list-item-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="c-list-item-text">
+                      CE030: "Cấu trúc XML le tờ khai chưa đúng le XSD."
+                    </div>
+                  </li>
+                  <li class="c-list-item">
+                    <div class="c-list-item-icon">
+                      <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="c-list-item-text">
+                      CE031: "Mã tờ khai không có trong thủ tục gửi hồ sơ."
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="c-popup-footer">
+            <button class="c-btn c-btn-primary">Đóng</button>
+          </div>
+        </div>
+      </div>
+      <div class="c-popup mb-10">
+        <div class="c-popup-header">
+          <button class="c-popup-close"></button>
+        </div>
+        <div class="c-popup-body">
+          <div class="c-popup-title">Danh sách hồ sơ đề nghị</div>
+          <div class="c-popup-content">
+            <div class="c-popup-text">
+              <button
+                style="margin-bottom: 24px"
+                class="c-btn c-btn-secondary c-btn-icon"
+              >
+                <i class="fas fa-plus"></i>
+                Thêm mới hồ sơ đề nghị
+              </button>
+              <ul class="c-list c-list-hr">
+                <li class="c-list-item">
+                  <div class="c-list-item-icon">
+                    <i class="fas fa-file-word"></i>
+                  </div>
+                  <div class="c-list-item-text">Hồ sơ đề nghị số 1</div>
+                  <div class="c-list-item-action">
+                    <button>
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
+                </li>
+                <li class="c-list-item">
+                  <div class="c-list-item-icon">
+                    <i class="fas fa-file-word"></i>
+                  </div>
+                  <div class="c-list-item-text">Hồ sơ đề nghị số 1</div>
+                  <div class="c-list-item-action">
+                    <button>
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="c-popup-footer">
+          <button class="c-btn c-btn-primary">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

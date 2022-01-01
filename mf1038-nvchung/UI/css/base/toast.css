@@ -1,0 +1,55 @@
+.c-toast {
+  height: 48px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+  max-width: 270px;
+  z-index: 10001;
+  position: fixed;
+  right: -100px;
+  top: 20px;
+  opacity: 0;
+}
+.c-toast .c-toast-icon {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c-toast .c-toast-text {
+  font-size: 13px;
+  color: #000;
+  flex: 1;
+}
+.c-toast .c-toast-close {
+  width: 24px;
+  height: 24px;
+  mask-image: url(/asset/icon/x.svg);
+  -webkit-mask-image: url(/asset/icon/x.svg);
+  background-size: 20px 20px;
+  border: none;
+}
+.c-toast-danger .c-toast-icon,
+.c-toast-danger .c-toast-close {
+  background-color: var(--red);
+}
+.c-toast-warning .c-toast-icon,
+.c-toast-warning .c-toast-close {
+  background-color: var(--orange);
+}
+.c-toast-primary .c-toast-icon,
+.c-toast-primary .c-toast-close {
+  background-color: var(--primary-default);
+}
+.c-toast-info .c-toast-icon,
+.c-toast-info .c-toast-close {
+  background-color: var(--blue);
+}

@@ -1,0 +1,23 @@
+@import url(./base/base.css);
+@import url(./base/typography.css);
+@import url(./base/button.css);
+@import url(./base/combobox.css);
+@import url(./base/fieldinput.css);
+@import url(./base/checkbox.css);
+@import url(./base/radio.css);
+@import url(./base/table.css);
+@import url(./base/pagination.css);
+@import url(./base/chip.css);
+@import url(./base/toast.css);
+@import url(./base/popup.css);
+@import url(./base/list.css);
+@import url(./base/menuleft.css);
+@import url(./base/topheader.css);
+body {
+  font-size: 13px;
+  font-weight: normal;
+  padding: 10px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}

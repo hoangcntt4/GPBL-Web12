@@ -1,0 +1,44 @@
+:root {
+  --primary: #01b075;
+  --primary-hover: #2fbe8e;
+  --primary-default: #019160;
+  --primary-focus: #ebf9f4;
+  --red: #f65454;
+  --red-light: #ffebeb;
+  --blue: #0075ff;
+  --blue-light: #ebf4ff;
+  --orange: #ff6900;
+  --orange-light: #fff3eb;
+  --black: #000;
+  --black-light: #bbb;
+}
+@font-face {
+  font-family: GoogleSans;
+  font-weight: normal;
+  src: url(/asset/font/GoogleSans-Regular.otf);
+}
+@font-face {
+  font-family: GoogleSans-Bold;
+  font-weight: bolder;
+  src: url(/asset/font/GoogleSans-Bold.otf);
+}
+@font-face {
+  font-family: GoogleSans-Medium;
+  font-weight: bold;
+  src: url(/asset/font/GoogleSans-Medium.otf);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: GoogleSans, "Font Awesome 5 Free";
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--black-light);
+  border-radius: 10px;
+}

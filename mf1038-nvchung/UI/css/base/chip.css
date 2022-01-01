@@ -1,0 +1,29 @@
+.c-chip {
+  display: inline-block;
+  font-size: 11px;
+  height: 32px;
+  min-width: 100px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 32px;
+}
+.c-chip-danger {
+  color: var(--red);
+  background-color: var(--red-light);
+}
+.c-chip-warning {
+  color: var(--orange);
+  background-color: var(--orange-light);
+}
+.c-chip-info {
+  color: var(--blue);
+  background-color: var(--blue-light);
+}
+.c-chip-primary {
+  color: var(--primary-default);
+  background-color: var(--primary-focus);
+}
+.c-chip-secondary {
+  color: (--black);
+  background-color: #eee;
+}
