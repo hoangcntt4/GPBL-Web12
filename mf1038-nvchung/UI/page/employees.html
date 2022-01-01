@@ -1,0 +1,426 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/asset/font/fontawesome-5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/employees.css" />
+  </head>
+  <body>
+    <div class="c-menu-left">
+      <div class="c-menu-header">
+        <button class="c-menu-toggle"></button>
+        <a href="#" class="c-menu-logo">
+          <img src="/asset/cukcuk-logo.png" alt="logo" />
+        </a>
+      </div>
+      <ul class="c-menu-list">
+        <li class="c-menu-item active">
+          <a href="#" class="c-menu-link">
+            <div class="c-menu-icon">
+              <img src="/asset/icon/document-online.png" alt="icon" />
+            </div>
+            <div class="c-menu-text">Hồ sơ điện tử</div>
+          </a>
+        </li>
+        <li class="c-menu-item">
+          <a href="#" class="c-menu-link">
+            <div class="c-menu-icon">
+              <img src="/asset/icon/document-online.png" alt="icon" />
+            </div>
+            <div class="c-menu-text">Hồ sơ giấy</div>
+          </a>
+        </li>
+        <li class="c-menu-item">
+          <a href="#" class="c-menu-link">
+            <div class="c-menu-icon">
+              <img src="/asset/icon/report.png" alt="icon" />
+            </div>
+            <div class="c-menu-text">Theo dõi chi</div>
+          </a>
+        </li>
+        <li class="c-menu-item">
+          <a href="#" class="c-menu-link">
+            <div class="c-menu-icon">
+              <img src="/asset/icon/dashboard.png" alt="icon" />
+            </div>
+            <div class="c-menu-text">Theo dõi đóng</div>
+          </a>
+        </li>
+        <li class="c-menu-item">
+          <a href="#" class="c-menu-link">
+            <div class="c-menu-icon">
+              <img src="/asset/icon/dic-employee.png" alt="icon" />
+            </div>
+            <div class="c-menu-text">Quản lý lao động</div>
+          </a>
+        </li>
+        <li class="c-menu-item">
+          <a href="#" class="c-menu-link">
+            <div class="c-menu-icon">
+              <img src="/asset/icon/setting.png" alt="icon" />
+            </div>
+            <div class="c-menu-text">Thiết lập</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="c-top-header">
+      <div class="c-top-header-left">
+        <div class="c-brand">BD</div>
+        <div class="c-dropdown c-title2">
+          Nhà hàng Biển Đông
+          <i style="margin-left: 10px" class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+      <div class="c-top-header-right">
+        <a href="#" class="c-top-header-link">
+          <img
+            class="c-avatar"
+            src="/asset/icon/avatar-default.png"
+            alt="avatar"
+          />
+        </a>
+        <a href="#" class="c-top-header-link">Ngô Việt Chung</a>
+        <a href="#" class="c-top-header-link">
+          <img src="/asset/icon/option.png" alt="more" />
+        </a>
+      </div>
+    </div>
+    <main>
+      <div class="c-add-emp-btn mb-16">
+        <div class="c-title">Danh sách nhân viên</div>
+        <button
+          class="c-btn c-btn-primary c-btn-icon c-btn-icon-add"
+          id="addEmployeeBtn"
+        >
+          Thêm nhân viên
+        </button>
+      </div>
+      <div class="c-filter-emp mb-16">
+        <div class="c-filter-inputs">
+          <div class="c-field-input c-field-input-icon" style="width: 213px">
+            <input
+              id="idOrNameFilter"
+              type="text"
+              placeholder="Tìm kiếm theo mã, Tên hoặc Số điện thoại"
+            />
+          </div>
+          <div style="width: 180px" id="departmentFilter"></div>
+          <div style="width: 180px" id="positionFilter"></div>
+        </div>
+        <div>
+          <button
+            id="delEmployeeBtn"
+            class="c-btn c-btn-danger c-btn-icon-only c-btn-icon-remove"
+          ></button>
+          <button
+            id="refreshBtn"
+            class="c-btn c-btn-secondary c-btn-icon-only c-btn-icon-refresh"
+          ></button>
+        </div>
+      </div>
+      <div class="c-table-container" style="height: 400px">
+        <table class="c-table mb-8" id="empTb">
+          <thead>
+            <tr>
+              <th><input type="checkbox" class="c-check-box" /></th>
+              <th propname="EmployeeCode">Mã nhân viên</th>
+              <th propname="FullName">Họ tên</th>
+              <th propname="Gender" format="gender">Giới tính</th>
+              <th class="text-center" propname="DateOfBirth" format="date">
+                Ngày sinh
+              </th>
+              <th propname="PhoneNumber">Điện thoại</th>
+              <th propname="Email">Email</th>
+              <th propname="PositionName">Chức vụ</th>
+              <th propname="DepartmentName">Phòng ban</th>
+              <th class="text-right" propname="Salary" format="currency">
+                Mức lương cơ bản
+              </th>
+              <th propname="WorkStatus" format="workStatus">
+                Tình trạng công việc
+              </th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="c-pagination">
+        <div class="pagination-info" id="paginationInfo"></div>
+        <ul id="pagination"></ul>
+        <div class="pagination-per-page">
+          <div id="comboPerPage" style="width: 190px"></div>
+        </div>
+      </div>
+    </main>
+    <div class="c-popup c-popup-fullscreen" id="empPopup">
+      <div class="c-popup-inner" id="empPopup">
+        <div class="c-popup-header">
+          <button class="c-popup-close"></button>
+        </div>
+        <div class="c-popup-body">
+          <div class="c-popup-title">Thông tin nhân viên</div>
+          <div class="c-popup-content">
+            <div class="c-form-emp">
+              <div class="c-form-emp-avatar">
+                <div class="c-form-avatar">
+                  <img src="/asset/img/default-avatar.jpg" alt="avatar" />
+                  <p>(Vui lòng chọn ảnh có định dạng .jpg .jepg .png .gif.)</p>
+                </div>
+              </div>
+              <div class="c-form-emp-input">
+                <div class="c-form-input-section">A. Thông tin chung:</div>
+                <div class="c-form-input-row">
+                  <div class="c-input-group">
+                    <label for="EmpId" class="c-field-input-label"
+                      >Mã nhân viên (<span class="text-danger">*</span>)</label
+                    >
+                    <div class="c-field-input">
+                      <input
+                        is-required
+                        required-message="Mã nhân viên không được để trống!"
+                        id="EmpId"
+                        type="text"
+                        name="EmployeeCode"
+                      />
+                    </div>
+                  </div>
+                  <div class="c-input-group">
+                    <label for="EmpName" class="c-field-input-label"
+                      >Họ và tên (<span class="text-danger">*</span>)</label
+                    >
+                    <div class="c-field-input">
+                      <input
+                        is-required
+                        required-message="Tên không được để trống!"
+                        id="EmpName"
+                        type="text"
+                        name="FullName"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="c-form-input-row">
+                  <div class="c-input-group">
+                    <label for="EmpBirth" class="c-field-input-label"
+                      >Ngày sinh</label
+                    >
+                    <div class="c-field-input">
+                      <input id="EmpBirth" type="date" name="DateOfBirth" />
+                    </div>
+                  </div>
+                  <div class="c-input-group">
+                    <label class="c-field-input-label">Giới tính</label>
+                    <label class="c-radio">
+                      <input type="radio" name="Gender" value="1" /> Nam
+                    </label>
+                    <label class="c-radio">
+                      <input type="radio" name="Gender" value="0" /> Nữ
+                    </label>
+                  </div>
+                </div>
+                <div class="c-form-input-row">
+                  <div class="c-input-group">
+                    <label for="EmpCardId" class="c-field-input-label"
+                      >Số CMTND/Căn cước (<span class="text-danger">*</span
+                      >)</label
+                    >
+                    <div class="c-field-input">
+                      <input
+                        is-required
+                        required-message="Số CMND không được để trống!"
+                        id="EmpCardId"
+                        type="text"
+                        name="IdentityNumber"
+                      />
+                    </div>
+                  </div>
+                  <div class="c-input-group">
+                    <label for="EmpCardDate" class="c-field-input-label"
+                      >Ngày cấp</label
+                    >
+                    <div class="c-field-input">
+                      <input id="EmpCardDate" type="date" name="IdentityDate" />
+                    </div>
+                  </div>
+                </div>
+                <div class="c-form-input-row">
+                  <div class="c-input-group">
+                    <label for="EmpCardPlace" class="c-field-input-label"
+                      >Nơi cấp</label
+                    >
+                    <div class="c-field-input">
+                      <input
+                        id="EmpCardPlace"
+                        type="text"
+                        name="IdentityPlace"
+                      />
+                    </div>
+                  </div>
+                  <div class="c-input-group">
+                    <label for="Email" class="c-field-input-label"
+                      >Email (<span class="text-danger">*</span>)</label
+                    >
+                    <div class="c-field-input">
+                      <input
+                        is-required
+                        required-message="Email không được để trống!"
+                        id="Email"
+                        type="email"
+                        name="Email"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="c-form-input-row">
+                  <div class="c-input-group" style="width: calc(50% - 8px)">
+                    <label for="Tel" class="c-field-input-label"
+                      >Số điện thoại (<span class="text-danger">*</span>)</label
+                    >
+                    <div class="c-field-input">
+                      <input
+                        is-required
+                        required-message="Số điệm thoại không được để trống!"
+                        id="Tel"
+                        type="tel"
+                        name="PhoneNumber"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="c-form-input-section">B. Thông tin công việc:</div>
+                <div class="c-form-input-row">
+                  <div class="c-input-group">
+                    <label class="c-field-input-label">Vị trí</label>
+                    <div id="employeePosition"></div>
+                  </div>
+                  <div class="c-input-group">
+                    <label class="c-field-input-label">Phòng ban</label>
+                    <div id="employeeDepartment"></div>
+                  </div>
+                </div>
+                <div class="c-form-input-row">
+                  <div class="c-input-group">
+                    <label for="TaxId" class="c-field-input-label"
+                      >Mã số thuế cá nhân</label
+                    >
+                    <div class="c-field-input">
+                      <input id="TaxId" type="text" name="PersonalTaxCode" />
+                    </div>
+                  </div>
+                  <div class="c-input-group">
+                    <label for="Salary" class="c-field-input-label"
+                      >Mức lương cơ bản</label
+                    >
+                    <div class="c-field-input">
+                      <input
+                        input-format="currency"
+                        id="Salary"
+                        type="text"
+                        name="Salary"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="c-form-input-row">
+                  <div class="c-input-group">
+                    <label for="Salary" class="c-field-input-label"
+                      >Ngày gia nhập công ty
+                    </label>
+                    <div class="c-field-input">
+                      <input id="Salary" type="date" name="JoinDate" />
+                    </div>
+                  </div>
+                  <div class="c-input-group">
+                    <label class="c-field-input-label"
+                      >Tình trạng công việc</label
+                    >
+                    <div id="employeeWorkStatus"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-popup-footer">
+          <button class="c-btn c-btn-secondary" id="cancelBtn">Hủy</button>
+          <button
+            class="c-btn c-btn-primary c-btn-icon c-btn-icon-save"
+            id="saveEmployeeBtn"
+          >
+            Lưu
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="c-loader" id="loader"></div>
+    <div style="display: none" id="toast"></div>
+    <div class="c-popup" id="confirmDelete">
+      <div class="c-popup-inner">
+        <div class="c-popup-header">
+          <button class="c-popup-close"></button>
+        </div>
+        <div class="c-popup-body">
+          <div class="c-popup-title"></div>
+          <div class="c-popup-content">
+            <div class="c-popup-icon">
+              <i
+                style="color: var(--orange)"
+                class="fas fa-exclamation-triangle"
+              ></i>
+            </div>
+            <div class="c-popup-text"></div>
+          </div>
+        </div>
+        <div class="c-popup-footer">
+          <button id="confirmDeleteOkBtn" class="c-btn c-btn-danger">
+            Xóa
+          </button>
+          <button id="confirmDeleteCancelBtn" class="c-btn c-btn-secondary">
+            Hủy
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="c-popup" id="formValidationError">
+      <div class="c-popup-inner" style="min-width: 300px">
+        <div class="c-popup-header">
+          <button class="c-popup-close"></button>
+        </div>
+        <div class="c-popup-body">
+          <div class="c-popup-title">Lỗi</div>
+          <div class="c-popup-content">
+            <div class="c-popup-icon">
+              <i
+                style="color: var(--red)"
+                class="fas fa-exclamation-triangle"
+              ></i>
+            </div>
+            <div class="c-popup-text"></div>
+          </div>
+        </div>
+        <div class="c-popup-footer">
+          <button
+            id="confirmFormValidationErrorBtn"
+            class="c-btn c-btn-primary"
+          >
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/lib/jquery-3.6.0.min.js"></script>
+    <script src="/js/combobox.js"></script>
+    <script src="/js/input.js"></script>
+    <script src="/js/popup.js"></script>
+    <script src="/js/toast.js"></script>
+    <script src="/js/utility.js"></script>
+    <script src="/js/pagination.js"></script>
+    <script src="/js/employees.js"></script>
+  </body>
+</html>

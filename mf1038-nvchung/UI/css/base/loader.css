@@ -1,0 +1,37 @@
+@keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.c-loader {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.16);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10000;
+  display: none;
+}
+.c-loader::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: url(/asset/icon/loader.png) no-repeat center;
+  background-size: 72px 72px;
+  animation: rotate 2s linear infinite;
+}
+.c-loader::after {
+  content: "Đang tải...";
+  font-weight: bold;
+  font-size: 20px;
+}
+.c-loader.active {
+  display: flex;
+}

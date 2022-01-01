@@ -1,0 +1,18 @@
+.mb-16 {
+  margin-bottom: 16px !important;
+}
+.mb-8 {
+  margin-bottom: 8px !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-danger {
+  color: var(--red) !important;
+}
+.min-w-0 {
+  min-width: 0 !important;
+}

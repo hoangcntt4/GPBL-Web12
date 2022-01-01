@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" /> <button>Generate</button>
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script>
+      const fromChar = "a".charCodeAt(0),
+        toChar = "z".charCodeAt(0);
+      function randomRange(from, to) {
+        return Math.floor(Math.random() * (to - from)) + from;
+      }
+      function stringRandom(length = 5) {
+        return String.fromCharCode(
+          ...Array.from({ length }, () => randomRange(fromChar, toChar + 1))
+        );
+      }
+      function fakeName() {
+        return `${stringRandom(3)} ${stringRandom(4)} ${stringRandom(5)}`;
+      }
+      function fakeDate() {
+        return `2000/${randomRange(1, 13)
+          .toString()
+          .padStart(2, "0")}/${randomRange(1, 30).toString().padStart(2, "0")}`;
+      }
+      function fakePhoneNumner() {
+        return Array.from({ length: 10 }, () =>
+          randomRange(0, 10).toString()
+        ).join("");
+      }
+      function fakeEmail() {
+        return `${stringRandom(5)}@${stringRandom(4)}.${stringRandom(3)}`;
+      }
+      const departmentIds = [
+        "142cb08f-7c31-21fa-8e90-67245e8b283e",
+        "17120d02-6ab5-3e43-18cb-66948daf6128",
+        "469b3ece-744a-45d5-957d-e8c757976496",
+        "4e272fc4-7875-78d6-7d32-6a1673ffca7c",
+      ];
+      const positionIds = [
+        "30d41e52-5e66-72bc-6c1c-b47866e0b131",
+        "548dce5f-5f29-4617-725d-e2ec561b0f41",
+        "589edf01-198a-4ff5-958e-fb52fd75a1d4",
+        "5bd71cda-209f-2ade-54d1-35c781481818",
+      ];
+      $("button").on("click", () => {
+        const amount = +$("input").val();
+        const tasks = [];
+        for (let i = 0; i < amount; i++) {
+          const data = {
+            employeeCode: `EMPV1${i}`,
+            fullName: fakeName(),
+            gender: randomRange(0, 2),
+            dateOfBirth: fakeDate(),
+            phoneNumber: fakePhoneNumner(),
+            email: fakeEmail(),
+            address: stringRandom(20),
+            identityNumber: fakePhoneNumner(),
+            identityDate: fakeDate(),
+            identityPlace: stringRandom(20),
+            joinDate: fakeDate(),
+            departmentId: departmentIds[randomRange(0, departmentIds.length)],
+            positionId: positionIds[randomRange(0, positionIds.length)],
+            workStatus: randomRange(0, 3),
+            personalTaxCode: fakePhoneNumner(),
+            salary: randomRange(30000000, 100000000),
+          };
+          const createEmpTask = $.ajax({
+            method: "post",
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            url: "http://cukcuk.manhnv.net/api/v1/Employees",
+            error: console.log,
+          });
+          tasks.push(createEmpTask);
+        }
+        Promise.allSettled(tasks)
+          .then(() => alert("Data generated!"))
+          .catch(console.log);
+      });
+    </script>
+  </body>
+</html>

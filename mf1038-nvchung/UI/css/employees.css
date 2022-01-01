@@ -1,0 +1,79 @@
+@import url(./base/base.css);
+@import url(./base/typography.css);
+@import url(./base/button.css);
+@import url(./base/combobox.css);
+@import url(./base/fieldinput.css);
+@import url(./base/checkbox.css);
+@import url(./base/radio.css);
+@import url(./base/table.css);
+@import url(./base/pagination.css);
+@import url(./base/chip.css);
+@import url(./base/toast.css);
+@import url(./base/popup.css);
+@import url(./base/list.css);
+@import url(./base/menuleft.css);
+@import url(./base/topheader.css);
+@import url(./base/loader.css);
+@import url(./base/utility.css);
+body {
+  font-size: 13px;
+  font-weight: normal;
+}
+main {
+  margin-left: 226px;
+  padding: 16px;
+  margin-top: 48px;
+}
+.c-add-emp-btn,
+.c-filter-emp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c-filter-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.c-form-emp {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+.c-form-emp-avatar {
+  text-align: center;
+  flex: 0;
+}
+.c-form-avatar img {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+}
+.c-form-input-section {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-weight: bold;
+}
+.c-form-input-section::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 5px;
+  background-color: var(--primary-default);
+  margin-top: 5px;
+}
+.c-form-emp-input {
+  width: 100%;
+}
+.c-form-input-row {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.c-form-input-row .c-input-group {
+  width: 100%;
+}

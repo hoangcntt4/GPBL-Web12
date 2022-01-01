@@ -1,0 +1,84 @@
+.c-popup {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  display: none;
+  opacity: 0;
+}
+.c-popup-inner {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  display: none;
+  flex-direction: column;
+}
+.c-popup.active {
+  display: flex;
+}
+.c-popup.active .c-popup-inner {
+  display: flex;
+}
+.c-popup-fullscreen .c-popup-inner {
+  width: 100%;
+  height: 100%;
+}
+.c-popup-header {
+  text-align: right;
+}
+.c-popup-close {
+  border: none;
+  width: 24px;
+  height: 24px;
+  background: url(/asset/icon/x.svg) no-repeat center;
+  background-size: 16px 16px;
+}
+.c-popup-close:hover {
+  background-color: #eee;
+  border-radius: 0 4px 0 4px;
+}
+.c-popup-body {
+  padding: 0 24px;
+  flex-grow: 1;
+  overflow: auto;
+}
+.c-popup-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+  padding-right: 24px;
+}
+.c-popup-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.c-popup-content {
+  display: flex;
+  align-items: center;
+  padding: 24px 0;
+}
+.c-popup-text {
+  font-size: 13px;
+  font-weight: normal;
+  color: #000;
+  width: 100%;
+}
+.c-popup-footer {
+  background-color: #eee;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
