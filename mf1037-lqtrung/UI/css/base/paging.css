@@ -1,0 +1,80 @@
+.m-table-paging{
+    height: 56px;
+    display: flex;
+    width: 100%;
+}
+
+.m-table-paging .m-paging-left{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding-left: 24px;
+    align-items: center;
+}
+
+.m-table-paging .m-paging-center{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.m-table-paging .m-paging-right{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    padding-right: 24px;
+}
+
+.m-page-number-group{
+    display: flex;
+}
+
+.m-paging-center .m-paging-button{
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: unset;
+    cursor: pointer;
+    background-color: unset;
+    opacity: .7;
+}
+.m-paging-center .m-paging-button:hover{
+    opacity: 1;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.m-paging-center .m-first-page{
+    background-image: url('../../assests/icon/btn-firstpage.svg');
+}
+.m-table-paging .m-pre-page{
+    background-image: url('../../assests/icon/btn-prev-page.svg');
+}
+.m-table-paging .m-next-page{
+    background-image: url('../../assests/icon/btn-next-page.svg');
+}
+.m-table-paging .m-last-page{
+    background-image: url('../../assests/icon/btn-lastpage.svg');
+}
+
+.m-paging-center .m-page-number{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    margin: 4px;
+    cursor: pointer;
+    background-color: #E9EBEE;
+}
+.m-paging-center .m-page-number:hover{
+    background-color: #fff;
+}
+.m-paging-center .m-page-number-active{
+    background-color: #019160 !important;
+    color: #fff;
+}

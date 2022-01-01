@@ -1,0 +1,61 @@
+.m-combobox{
+    position: relative;
+    color: #000000;
+    height: 40px;
+    border: 1px solid #019160;
+    border-radius: 4px;
+    display: flex;
+    box-sizing: border-box;
+    width: 150px;
+    outline: none;
+    cursor: pointer;
+}
+
+.m-combobox .m-combobox-data{
+    position: absolute;
+    top: calc(100% + 1px);
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #bfbdbd;
+    border-radius: 4px;
+    display: none;
+}
+
+.m-combobox input{
+    width: 100%;
+    border: none;
+    padding: 0 16px;
+    border-radius: 4px 0 0 4px;
+}
+
+.m-combobox button{
+    width: 40px;
+    background-color: #fff;
+    border: unset;
+    cursor: pointer;
+}
+
+.m-combobox input:focus{
+    border: none;
+    outline: none;
+}
+
+.m-combobox .m-combobox-item{
+    height: 40px;
+    line-height: 40px;
+}
+
+.m-combobox .m-combobox-item:hover{
+    cursor: pointer;
+    background-color: #E9EBEE;
+}
+
+.m-combobox .m-combobox-item.m-combobox-item-selected{
+    background-color: #019160;
+    color: #fff;
+    padding-left: 36px;
+    background-image: url(../../assests/icon/check.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 10px center;
+}
