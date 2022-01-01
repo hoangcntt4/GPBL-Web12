@@ -1,0 +1,110 @@
+/*css chung cho thanh chuyển trang*/
+
+.m-main-navigate {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+
+/*css cho phần nội dung bên trái của thanh chuyển trang*/
+
+.m-main-navigate .m-navigate-left {
+    width: 100%;
+    padding: 18px 0;
+    font-size: 13px;
+}
+
+
+/*css cho phần chuyển trang*/
+
+.m-main-navigate .m-navigate-center {
+    width: 100%;
+    display: flex;
+    padding: 8px 0;
+}
+
+
+/*css cho phần bên phải của thanh chuyển trang*/
+
+.m-navigate-center .m-navigate-button {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    border: none;
+    background-color: unset;
+    outline: none;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center center;
+    opacity: .5;
+}
+
+
+/*css cho các button chuyển trang*/
+
+.m-navigate-center .m-navigate-button:hover {
+    opacity: 1;
+    background-color: #dddddd;
+}
+
+
+/*gán icon cho các button*/
+
+.m-navigate-center .m-first-page {
+    background-image: url('/assets/Resource/icon/btn-firstpage.svg');
+}
+
+.m-navigate-center .m-pre-page {
+    background-image: url('/assets/Resource/icon/btn-prev-page.svg');
+}
+
+.m-navigate-center .m-next-page {
+    background-image: url('/assets/Resource/icon/btn-next-page.svg');
+}
+
+.m-navigate-center .m-last-page {
+    background-image: url('/assets/Resource/icon/btn-lastpage.svg');
+}
+
+
+/*css cho các số của phần chuyển trang*/
+
+.m-navigate-center .m-page-number {
+    height: 40px;
+    border: 1px solid #dddddd;
+    width: 40px;
+    margin: 0 4px;
+    border-radius: 50%;
+    text-align: center;
+    color: #000000;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+
+/*css cho các số trang khi hover*/
+
+.m-page-number:hover {
+    color: #ffffff;
+    background-color: #019160;
+}
+
+
+/*css cho phần nội dung bên phải của thanh chuyển trang*/
+
+.m-main-navigate .m-navigate-right {
+    width: 100%;
+    position: relative;
+}
+
+
+/**/
+
+.m-navigate-right .m-combobox {
+    position: absolute;
+    right: 0;
+    top: 6px;
+}

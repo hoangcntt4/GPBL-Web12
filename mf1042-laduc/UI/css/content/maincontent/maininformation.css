@@ -1,0 +1,13 @@
+/*css cho phần thông tin của trang*/
+
+.m-main-information {
+    padding: 0 24px;
+}
+
+
+/*css cho table trong phần thông tin*/
+
+.m-main-information .m-table tbody {
+    border-right: 3px solid #dddddd;
+    border-bottom: 4px solid #cccccc;
+}

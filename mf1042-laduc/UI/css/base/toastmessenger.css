@@ -1,0 +1,128 @@
+/*css cho vùng chứa các toast*/
+
+.m-toast-msg {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    display: none;
+}
+
+
+/*css cho icon trong toast*/
+
+.m-toast-msg .m-toast-icon {
+    height: 16px;
+    width: 16px;
+    font-size: 16px;
+    padding: 0 8px 0 16px;
+}
+
+
+/*css cho nội dung trong toast*/
+
+.m-toast-msg .m-toast-content {
+    height: 16px;
+    font-size: 16px;
+    min-width: 100px;
+}
+
+
+/* css cho icon đóng toast*/
+
+.m-toast-msg .m-toast-close {
+    height: 16px;
+    width: 16px;
+    font-size: 16px;
+    padding: 0 8px 0 8px;
+}
+
+
+/*css cho toast error*/
+
+.m-toast-msg .m-toast-error {
+    height: 48px;
+    margin: 2px 0;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    padding: 16px 0;
+    box-sizing: border-box;
+    background-color: #FFCECE;
+}
+
+
+/*css cho toast warrning */
+
+.m-toast-msg .m-toast-warning {
+    height: 48px;
+    margin: 2px 0;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    padding: 16px 0;
+    box-sizing: border-box;
+    background-color: #FFE7AF;
+}
+
+
+/*css cho toast success*/
+
+.m-toast-msg .m-toast-success {
+    height: 48px;
+    margin: 2px 0;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    padding: 16px 0;
+    box-sizing: border-box;
+    background-color: #BAFFE7;
+}
+
+
+/*css cho toast info */
+
+.m-toast-msg .m-toast-info {
+    height: 48px;
+    margin: 2px 0;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    padding: 16px 0;
+    box-sizing: border-box;
+    background-color: #D8EAFF;
+}
+
+
+/*css cho icon và icon đóng toast*/
+
+.m-toast-msg .m-toast-error .m-toast-icon {
+    color: #f34646;
+}
+
+.m-toast-msg .m-toast-error .m-toast-close {
+    color: #f34646;
+}
+
+.m-toast-msg .m-toast-warning .m-toast-icon {
+    color: #f8cd6a;
+}
+
+.m-toast-msg .m-toast-warning .m-toast-close {
+    color: #fcca57;
+}
+
+.m-toast-msg .m-toast-success .m-toast-icon {
+    color: #00d640;
+}
+
+.m-toast-msg .m-toast-success .m-toast-close {
+    color: #00d640;
+}
+
+.m-toast-msg .m-toast-info .m-toast-icon {
+    color: #6dacfa;
+}
+
+.m-toast-msg .m-toast-info .m-toast-close {
+    color: #73b2fa;
+}

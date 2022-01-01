@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/Resource/font/fontawesome-5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/all.css">
+</head>
+
+<body>
+    <!--Phần Navbar-->
+    <div class="m-menu">
+        <!--Phần logo công ty-->
+        <div class="m-banner">
+            <div class="m-banner-icon"><i class="fas fa-th"></i></div>
+            <div class="m-banner-logo"><img src="/assets/Resource/cukcuk-logo.png"></div>
+        </div>
+        <!-- Phần menu -->
+        <div class="m-main-menu">
+            <div class="m-menu-element">
+                <div class="m-menu-icon"><i class="fas fa-chart-pie"></i></div>
+                <div class="m-menu-text"><a href="#">Tổng quan</a></div>
+            </div>
+            <div class="m-menu-element">
+                <div class="m-menu-icon"><i class="fas fa-chart-bar"></i></div>
+                <div class="m-menu-text"><a href="#">Báo cáo</a></div>
+            </div>
+            <div class="m-menu-element">
+                <div class="m-menu-icon"><i class="fas fa-chart-pie"></i></div>
+                <div class="m-menu-text"><a href="#">Mua hàng</a></div>
+            </div>
+            <div class="m-menu-element">
+                <div class="m-menu-icon"><i class="fas fa-users"></i></div>
+                <div class="m-menu-text"><a href="#">Danh mục nhân viên</a></div>
+            </div>
+            <div class="m-menu-element">
+                <div class="m-menu-icon"><i class="fas fa-users"></i></div>
+                <div class="m-menu-text"><a href="#">Danh mục nhân viên</a></div>
+            </div>
+            <div class="m-menu-element">
+                <div class="m-menu-icon"><i class="fas fa-cog"></i></div>
+                <div class="m-menu-text"><a href="#">Thiết lập hệ thống</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- Phần nội dung -->
+    <div class="m-content">
+        <!-- phần header  -->
+        <div class="m-content-header">
+            <!-- combobox -->
+            <div class="m-content-combobox">
+                <select name="" id="" class="m-combobox">
+                    <option value="">Nhà hàng biển đông</option>
+                </select>
+            </div>
+            <!-- tài khoản -->
+            <div class="m-content-user">
+                <div class="m-user-avatar"><img src="/assets/Resource/icon/avatar-default.png" width="40"></div>
+                <div class="m-user-name">Lê Anh Đức</div>
+                <div class="m-user-expand"><i class="fas fa-ellipsis-h"></i></div>
+            </div>
+        </div>
+        <!-- nội dung -->
+        <div class="m-content-main">
+            <!-- tiêu đề nội dung -->
+            <div class="m-main-header">
+                <h2 class="m-heading">Danh sách nhân viên</h2>
+                <button class="m-button m-button-i" id="btnAddEmployee"><img src="/assets/Resource/icon/add.png" width="16" class="m-button-icon"> Thêm nhân viên</button>
+            </div>
+            <!-- các công cụ  -->
+            <div class="m-main-tools">
+                <input type="text" class="m-input" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại">
+                <select name="" id="" class="m-combobox">
+                    <option value="" class="m-option">Tất cả phòng ban</option>
+                </select>
+                <select name="" id="" class="m-combobox">
+                    <option value="" class="m-option">Tất cả vị trí</option>
+                </select>
+                <button class="m-button-onlyicon" id="btnDeleteEmployee" style="color: red;"><i class="fas fa-user-times"></i></button>
+                <button class="m-button-onlyicon" id="btnRefresh"><i class="fas fa-sync-alt"></i></button>
+            </div>
+            <!--Phần thông tin-->
+            <div class="m-main-information">
+                <!--Bảng thông tin -->
+                <table class="m-table" id="tbEmployees">
+                    <thead>
+                        <tr>
+                            <th property="EmployeeCode" formatType="">Mã nhân viên</th>
+                            <th property="FullName" formatType="">Họ và tên</th>
+                            <th property="Gender" formatType="gender">Giới tính</th>
+                            <th property="DateOfBirth" formatType="date">Ngày sinh</th>
+                            <th property="PhoneNumber" formatType="phoneNumber">Điện thoại</th>
+                            <th property="Email" formatType="email">Email</th>
+                            <th property="PositionName" formatType="position">Chức vụ</th>
+                            <th property="DepartmentName" formatType="department">Phòng ban</th>
+                            <th style="text-align: right;" property="Salary" formatType="money">Mức lương cơ bản</th>
+                            <th property="WorkStatus" formatType="workStatus">Tình trạng công việc</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- phần thanh chuyển trang -->
+            <div class="m-main-navigate">
+                <div class="m-navigate-left">Hiển thị 1-10/? Nhân viên</div>
+                <div class="m-navigate-center">
+                    <button class="m-navigate-button m-first-page"></button>
+                    <button class="m-navigate-button m-pre-page"></button>
+                    <div class="m-page-number">1</div>
+                    <div class="m-page-number">2</div>
+                    <div class="m-page-number">3</div>
+                    <div class="m-page-number">4</div>
+                    <button class="m-navigate-button m-next-page"></button>
+                    <button class="m-navigate-button m-last-page"></button>
+                </div>
+                <div class="m-navigate-right">
+                    <select name="" id="" class="m-combobox">
+                        <option value="">10 nhân viên/trang</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+        <!--phần form thong tin nhân viên -->
+        <div class="m-popup-contain" id="EmployeeForm">
+            <!-- background form -->
+            <div class="m-popup-bg"></div>
+            <div class="m-popup-form">
+                <!-- nội dung form -->
+                <div class="m-form-content">
+                    <!-- tiêu đề form -->
+                    <div class="m-form-header">
+                        <h2 class="m-heading">THÔNG TIN NHÂN VIÊN</h2>
+                        <div class="m-form-close" id="FormClose"><i class="fas fa-times"></i></div>
+
+                    </div>
+                    <!-- thông tin trong form -->
+                    <div class="m-form-body">
+                        <!-- ảnh đại diện-->
+                        <div class="m-form-avatar">
+                            <img src="/assets/Resource/img/default-avatar.jpg">
+                            <div class="m-form-avatar-note">(Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif)</div>
+                        </div>
+                        <!--Thông tin nhân viên -->
+                        <div class="m-form-information">
+                            <div class="m-tittle2 m-form-tittle">A.THÔNG TIN CHUNG:
+                                <div class="m-tittle-line"></div>
+                            </div>
+                            <div class="m-info-line">
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Mã nhân viên(<span style="color: red;">*</span>)</div>
+                                    <input type="text" class="m-input" id="txtEmployeeCode" fieldName="EmployeeCode">
+                                </div>
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Họ và tên(<span style="color: red;">*</span>)</div>
+                                    <input type="text" class="m-input" id="txtFullName" fieldName="FullName">
+
+                                </div>
+                            </div>
+                            <div class="m-info-line">
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Ngày sinh</div>
+                                    <input type="date" class="m-input" id="txtDoB" fieldName="DateOfBirth" value="yyyy-MM-dd">
+                                </div>
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Giới tính</div>
+                                    <input type="text" class="m-input" id="txtGender" fieldName="Gender">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="m-info-line">
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Số CMTND/ Căn cước(<span style="color: red;">*</span>)</div>
+                                    <input type="text" class="m-input" id="txtIdentityNumber" fieldName="IdentityNumber">
+                                </div>
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Ngày cấp</div>
+                                    <input type="date" class="m-input" id="txtIdentityDate" fieldName="IdentityDate" value="yyyy-MM-dd">
+                                </div>
+                            </div>
+                            <div class="m-info-line">
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Nơi cấp</div>
+                                    <input type="text" class="m-input" id="IdentityPlace" fieldName="IdentityPlace">
+                                </div>
+
+                            </div>
+                            <div class="m-info-line">
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Email(<span style="color: red;">*</span>)</div>
+                                    <input type="text" class="m-input" id="txtEmail" fieldName="Email">
+                                </div>
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Số điện thoại(<span style="color: red;">*</span>)</div>
+                                    <input type="text" class="m-input" id="txtPhoneNumber" fieldName="PhoneNumber">
+                                </div>
+                            </div>
+                            <div class="m-tittle2 m-form-tittle">B. THÔNG TIN CÔNG VIỆC:
+                                <div class="m-tittle-line"></div>
+                            </div>
+                            <div class="m-info-line">
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Vị trí</div>
+                                    <input type="text" class="m-input" id="txtPosition" fieldName="PositionId">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Phòng ban</div>
+                                    <input type="text" class="m-input" id="txtDepartment" fieldName="DepartmentId">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="m-info-line">
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Mã số thuế cá nhân</div>
+                                    <input type="text" class="m-input" id="txtPersonalTaxCode" fieldName="PersonalTaxCode">
+                                </div>
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Mức lương cơ bản</div>
+                                    <input type="text" class="m-input" id="txtSalary" fieldName="Salary">
+                                </div>
+                            </div>
+                            <div class="m-info-line">
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Ngày gia nhập công ty</div>
+                                    <input type="date" class="m-input" id="txtJoinDate" fieldName="JoinDate" value="yyyy-MM-dd">
+                                </div>
+                                <div class="m-info-box">
+                                    <div class="m-info-name">Tình trạng công việc</div>
+                                    <input type="text" class="m-input" id="txtWorkStatus" fieldName="WorkStatus">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-form-footer">
+                        <button class="m-button-onlyicon" id="btnCloseFormEmployee">Hủy</button>
+                        <button class="m-button m-button-i" id="btnSaveEmployee"><i class="far fa-save m-button-icon" ></i>Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- toast message  -->
+    <div class="m-toast-msg">
+        <div class="m-toast-success">
+            <div class="m-toast-icon"><i class="fas fa-check-circle"></i></div>
+            <div class="m-toast-content">Thực hiện thành công.</div>
+            <div class="m-toast-close"><i class="fas fa-times"></i></div>
+        </div>
+
+    </div>
+    <!--loader để hiện thị những lúc load dữ liệu -->
+    <div class="m-loader">
+        <div class="loader-bg"></div>
+        <div class="loader"></div>
+    </div>
+    <!--popup cảnh báo-->
+    <div class="m-confirm-delete" id="confirmDeleteBox">
+        <div class="m-form-close" id="FormClose"><i class="fas fa-times"></i></div>
+        <div class="m-confirm-header">
+            <h2 class="m-tittle2">Xóa nhân viên</h2>
+        </div>
+        <div class="m-confirm-body">
+            <div class="m-confirm-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <div class="m-confirm-text"></div>
+        </div>
+
+        <div class="m-confirm-footer">
+            <button class="m-button-onlyicon" id="btnCloseForm">Hủy</button>
+            <button class="m-confirm-yes m-button" id="confirmYes">Xóa</button>
+
+        </div>
+
+    </div>
+    <!--popup cảnh báo-->
+    <div class="m-confirm-delete" id="AlertBox">
+        <div class="m-form-close" id="FormClose"><i class="fas fa-times"></i></div>
+        <div class="m-confirm-header">
+            <h2 class="m-tittle2">Lỗi</h2>
+        </div>
+        <div class="m-confirm-body">
+            <div class="m-confirm-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <div class="m-confirm-text"></div>
+        </div>
+
+        <div class="m-confirm-footer" style="padding-left: 260px;">
+            <button class="m-button-onlyicon" id="btnCloseForm">Đóng</button>
+
+        </div>
+
+    </div>
+    <!--các thư viện js-->
+    <script src="/js/jquery-3.6.0.js"></script>
+    <!--Js dùng cho page-->
+    <script src="/js/employee.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+/* thiết lập chung cho body*/
+
+body {
+    font-family: GoogleSans;
+    font-size: 13px;
+    color: #454545;
+}
+
+
+/* thêm font chữ*/
+
+@font-face {
+    font-family: GoogleSans;
+    src: url('../assets/Resource/font/GoogleSans-Regular.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Bold;
+    src: url('../assets/Resource/font/GoogleSans-Bold.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Medium;
+    src: url('../assets/Resource/font/GoogleSans-Medium.otf');
+}
+
+@font-face {
+    font-family: GoogleSans-Italic;
+    src: url('../assets/Resource/font/GoogleSans-Italic.otf');
+}
+
+@font-face {
+    font-family: GoogleSans;
+    src: url('../assets/Resource/font/GoogleSans-Regular.otf');
+}
+
+
+/* thiết lập các kiểu chữ cho từng mục*/
+
+.m-heading {
+    font-weight: bold;
+    font-size: 24px;
+    color: #000000;
+}
+
+.m-tittle {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+}
+
+.m-tittle2 {
+    font-weight: bold;
+    font-size: 15px;
+    color: #000000;
+}
+
+.m-label-field-input {
+    font-weight: 500;
+    font-size: 13px;
+    color: #000000;
+}
+
+.m-label {
+    font-weight: normal;
+    font-size: 13px;
+    color: #454545;
+}
+
+.m-content-detail {
+    font-weight: 500;
+    font-size: 13px;
+    color: #666666;
+}
+
+.m-bodycontent {
+    font-weight: normal;
+    font-size: 13px;
+    color: #454545;
+}
+
+.m-subtext,
+.m-hinttext {
+    font-weight: normal;
+    font-size: 11px;
+    color: #BBBBBB;
+}

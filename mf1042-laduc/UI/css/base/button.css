@@ -1,0 +1,112 @@
+/*button default */
+
+.m-button {
+    display: inline-flex;
+    background-color: #019160;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 13px;
+    color: #ffffff;
+    padding: 0 24px;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    min-width: 100px;
+    line-height: 40px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* button hover*/
+
+.m-button:hover {
+    background-color: #2fbe8e;
+}
+
+
+/*button active*/
+
+.m-button:active {
+    background-color: #01b075;
+}
+
+
+/*button khi chỉ chứa icon*/
+
+.m-button-onlyicon {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: unset;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.m-button-onlyicon:hover {
+    opacity: 1;
+}
+
+
+/* css icon của button*/
+
+.m-button-icon {
+    padding: 12px 8px 12px 0;
+    height: 16px;
+    width: 16px;
+    font-size: 16px;
+}
+
+
+/* css cho button có chứa icon*/
+
+.m-button-i {
+    padding-left: 16px;
+}
+
+
+/* css cho icon bên trái của button có 2 icon*/
+
+.m-button-icon-left {
+    align-items: center;
+    display: inline-flex;
+    width: 16px;
+    padding: 12px 0 12px 16px;
+    margin: 0;
+}
+
+
+/*css cho text của button*/
+
+.m-button-text {
+    align-items: center;
+    display: inline-flex;
+    padding: 0 12px 0 8px;
+    height: 100%;
+    margin: 0;
+}
+
+
+/*css cho button bên phải của button có 2 icon*/
+
+.m-button-icon-right {
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    border-left: 1px solid #96ecd0;
+}
+
+.m-button-icon-right:hover {
+    background-color: #2FBE8E;
+    transform: rotate(180deg);
+    transition: all 0.5s;
+}
+
+.m-button-icon-right {
+    width: 16px;
+    padding: 12px 12px;
+}

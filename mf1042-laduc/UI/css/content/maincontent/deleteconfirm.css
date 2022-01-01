@@ -1,0 +1,119 @@
+/*css cho popup cảnh báo */
+
+.m-confirm-delete {
+    width: 400px;
+    height: 200px;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: none;
+}
+
+
+/*css cho icon tắt của popup*/
+
+.m-confirm-delete .m-form-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    opacity: 0.5;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+}
+
+
+/*css khi hover vào icon tắt*/
+
+.m-confirm-delete .m-form-close:hover {
+    color: red;
+    opacity: 1;
+}
+
+
+/* css cho tiêu đề của popup*/
+
+.m-confirm-delete .m-confirm-header {
+    width: 80%;
+    height: 40px;
+    margin: 24px 45px 0 24px;
+    box-sizing: border-box;
+}
+
+
+/*css cho thân của popup*/
+
+.m-confirm-delete .m-confirm-body {
+    padding: 0 24px 24px 84px;
+    position: relative;
+}
+
+
+/*css cho icon chính của popup*/
+
+.m-confirm-body .m-confirm-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 16px;
+    padding: 12px 0;
+    text-align: center;
+    background-color: #cccccc;
+    box-sizing: border-box;
+    position: absolute;
+    left: 24px;
+    top: 0;
+    color: red;
+}
+
+
+/*css cho phần footer của popup*/
+
+.m-confirm-delete .m-confirm-footer {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    display: flex;
+    background-color: #eeeeee;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    padding-left: 40%;
+}
+
+
+/*css cho các button trong footer*/
+
+.m-confirm-delete button {
+    margin: 0 24px;
+}
+
+.m-confirm-delete button.m-confirm-yes {
+    background-color: rgb(253, 68, 68);
+    padding-left: 36px;
+}
+
+.m-confirm-delete button.m-confirm-yes:hover {
+    background-color: red;
+}
+
+.m-confirm-delete .m-button-onlyicon {
+    padding: 0px 32px;
+    width: 100px;
+    margin: 0 8px;
+    border: none;
+}
+
+.m-confirm-delete .m-button-onlyicon:hover {
+    width: 100px;
+    border: 1px solid #cccccc;
+    color: #000000;
+    background-color: dddddd;
+    padding: 0 31px;
+}
