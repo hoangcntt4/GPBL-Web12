@@ -1,0 +1,512 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/f8d6b4e65c.js" crossorigin="anonymous"></script>
+    <title>CUKCUK.VN</title>
+</head>
+
+<body>
+    <div>
+        <div class="ms-top-header ms-row">
+            <div class="ms-left-header">
+                <img src="./assets/img/toggle.png" class="ms-header-toggle" alt="">
+                <img src="./assets/cukcuk-logo.png" class="ms-header-logo" alt="">
+            </div>
+            <div class="ms-right-header ms-row">
+                <div class="ms-right-header-btn-diachi">
+                    <div class="ms-dropdown">
+                        <div class="ms-content-dropdown">
+                            Nhà hàng biển đông
+                        </div>
+                        <div class="ms-btn-dropdown">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="ms-all-item-dropdown">
+                        </div>
+                    </div>
+                </div>
+                <div class="ms-tool-user">
+
+                    <img class="ms-tool-user-cursor" src="./assets/icon/avatar-default.png" alt="">
+                    <div class="ms-tool-user-cursor">
+                        Nguyễn Hữu Hoàng
+                    </div>
+                    <i class="ms-icon-size-16 icon-option ms-tool-user-option"></i>
+                </div>
+            </div>
+        </div>
+        <div class="ms-row" style="padding: 0px;">
+            <div class="ms-menu-left">
+                <div class="ms-item-menu ms-menu-selected">
+                    <i class="ms-icon-size-20 icon-dashboard"></i> Tổng quan
+                </div>
+                <div class="ms-item-menu">
+                    <i class="ms-icon-size-20 icon-report"></i> Báo cáo
+                </div>
+                <div class="ms-item-menu">
+                    <i class="ms-icon-size-20 icon-dashboard"></i> Mua hàng
+                </div>
+                <div class="ms-item-menu">
+                    <i class="ms-icon-size-20 icon-dicemployee"></i> Danh mục nhân viên
+                </div>
+                <div class="ms-item-menu">
+                    <i class="ms-icon-size-20 icon-dicemployee"></i> Danh mục khách hàng
+                </div>
+                <div class="ms-item-menu">
+                    <i class="ms-icon-size-20 icon-setting"></i> Thiết lập hệ thống
+                </div>
+                <div class="ms-collapse-menu">
+                    <i class="fas fa-chevron-left" title="Thu gọn Thanh công cụ"></i>
+                </div>
+            </div>
+            <div class="ms-content">
+                <div class="ms-row">
+                    <div class="ms-name-table">Danh sách nhân viên</div>
+                    <div id="btn-add-employee" class="ms-btn-add-employee">
+                        <button class="ms-btn ms-btn-icon">
+                            <i class="ms-icon-size-16 icon-add"></i>Thêm nhân viên
+                        </button>
+                    </div>
+                </div>
+                <div class="ms-row">
+                    <div class="ms-tool-search">
+                        <div class="ms-input-icon" style="width: 300px;">
+                            <input type="text" class="ms-input icon-search" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại">
+                            <!-- <i class="ms-icon-size-16 icon-close"></i>
+                        <div class="ms-error-input-icon">
+                            <div class="ms-box-mess-error-input">
+                                Mật khẩu không được trùng với tài khoản
+                                <div class="ms-arrow-down"></div>
+                            </div>
+                        </div> -->
+                        </div>
+                        <div class="ms-dropdown" data="Department" valueItem="DepartmentId" textItem="DepartmentName" style="width: 200px;">
+                            <div class="ms-content-dropdown">
+                                Tất cả phòng ban
+                            </div>
+                            <div class="ms-btn-dropdown">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="ms-all-item-dropdown">
+                                <div class="ms-item-dropdown selected" value="">Tất cả phòng ban</div>
+                            </div>
+                        </div>
+                        <div class="ms-dropdown" data="Position" valueItem="PositionId" textItem="PositionName" style="width: 200px;">
+                            <div class="ms-content-dropdown">
+                                Tất cả vị trí
+                            </div>
+                            <div class="ms-btn-dropdown">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="ms-all-item-dropdown">
+                                <div class="ms-item-dropdown selected" value="">Tất cả vị trí</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-btn-refresh">
+                        <button id="btn-refresh">
+                            <i class="ms-icon-size-16 icon-refresh"></i>
+                        </button>
+                    </div>
+                    <div class="ms-btn-refresh" style="margin-right: 6px;">
+                        <button id="btn-delete" data-confirm="Are you sure to delete this item?" style="background-color: red;">
+                            <i class="ms-icon-size-16 icon-close"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="ms-box-table">
+                    <table id="table-data" keyRow="EmployeeId" class="ms-table">
+                        <thead>
+                            <tr>
+                                <th typeData="checkbox"></th>
+                                <th typeData="stt">#</th>
+                                <th colData="EmployeeCode">
+                                    Mã nhân viên
+
+                                </th>
+                                <th colData="FullName">
+                                    Họ và tên
+
+                                </th>
+                                <th colData="GenderName">
+                                    Giới tính
+
+                                </th>
+                                <th class="align-center" colData="DateOfBirth" typeData="ddmmyyyy">
+                                    Ngày sinh
+
+                                </th>
+                                <th colData="PhoneNumber">
+                                    Điện thoại
+
+                                </th>
+                                <th colData="Email">
+                                    Email
+
+                                </th>
+                                <th colData="PositionName">
+                                    Chức vụ
+
+                                </th>
+                                <th colData="DepartmentName">
+                                    Phòng ban
+
+                                </th>
+                                <th class="align-center" colData="Salary" typeData="Money">
+                                    Lương cơ bản
+
+                                </th>
+                                <th colData="WorkStatus" typeData="WorkStatus">
+                                    Tình trạng công việc
+
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="m-table-paging">
+                    <div class="m-paging-left">Hiện thị &nbsp;<b> 01-20/123 </b>&nbsp; lao động</div>
+                    <div class="m-paging-center">
+                        <button class="m-paging-button m-first-page"></button>
+                        <button class="m-paging-button m-pre-page"></button>
+                        <div class="m-page-number-group">
+                            <button class="m-page-number m-page-number-active">1</button>
+                            <button class="m-page-number">2</button>
+                            <button class="m-page-number">3</button>
+                            <button class="m-page-number">4</button>
+                        </div>
+                        <button class="m-paging-button m-next-page"></button>
+                        <button class="m-paging-button m-last-page"></button>
+                    </div>
+                    <div class="m-paging-right">
+                        <div class="ms-dropdown" name="Trang" style="width: 200px;">
+                            <div class="ms-content-dropdown">
+                                10 nhân viên/trang
+                            </div>
+                            <div class="ms-btn-dropdown">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="ms-all-item-dropdown">
+                                <div class="ms-item-dropdown" value=1>10 nhân viên/trang</div>
+                                <div class="ms-item-dropdown" value=2>20 nhân viên/trang</div>
+                                <div class="ms-item-dropdown" value=3>50 nhân viên/trang</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dialog-add-employee" class="ms-dialog">
+        <div class="ms-dialog-background"></div>
+        <div class="ms-dialog-modal">
+            <div class="ms-dialog-btn-close"></div>
+            <div class="ms-dialog-title">
+                thông tin nhân viên
+            </div>
+            <div class="ms-row">
+                <div class="ms-dialog-image-user">
+                    <img src="./assets/img/default-avatar.jpg" alt="">
+                    <div class="note-image-user">
+                        (Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif.)
+                    </div>
+                </div>
+                <div class="ms-dialog-form">
+                    <div class="ms-dialog-form-item">
+                        <div class="ms-dialog-form-item-header">
+                            a. thông tin chung:
+                            <hr>
+                        </div>
+                        <div class="ms-row">
+                            <div class="ms-input-label">
+                                <label for="EmployeeCode">
+                                    Mã nhân viên (<div class="ms-text-red">*</div>)
+                                </label>
+                                <input type="text" name="EmployeeCode" class="ms-input" required>
+                                <i class="ms-icon-size-16 icon-close ms-delete-content-input"></i>
+                                <div class="ms-error-input-icon">
+                                    <div class="ms-box-mess-error-input">
+                                        Mật khẩu không được trùng với tài khoản
+                                        <div class="ms-arrow-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms-input-label">
+                                <label for="FullName">
+                                    Họ và tên (<div class="ms-text-red">*</div>)
+                                </label>
+                                <input type="text" name="FullName" class="ms-input" required>
+                                <i class="ms-icon-size-16 icon-close"></i>
+                                <div class="ms-error-input-icon">
+                                    <div class="ms-box-mess-error-input">
+                                        Mật khẩu không được trùng với tài khoản
+                                        <div class="ms-arrow-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms-input-label">
+                                <label for="DateOfBirth">
+                                    Ngày sinh
+                                </label>
+                                <input type="date" format="ddmmyyyy" name="DateOfBirth" class="ms-input" beforeday>
+                            </div>
+                            <div class="ms-input-label">
+                                <label for="gioitinh">
+                                    Giới tính
+                                </label>
+                                <div class="ms-dropdown" format="DropDown" name="Gender">
+                                    <div class="ms-content-dropdown">
+                                        --Chọn--
+                                    </div>
+                                    <div class="ms-btn-dropdown">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="ms-all-item-dropdown">
+                                        <div class="ms-item-dropdown" value=0>Nam</div>
+                                        <div class="ms-item-dropdown" value=1>Nữ</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms-input-label">
+                                <label for="IdentityNumber">Số CMTND/ Căn cước (<div class="ms-text-red">*</div>)</label>
+                                <input type="text" name="IdentityNumber" class="ms-input" required>
+                                <i class="ms-icon-size-16 icon-close"></i>
+                                <div class="ms-error-input-icon">
+                                    <div class="ms-box-mess-error-input">
+                                        Mật khẩu không được trùng với tài khoản
+                                        <div class="ms-arrow-down"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms-input-label">
+                                <label for="IdentityDate">
+                                    Ngày cấp
+                                </label>
+                                <input type="date" name="IdentityDate" format="ddmmyyyy" class="ms-input" beforeday>
+                            </div>
+                        </div>
+                        <div class="ms-row">
+                            <div class="ms-input-label">
+                                <label for="IdentityPlace">
+                                    Nơi cấp
+                                </label>
+                                <input type="text" name="IdentityPlace" class="ms-input">
+
+                            </div>
+                        </div>
+                        <div class="ms-row">
+                            <div class="ms-input-label">
+                                <label for="Email">
+                                    Email (<div class="ms-text-red">*</div>)
+                                </label>
+                                <input type="text" name="Email" class="ms-input" required isEmail>
+                                <!-- <i class="ms-icon-size-16 icon-close"></i>
+                                <div class="ms-error-input-icon">
+                                    <div class="ms-box-mess-error-input">
+                                        Mật khẩu không được trùng với tài khoản
+                                        <div class="ms-arrow-down"></div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="ms-input-label">
+                                <label for="PhoneNumber">
+                                    Điện thoại (<div class="ms-text-red">*</div>)
+                                </label>
+                                <input type="text" name="PhoneNumber" class="ms-input" required>
+                                <!-- <i class="ms-icon-size-16 icon-close"></i>
+                                <div class="ms-error-input-icon">
+                                    <div class="ms-box-mess-error-input">
+                                        Mật khẩu không được trùng với tài khoản
+                                        <div class="ms-arrow-down"></div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-dialog-form-item">
+                        <div class="ms-dialog-form-item-header">
+                            b. thông tin công việc:
+                            <hr>
+                        </div>
+                        <div class="ms-row">
+                            <div class="ms-input-label">
+                                <label for="vitri">Vị trí</label>
+                                <div class="ms-dropdown" name="PositionId" data="Position" valueItem="PositionId" textItem="PositionName">
+                                    <div class="ms-content-dropdown">
+                                        --Chọn--
+                                    </div>
+                                    <div class="ms-btn-dropdown">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="ms-all-item-dropdown">
+                                        <!-- <div class="ms-item-dropdown" value="P08">Giám đốc</div>
+                                        <div class="ms-item-dropdown" value="P94">Nhân viên</div>
+                                        <div class="ms-item-dropdown" value="P07">Phó phòng</div>
+                                        <div class="ms-item-dropdown" value="P92">Trưởng phòng</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms-input-label">
+                                <label for="phongban">Phòng ban</label>
+                                <div class="ms-dropdown" name="DepartmentId" format="DropDown" data="Department" valueItem="DepartmentId" textItem="DepartmentName">
+                                    <div class="ms-content-dropdown">
+                                        --Chọn--
+                                    </div>
+                                    <div class="ms-btn-dropdown">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="ms-all-item-dropdown">
+                                        <!-- <div class="ms-item-dropdown" value="PB99">Phòng Marketting</div>
+                                        <div class="ms-item-dropdown" value="PB89">Phòng đào tạo</div>
+                                        <div class="ms-item-dropdown" value="PB86">Phòng Nhân sự</div>
+                                        <div class="ms-item-dropdown" value="PB92">Phòng công nghệ</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms-input-label">
+                                <label for="PersonalTaxCode">Mã số thuế cá nhân</label>
+                                <input type="text" name="PersonalTaxCode" class="ms-input">
+
+                            </div>
+                            <div class="ms-input-label">
+                                <label for="Salary">Mức lương cơ bản</label>
+                                <input type="text" name="Salary" format="Money" class="ms-input align-right" formatSalary>
+
+                            </div>
+                            <div class="ms-input-label">
+                                <label for="CreatedDate">Ngày gia nhập công ty</label>
+                                <div class="ms-dropdown">
+                                    <input type="date" format="ddmmyyyy" name="CreatedDate" class="ms-input" beforeday>
+                                </div>
+                            </div>
+                            <div class="ms-input-label">
+                                <label for="tinhtrangcongviec">Tình trạng công việc</label>
+                                <div class="ms-dropdown" name="WorkStatus">
+                                    <div class="ms-content-dropdown">
+                                        --Chọn--
+                                    </div>
+                                    <div class="ms-btn-dropdown">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="ms-all-item-dropdown">
+                                        <div class="ms-item-dropdown" value=1>Đang làm việc</div>
+                                        <div class="ms-item-dropdown" value=0>Đã nghỉ việc</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-dialog-footer">
+                <button id="btnSubmit" class="ms-btn ms-btn-icon">
+                    <i class="far fa-save ms-icon-size-16"></i>Lưu
+                </button>
+                <button id="close_dialog" class="ms-btn ms-btn-icon">
+                    Huỷ
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <div id="ms-toast-box" class="ms-toast-box"></div>
+    <!-- <div id="ms-toast-box" class="ms-toast-box">
+        <div class="ms-toast-mess ms-warning">
+            <div class="ms-toast-icon "></div>
+            <div class="ms-toast-content">Nội dung đi kèm</div>
+            <div class="ms-toast-btn-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="ms-dropdown selected" style="width: 200px;">
+        <div class="ms-content-dropdown">
+            Loại hồ sơ
+        </div>
+        <div class="ms-btn-dropdown">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="ms-all-item-dropdown">
+            <div class="ms-item-dropdown" value=1>Trạng thái 1</div>
+            <div class="ms-item-dropdown" value=2>Trạng thái 2</div>
+            <div class="ms-item-dropdown" value=3>Trạng thái 3</div>
+        </div>
+    </div> -->
+
+
+    <!-- wellcome<br><br>
+    Button default <br>
+    <button class="ms-btn">Nộp</button><br><br>
+    Button with icon
+    <button class="ms-btn ms-btn-icon">
+        <i class="ms-icon-size-16 icon-add"></i>Lập hồ sơ
+    </button>
+    <br>
+    Button with icon, dropdown
+    <div class="ms-btn-dropdown">
+        <button class="ms-btn ms-btn-icon ">
+            <i class="ms-icon-size-16 icon-add"></i>
+            Lập hồ sơ
+        </button>
+        <button class="ms-btn ms-btn-right-dropdown">
+            <i class="ms-icon-size-16 icon-add"></i>
+        </button>
+    </div>
+    <br>
+    Second Button <br>
+    <button class="ms-btn ms-btn-second">Nộp</button><br><br>
+    <div>
+        Field input icon <br>
+        <div class="ms-input-icon" style="width: 300px;">
+            <input type="text" class="ms-input icon-search" placeholder="Tìm kiếm theo tên, số hồ sơ">
+            <i class="ms-icon-size-16 icon-close"></i>
+            <div class="ms-error-input-icon">
+                <div class="ms-box-mess-error-input">
+                    Mật khẩu không được trùng với tài khoản
+                    <div class="ms-arrow-down"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        Field input label <br>
+        <div class="ms-input-label">
+            <label for="">Label</label>
+            <input type="text" class="ms-input" placeholder="Tìm kiếm theo tên, số hồ sơ">
+            <i class="ms-icon-size-16 icon-close"></i>
+            <div class="ms-error-input-icon">
+                <div class="ms-box-mess-error-input">
+                    Mật khẩu không được trùng với tài khoản
+                    <div class="ms-arrow-down"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <input type="checkbox" class="ms-checkbox" name="" id="" checked="checked">
+    </div>
+    <div>
+        <div class="container">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+            One
+        </div>
+    </div> -->
+    <!-- Thư viện -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- file js dùng chung -->
+    <script src="./js/ConstantsAPI.js"></script>
+    <script src="./js/Common.js"></script>
+    <script src="./js/Enum.js"></script>
+    <!-- file js riêng -->
+    <script src="./js/main.js"></script>
+    <script src="./js/dropdown.js"></script>
+    <script src="./js/dialog.js"></script>
+    <script src="./js/Toast.js"></script>
+
+</body>
+
+</html>

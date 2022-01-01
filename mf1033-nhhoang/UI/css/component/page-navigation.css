@@ -1,0 +1,86 @@
+.m-table-paging {
+    display: flex;
+    height: 56px;
+    position: relative;
+}
+
+.m-table-paging .m-paging-left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.m-table-paging .m-paging-center {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.m-table-paging .m-paging-right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.m-table-paging .m-paging-right .ms-dropdown {
+    position: absolute;
+    right: 0;
+}
+
+.m-page-number-group {
+    display: flex;
+}
+
+.m-table-paging .m-paging-button {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: unset;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.m-table-paging .m-paging-button:hover {
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.m-table-paging .m-first-page {
+    background-image: url(../../assets/icon/btn-firstpage.svg);
+}
+
+.m-table-paging .m-pre-page {
+    background-image: url(../../assets/icon/btn-prev-page.svg);
+}
+
+.m-table-paging .m-next-page {
+    background-image: url(../../assets/icon/btn-next-page.svg);
+}
+
+.m-table-paging .m-last-page {
+    background-image: url(../../assets/icon/btn-lastpage.svg);
+}
+
+.m-table-paging .m-page-number {
+    border-radius: 50%;
+    border: 1px solid #bbb;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.m-table-paging .m-page-number:hover {
+    background-color: #fff;
+}
+
+.m-table-paging .m-page-number-active {
+    background-color: #019160 !important;
+    color: #fff;
+}

@@ -1,0 +1,101 @@
+/* layout toast */
+
+.ms-toast-box {
+    position: fixed;
+    bottom: 16px;
+    right: 24px;
+}
+
+
+/* item toast */
+
+.ms-toast-mess {
+    width: 250px;
+    height: 48px;
+    margin: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    padding-right: 24px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+
+/* content toast */
+
+.ms-toast-content {
+    max-width: 200px;
+}
+
+
+/* button close toast */
+
+.ms-toast-btn-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ms-toast-btn-close i {
+    font-size: 16px;
+}
+
+
+/* color message toast */
+
+.ms-success .ms-toast-btn-close i {
+    color: #2FBE8E;
+}
+
+.ms-error .ms-toast-btn-close i {
+    color: #F65454;
+}
+
+.ms-warning .ms-toast-btn-close i {
+    color: #FF6900;
+}
+
+.ms-info .ms-toast-btn-close i {
+    color: #0075FF;
+}
+
+
+/* icon toast */
+
+.ms-toast-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
+    margin: 0px 8px 0px 16px;
+}
+
+.ms-success .ms-toast-icon {
+    background-image: url('../../assets/icon/checked.png');
+    background-color: #2FBE8E;
+}
+
+.ms-info .ms-toast-icon {
+    background-image: url('../../assets/icon/add.png');
+    background-color: #0075FF;
+}
+
+.ms-warning .ms-toast-icon {
+    background-image: url('../../assets/icon/option.png');
+    background-color: #FF6900;
+}
+
+.ms-error .ms-toast-icon {
+    background-image: url('../../assets/icon/setting.png');
+    background-color: #F65454;
+}

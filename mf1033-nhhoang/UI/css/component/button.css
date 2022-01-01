@@ -1,0 +1,119 @@
+/* button default */
+.ms-btn{
+    height: 40px;
+    padding: 0 24px;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    border: none;
+    background-color: #019160;
+    min-width: 100px;
+    cursor: pointer;
+}
+.ms-btn:hover{
+    background-color: #2FBE8E;
+}
+.ms-btn:active{
+    background-color: #01B075;
+}
+/* button with icon */
+.ms-btn-icon{
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+/* button - dropdown */
+.ms-btn-dropdown{
+    display: flex;
+}
+.ms-btn-right-dropdown{
+    min-width: 0px;
+    padding: 0 12px;
+}
+.ms-btn-right-dropdown i{
+    display: block;
+    margin: 0 auto;
+}
+.ms-btn-dropdown .ms-btn-icon{
+    border-radius: 4px 0px 0px 4px;
+    border-right: 1px #2FBE8E solid;
+}
+.ms-btn-right-dropdown{
+    border-radius: 0px 4px 4px 0px;
+}
+/* second button */
+.ms-btn-second{
+    border: 1px #bbbbbb solid;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+}
+.ms-btn-second:hover{
+    background-color: #E9EBEE;
+}
+.ms-btn-second:active{
+    background-color: #01B075;
+    color: #ffffff;
+}
+/* button refresh */
+.ms-btn-refresh{
+    float: right;
+}
+.ms-btn-refresh button{
+    background-color: white;
+    min-width: 0px;
+    border: none;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.ms-btn-refresh i{
+    display: block;
+    color: #bbbbbb;
+    margin: 0px;
+}
+.ms-btn-refresh button:hover{
+    background-color: #bbbbbb;
+}
+.ms-btn-refresh button:active{
+    background-color: #019160;
+}
+/* dropdown top header  dia chi  */
+.ms-right-header-btn-diachi{
+    float: left;
+}
+.ms-right-header-btn-diachi .ms-dropdown{
+    /* width: 200px; */
+    height: 50px;
+}
+.ms-right-header-btn-diachi .ms-content-dropdown{
+    border: none !important;
+    height: 50px;
+    font-weight: 800;
+    padding-left: 24px !important;
+    padding-right: 50px;
+}
+/* button them moi nhan vien */
+.ms-name-table{
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+.ms-btn-add-employee{
+    float: right;
+    cursor: pointer;
+}
+.ms-btn-add-employee button{
+    cursor: pointer;
+}
+/* button delete  */
+.btn-delete-disabled{
+    display: none;
+}

@@ -1,0 +1,87 @@
+/* field input icon */
+.ms-input{
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    padding-left: 40px;
+    background-position: 16px center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.ms-input:focus{
+    outline: none;
+    box-shadow: 0 0 0 1pt #019160;
+}
+/* all input - button close */
+.ms-input-icon, .ms-input-label{
+    position: relative;
+}
+.ms-input-icon i, .ms-input-label i{
+    position: absolute;
+    border-radius: 50%;
+    /* background-color: #BBBBBB; */
+    background-size: 13px 13px;
+    bottom: 12px;
+    right: 10px;
+    margin-right: 0px;
+    cursor: pointer;
+}
+/* field input icon - box mess error */
+.ms-valid-error-input{
+    border:1px #F65454 solid !important;
+}
+.ms-delete-content-input{
+    display: none;
+}
+.ms-error-input-icon{
+    display: none;
+}
+.ms-input-icon .ms-error-input-icon,
+.ms-input-label .ms-error-input-icon{
+    position: absolute;
+    background-color: #FF4747;
+    border-radius: 4px;
+    padding: 10px;
+    max-width: 130px;
+    color: #ffff;
+    text-align: center;
+    top: -140%;
+    left: 25%;
+}
+.ms-input-label .ms-error-input-icon{
+    top: -60%;
+}
+.ms-box-mess-error-input{
+    position: relative;
+}
+.ms-box-mess-error-input .ms-arrow-down{
+    position: absolute;
+    background-color: rgba(0, 0, 0,0);
+    width: 0px;
+    height: 0px;
+    bottom: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 15px #FF4747 solid;
+    border-left: 15px rgba(0, 0, 0,0) solid;
+    border-bottom: 15px rgba(0, 0, 0,0) solid;
+    border-right: 15px rgba(0, 0, 0,0) solid;
+}
+/* field input with label */
+.ms-input-label input{
+    margin-top: 4px;
+    padding-left: 16px;
+}
+.ms-input-label input[type=date]{
+    padding-right: 6px;
+}
+.ms-input-label label{
+    font-family: GoogleSans Medium;
+    color: black;
+}
+/* input with align */
+input.align-right{
+    padding-right: 16px;
+}

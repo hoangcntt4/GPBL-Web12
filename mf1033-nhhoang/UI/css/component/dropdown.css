@@ -1,0 +1,93 @@
+.ms-dropdown {
+    height: 40px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.ms-tool-search .ms-dropdown {
+    margin-top: 0px;
+}
+
+
+/* content - dropdown */
+
+.ms-dropdown.selected .ms-content-dropdown {
+    border: 1px #019160 solid;
+}
+
+.ms-dropdown .ms-content-dropdown {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px #BBBBBB solid;
+    border-radius: 4px;
+    color: black;
+    font-family: GoogleSans;
+    padding-left: 16px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+
+/* icon arrow down - dropdown */
+
+.ms-dropdown .ms-btn-dropdown {
+    width: 16px;
+    height: 40px;
+    padding: 0px 12px;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.ms-dropdown .ms-btn-dropdown i {
+    font-size: 16px;
+}
+
+
+/* item - dropdown */
+
+.ms-all-item-dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 44px;
+    border-radius: 4px;
+    padding: 4px 0px 4px 0px;
+    background-color: white;
+    z-index: 99999;
+}
+
+.ms-item-dropdown {
+    height: 40px;
+    display: flex;
+    padding-left: 36px;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.ms-item-dropdown {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+}
+
+.ms-item-dropdown:hover {
+    background-color: #E9EBEE;
+}
+
+.ms-item-dropdown.selected {
+    color: white;
+    background-color: #019160;
+    background-image: url('../../assets/icon/checked.png');
+    background-size: 16px 16px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+}

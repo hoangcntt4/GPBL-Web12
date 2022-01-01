@@ -1,0 +1,58 @@
+.ms-table {
+    width: 100%;
+    border-spacing: unset;
+    border: unset;
+    border-collapse: collapse;
+    background-color: #fff;
+    /* border: 1px solid red; */
+}
+
+table.ms-table tr {
+    border-bottom: 1px solid #abb;
+    border-collapse: collapse;
+    height: 48px;
+}
+
+table.ms-table tr td {
+    padding: 0 16px;
+}
+
+table.ms-table tbody tr:nth-child(2n) {
+    background-color: #fff;
+}
+
+table.ms-table tbody tr:hover {
+    background-color: #EBF9F4;
+    cursor: pointer;
+}
+
+table.ms-table tbody tr.selected {
+    background-color: #EBF9F4;
+    cursor: pointer;
+}
+
+
+/* table name */
+
+.ms-name-table {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+/* khung ngoai table */
+
+.ms-box-table {
+    width: 100%;
+    display: flex;
+    max-height: calc(100vh - 217px);
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.ms-box-table th {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    line-height: 48px;
+}

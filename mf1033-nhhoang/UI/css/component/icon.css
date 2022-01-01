@@ -1,0 +1,118 @@
+.icon-add {
+    background-image: url('../../assets/icon/add.png');
+}
+
+.icon-search {
+    background-image: url('../../assets/icon/search.png');
+}
+
+.icon-close {
+    background-image: url('../../assets/icon/x.svg');
+}
+
+.icon-prevpage {
+    background-image: url('../../assets/icon/btn-prev-page.svg');
+}
+
+.icon-firstpage {
+    background-image: url('../../assets/icon/btn-firstpage.svg');
+}
+
+.icon-nextpage {
+    background-image: url('../../assets/icon/btn-next-page.svg');
+}
+
+.icon-lastpage {
+    background-image: url('../../assets/icon/btn-lastpage.svg');
+}
+
+.icon-arrow-up {
+    background-image: url('../../assets/icon/btn-next-page.svg');
+}
+
+.icon-documentonline {
+    background-image: url('../../assets/icon/document-online.png');
+}
+
+.icon-option {
+    background-image: url('../../assets/icon/option.png');
+}
+
+.icon-setting {
+    background-image: url('../../assets/icon/setting.png');
+}
+
+.icon-dashboard {
+    background-image: url('../../assets/icon/dashboard.png');
+}
+
+.icon-dicemployee {
+    background-image: url('../../assets/icon/dic-employee.png');
+}
+
+.icon-report {
+    background-image: url('../../assets/icon/report.png');
+}
+
+.icon-refresh {
+    background-image: url('../../assets/icon/refresh.png');
+}
+
+.icon-checked {
+    background-image: url('../../assets/icon/checked.png');
+}
+
+.ms-icon-size-16 {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+.ms-icon-size-20 {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    display: inline-block;
+}
+
+.ms-icon-size-25 {
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px 25px;
+    display: inline-block;
+}
+
+.ms-arrow-sort i {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    color: #E9EBEE;
+    display: block;
+}
+
+.ms-arrow-sort {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.ms-icon-notification {
+    cursor: pointer;
+}
+
+.ms-icon-point-red {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: red;
+    top: 0px;
+    right: 2px;
+}

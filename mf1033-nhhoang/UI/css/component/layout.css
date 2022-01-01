@@ -1,0 +1,153 @@
+.ms-top-header {
+    position: relative;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 5px #a5a7ab;
+}
+
+.ms-top-header.ms-row {
+    padding: 0px;
+}
+
+
+/* menu left */
+
+.ms-row {
+    padding-bottom: 5px;
+}
+
+.ms-row::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.ms-menu-left {
+    float: left;
+    width: 220px;
+    background-color: #FFFFFF;
+    border-right: 1px solid #e5e5e5;
+}
+
+.ms-menu-left .ms-item-menu {
+    font-family: GoogleSans Medium;
+    height: 48px;
+    width: 100%;
+    padding-left: 15px;
+    color: #454545;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ms-menu-left .ms-item-menu:hover {
+    background-color: #e5e5e5;
+    color: #fff;
+}
+
+.ms-menu-left .ms-menu-selected {
+    background-color: #019160;
+    color: white;
+}
+
+.ms-collapse-menu {
+    float: right;
+    width: 25px;
+    height: 25px;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px 0px 0px 4px;
+    background-color: #BBBBBB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ms-collapse-menu i {
+    font-size: 15px;
+}
+
+
+/* content */
+
+.ms-content {
+    float: left;
+    width: calc(100% - 221px);
+    min-height: calc(100% - 60px);
+    background-color: #E9EBEE;
+    padding: 10px 10px 0px 10px;
+    box-sizing: border-box;
+}
+
+
+/* image top header */
+
+.ms-header-toggle {
+    width: 24px;
+    height: 24px;
+    margin: 12px 10px 12px 16px;
+    cursor: pointer;
+}
+
+.ms-header-logo {
+    width: 90px;
+    height: 24px;
+    padding: 12px 0px;
+    cursor: pointer;
+}
+
+.ms-left-header {
+    width: 220px;
+    border-right: 1px solid #e5e5e5;
+    float: left;
+}
+
+.ms-right-header {
+    width: calc(100% - 221px);
+    float: left;
+    padding-bottom: 0px !important;
+}
+
+
+/* tool user top header */
+
+.ms-tool-user {
+    float: right;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.ms-tool-user img {
+    width: 32px;
+    height: 32px;
+    margin: 0px 16px;
+}
+
+.ms-tool-user .ms-tool-user-option {
+    margin: 0px 16px;
+    cursor: pointer;
+}
+
+.ms-tool-user-cursor {
+    cursor: pointer;
+}
+
+.ms-tool-user .ms-icon-notification {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.ms-tool-user .ms-icon-notification i {
+    font-size: 20px;
+}
+
+.ms-tool-search {
+    width: 70%;
+    max-width: 750px;
+    display: flex;
+    justify-content: space-between;
+    float: left;
+}

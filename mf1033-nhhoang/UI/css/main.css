@@ -1,0 +1,67 @@
+@import url(./component/button.css);
+@import url(./component/icon.css);
+@import url(./component/input.css);
+@import url(./component/table.css);
+@import url(./component/layout.css);
+@import url(./component/page-navigation.css);
+@import url(./component/dropdown.css);
+@import url(./component/dialog.css);
+@import url(./component/notification.css);
+@import url(./component/toast.css);
+@font-face {
+    font-family: GoogleSans;
+    src: url('../assets//font/GoogleSans-Regular.otf');
+}
+
+@font-face {
+    font-family: GoogleSans Bold;
+    src: url('../assets/font/GoogleSans-Bold.otf');
+}
+
+@font-face {
+    font-family: GoogleSans Italic;
+    src: url('../assets/font/GoogleSans-Italic.otf');
+}
+
+@font-face {
+    font-family: GoogleSans Medium;
+    src: url('../assets/font/GoogleSans-Medium.otf');
+}
+
+@font-face {
+    font-family: GoogleSans Thin;
+    src: url('../assets/font/GoogleSans-Thin.otf');
+}
+
+@font-face {
+    font-family: GoogleSans Black;
+    src: url('../assets/font/GoogleSans-Italic.otf');
+}
+
+* {
+    font-family: GoogleSans;
+    font-size: 13px;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    width: 100%;
+}
+
+.ms-text-red {
+    color: red;
+    display: inline-block;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
