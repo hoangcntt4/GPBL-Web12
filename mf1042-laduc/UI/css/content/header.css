@@ -1,0 +1,67 @@
+/*css cho header của vùng nội dung*/
+
+.m-content-header {
+    width: 100%;
+    height: 80px;
+    padding: 18px 24px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #dddddd;
+}
+
+
+/*css cho combobox trong header*/
+
+.m-content-combobox {
+    width: 100%;
+}
+
+
+/*css cho thẻ select*/
+
+.m-content-combobox select {
+    margin: 0;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*css cho vùng tài khoản*/
+
+.m-content-user {
+    display: flex;
+    height: 40px;
+    position: absolute;
+    right: 24px;
+    top: 18px;
+}
+
+
+/*css cho avatar user*/
+
+.m-content-user .m-user-avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+
+/**/
+
+.m-content-user .m-user-name {
+    padding: 12px 0;
+}
+
+
+/*css cho phần mở rộng lựa chọn của user*/
+
+.m-content-user .m-user-expand {
+    padding: 12px 4px;
+    height: 16px;
+    width: 16px;
+    opacity: 0.5;
+}
+
+.m-content-user .m-user-expand:hover {
+    opacity: 1;
+    cursor: pointer;
+}

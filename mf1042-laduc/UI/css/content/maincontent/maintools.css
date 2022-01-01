@@ -1,0 +1,41 @@
+/*css cho phần công cụ của trang*/
+
+.m-main-tools {
+    width: 100%;
+    height: 40px;
+    padding: 0 24px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+/*css cho combobox trong phần công cụ*/
+
+.m-main-tools .m-combobox {
+    margin: 0 8px;
+}
+
+
+/*css cho input tìm kiếm trong phần công cụ*/
+
+.m-main-tools input {
+    width: 350px;
+}
+
+
+/*css cho button refersh trong phần công cụ*/
+
+.m-main-tools #btnRefresh {
+    position: absolute;
+    top: 1px;
+    right: 24px;
+}
+
+
+/*css cho botton xóa trong phần công cụ*/
+
+.m-main-tools #btnDeleteEmployee {
+    position: absolute;
+    top: 1px;
+    right: 88px;
+}

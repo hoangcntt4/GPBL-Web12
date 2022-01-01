@@ -1,0 +1,51 @@
+.m-main-menu {
+    display: block;
+}
+
+.m-main-menu .m-menu-element {
+    display: flex;
+    width: 250px;
+    height: 80px;
+    box-sizing: border-box;
+}
+
+
+/*css cho các icon trong menu*/
+
+.m-menu-element .m-menu-icon {
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+    margin: 26px;
+}
+
+
+/*css cho các nội dung của menu*/
+
+.m-menu-element .m-menu-text {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+
+/* css cho các thẻ a khi hover*/
+
+.m-menu-element .m-menu-text a:hover {
+    background-color: #019160;
+    color: #ffffff;
+}
+
+
+/*css cho các thẻ a*/
+
+.m-main-menu a {
+    color: #454545;
+    text-decoration: none;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}

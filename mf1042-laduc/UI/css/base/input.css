@@ -1,0 +1,57 @@
+.m-fieldinput {
+    display: block;
+}
+
+
+/* default input*/
+
+.m-input {
+    min-width: 150px;
+    max-width: 500px;
+    padding: 0 8px 0 30px;
+    border: 1px solid #dbdeff;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #bbbbbb;
+    font-style: italic;
+    outline: none;
+    background-image: url('/assets/Resource/icon/search.png');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: 16px 16px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+
+/*input focus*/
+
+.m-input:focus {
+    border: 1px solid #019160;
+    font-size: 13px;
+    color: #000000;
+}
+
+
+/* input active*/
+
+.m-input:active {
+    border: 1px solid #019160;
+}
+
+
+/*css cho label của input*/
+
+.m-inputlabel {
+    display: block;
+    font-size: 13px;
+    color: #000000;
+    font-weight: 500;
+}
+
+
+/* css cho ô input nhập dữ liệu không đúng*/
+
+.m-invalid {
+    border: 1px solid red;
+}
