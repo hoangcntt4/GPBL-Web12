@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-transform: none;
+    text-decoration: none;
+}
+body{
+    font-family: Notosans;
+    font-size: 13px;
+}
+
+@font-face {
+    font-family: Notosans;
+    src: url('../../assets/fonts/notosans-regular.2cb88a13.woff2');
+}
+
+@font-face {
+    font-family: Notosans-Bold;
+    src: url('../../assets/fonts/notosans-bold.3ede5aff.woff2');
+}
+
+@font-face {
+    font-family: Notosans-Semibold;
+    src: url('../../assets/fonts/notosans-semibold.df3e6dc4.woff2');
+}
+
+@font-face {
+    font-family: Notosans-Italic;
+    src: url('../../assets/fonts/notosans-italic.1c1aaac9.woff2');
+}
+.m-headding{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+.m-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+.m-subtitle{
+    font-size: 13px;
+}
+
+
+/* checkbox và radio */
+.m-checkbox + label{
+    display: block;
+    cursor: pointer;
+}
+.m-checkbox, .m-radio{
+    display: none;
+}
+
+.m-checkbox + label:before {
+    content: "\2713";
+    text-align: center;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: transparent;
+    transition: .2s;
+}
+
+.m-checkbox:checked + label:before {
+    border: 1px solid #019160;
+    background-color: #019160;
+    color: #fff;
+}
+
+.m-radio + label{
+    position: relative;
+    font-size: 13px;
+    color: #000000;
+    border-radius: 4px;
+    border: 1px solid #BBBBBB;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.m-radio + label:before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid #BBBBBB;
+    margin-right: 8px;
+}
+
+.m-radio:checked + label:before {
+    /* background-image: url('../../assests/icon/radio@2x.png'); */
+    background-size: 20px;
+    
+}
+/* icon */
+.mi-icon-item{
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    background: url('../../assets/img/Sprites.svg') no-repeat;
+    cursor: pointer;
+}
+
+/* align */
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
