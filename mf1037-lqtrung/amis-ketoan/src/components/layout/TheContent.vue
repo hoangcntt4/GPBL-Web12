@@ -1,5 +1,5 @@
 <template>
     <div>
-        CONTENT HOMEPAGE
+        Tổng quan
     </div>
 </template>

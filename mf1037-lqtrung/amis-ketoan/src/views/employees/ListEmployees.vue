@@ -3,7 +3,7 @@
         <div class="lstemployees-header">
             <div class="title-employee">Nhân viên</div>
             <div class="btnAddEmployee">
-                <base-button/>
+                <button class="m-button" @click="btnAddOnClick()">Thêm mới nhân viên</button>
             </div>
         </div>
         <div class="lstEmployees-content">
@@ -31,16 +31,16 @@
                         <th class="text-center">CHỨC NĂNG</th>
                     </thead>
                     <tbody>
-                        <tr v-for="employee in employees" :key="employee">
+                        <tr v-for="employee in employees" :key="employee" @dblclick="dbClickonRow(employee.EmployeeId)">
                             <td class="text-center">
                                 <input type="checkbox" style="width: 18px;height: 16px;cursor: pointer">
                             </td>
                             <td class="text-left">{{employee.EmployeeCode}}</td>
-                            <td class="text-left">{{employee.FullName}}</td>
+                            <td class="text-left">{{employee.EmployeeName}}</td>
                             <td class="text-left">{{FormatGender(employee.Gender)}}</td>
                             <td class="text-center">{{FormatDate(employee.DateOfBirth)}}</td>
                             <td class="text-left">{{employee.IdentityNumber}}</td>
-                            <td class="text-left">{{employee.PositionName}}</td>
+                            <td class="text-left">{{employee.EmployeePosition}}</td>
                             <td class="text-left">{{employee.DepartmentName}}</td>
                             <td class="text-center">
                                 <div class="fnc_btn">
@@ -77,25 +77,36 @@
                 </div>
             </div>
         </div>
+        <detail-employee :employeeId="employeeId" :editMode="editMode" />
     </div>
 </template>
 <script>
-import BaseButton from '../../components/base/BaseButton.vue'
 import BaseInput from '../../components/base/BaseInput.vue'
 import BaseCombobox from '../../components/base/BaseCombobox.vue'
+import DetailEmployee from '../../views/employees/DetailEmployee.vue'
 import axios from "axios";
 export default {
     name: "ListEmployees",
-    components: { BaseButton, BaseInput, BaseCombobox },
+    components: { BaseInput, BaseCombobox, DetailEmployee},
     data:()=> ({
-        employees: []
+        employees: [],
+        employeeId : null,
+        editMode: null,
     }),
     async created(){
-        //Gọi api lấy dữ liệu list nhân viên
-        const response = await axios.get("http://cukcuk.manhnv.net/api/v1/Employees");
-        this.employees = response.data;
+        this.GetData();
     },
     methods: {
+        GetData(){
+            var me = this;
+            //Gọi api lấy dữ liệu list nhân viên
+            axios.get("http://amis.manhnv.net/api/v1/Employees")
+            .then(function(res){
+                me.employees = res.data;
+            }).catch(function(err){
+                console.log(err);
+            })
+        },
         //Định dạng giới tính
         FormatGender(gender){
             if(gender==0){
@@ -115,6 +126,20 @@ export default {
             const d = date.getDate().toString().padStart(2, "0");
             return `${d}/${m}/${y}`
         },
+        //Hiển thị form chi tiết 
+        btnAddOnClick(){
+            this.editMode = 1;
+            document.getElementById("dialogEmployee").style.display = "block";
+            this.employeeId = null;
+        },
+        //doubleClick hiển thị chi tiết nhân viên
+        dbClickonRow(employeeId){
+            this.editMode = 0;
+            //gán employeeId trong data = employeeId từ row
+            this.employeeId = employeeId;
+            //hiển thị form chi tiết
+            document.getElementById("dialogEmployee").style.display = "block";
+        }
     },
 
 }
@@ -131,9 +156,10 @@ export default {
     color: #111;
 }
 .lstEmployees-content{
-    height: 600px;
     margin: 0 24px;
     background-color: #fff;
+    height: 640px;
+    padding-bottom: 8px;
 }
 .btnAddEmployee{
     margin-right: 12px;
@@ -158,11 +184,13 @@ export default {
 #tbEmployees{
     border-spacing: 0;
     min-width: 100%;
+    overflow: scroll;
 }
 .employees-table{
     padding: 8px 24px 8px 16px;
     width: 100%;
     overflow: auto;
+    height: calc(100% - 122px);
 }
 #tbEmployees thead th{
     height: 34px;
@@ -186,6 +214,10 @@ export default {
 }
 
 .mi-arrow-up{
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
     background-position: -896px -359px;
 }
 .fnc_btn div{
@@ -198,11 +230,18 @@ export default {
     font-weight: 600;
     width: 44px;
     height: 36px;
+    padding: 6px 0 6px 16px;
+}
+.btn_fix:active{
+    border: 1px solid #0075c0;
 }
 .btn_arrow{
     width: 46px;
     height: 36px;
     padding: 8px 10px;
+}
+.btn_arrow:active{
+    border: 1px solid #0075c0;
 }
 /* pagination */
 .ms-pagination{

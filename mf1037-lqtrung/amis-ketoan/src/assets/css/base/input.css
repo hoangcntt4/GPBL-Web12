@@ -1,0 +1,17 @@
+.ms-input{
+    display: flex;
+    justify-content: center;
+}
+.m-input{
+    font-size: 13px;
+    height: 32px;
+    color: inherit;
+    position: relative;
+    border-radius: 2px;
+    border: 1px solid #babec5;
+    padding: 0 12px 0 10px;
+}
+.m-input:focus{
+    outline: none;
+    border: 1px solid #2ca01c;
+}

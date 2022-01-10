@@ -2,16 +2,16 @@
     <div class="m-menu">
             <div class="m-menu-logo">
                 <a href="" class="toggle"></a>
-                <a href="" class="logo"><img src="../../assets/img/Logo_Module_TiengViet_White.66947422.svg" alt="" height="24px"></a>
+                <router-link to="/" class="logo"><img src="../../assets/img/Logo_Module_TiengViet_White.66947422.svg" alt="" height="24px"></router-link>
             </div>
             <div class="menu-item-list">
                 <div class="menu-item">
-                    <a href="" class="item-link">
+                    <router-link to="/content" class="item-link">
                         <div class="menu-item-icon">
                             <div class="mi-icon-item mi-dashboard"></div>
                         </div>
                         <div class="menu-item-title">Tổng quan</div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="menu-item">
                     <a href="" class="item-link">
