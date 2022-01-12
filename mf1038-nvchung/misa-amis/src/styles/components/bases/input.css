@@ -1,0 +1,36 @@
+.input {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #babec5;
+  border-radius: 3px;
+  padding: 0 10px;
+  height: 32px;
+}
+.input:hover {
+  outline: 1px solid #e2e2e2;
+}
+.input:focus-within {
+  border-color: var(--green);
+}
+.input.input--error {
+  border-color: red;
+}
+.input input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  min-width: 0;
+  width: 100%;
+  font-size: 13px;
+}
+.input input::placeholder {
+  font-size: 11px;
+  font-style: italic;
+}
+.input__icon {
+  flex-shrink: 0;
+}
+.input--icon input {
+  padding-right: 10px;
+}
