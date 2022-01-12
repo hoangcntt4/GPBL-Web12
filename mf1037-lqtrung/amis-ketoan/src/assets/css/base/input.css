@@ -1,5 +1,8 @@
 .ms-input{
     display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
     justify-content: center;
 }
 .m-input{
@@ -14,4 +17,29 @@
 .m-input:focus{
     outline: none;
     border: 1px solid #2ca01c;
+}
+
+/* input search  */
+.m-input-search{
+    width: 240px;
+    padding: 0 44px 0 10px;
+}
+.mi-search{
+    background-position: -992px -360px !important;
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+    cursor: pointer;
+    position: absolute;
+    left: auto;
+    right: 12px;
+    color: rgba(0,0,0,.4);
+}
+
+::placeholder{
+    font-style: italic;
+    font-size: 12px;
+    color: #BBBBBB;
+    
 }
