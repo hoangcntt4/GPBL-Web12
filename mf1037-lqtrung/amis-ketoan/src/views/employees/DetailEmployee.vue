@@ -27,7 +27,8 @@
 
       <div class="popup-content-container">
           <!-- form chi tiết  -->
-        <div class="popup-content">
+        <form action="">
+          <div class="popup-content">
           <div class="pop-top">
               <!-- form-left  -->
             <div class="e-left">
@@ -40,9 +41,11 @@
                   <div>
                     <input
                       type="text"
-                      class="m-input"
+                      class="form-control m-input"
                       style="width: 150px"
                       v-model="employee.EmployeeCode"
+                      @blur="validate()"
+                      :class="{'is-invalid': errors.employeeCode}"
                     />
                   </div>
                 </div>
@@ -54,9 +57,11 @@
                   <div>
                     <input
                       type="text"
-                      class="m-input"
+                      class="form-control m-input"
                       style="width: 235px"
                       v-model="employee.EmployeeName"
+                      @blur="validate()"
+                      :class="{'is-invalid': errors.employeeName}"
                     />
                   </div>
                 </div>
@@ -69,10 +74,12 @@
                 <div>
                   <input
                     type="text"
-                    class="m-input"
+                    class="form-control m-input"
                     style="width: 391px"
                     v-model="employee.DepartmentId"
-                  />
+                    @blur="validate()"
+                    :class="{'is-invalid': errors.departmentId}"
+                  /> 
                 </div>
               </div>
               <!-- Chức danh  -->
@@ -305,6 +312,7 @@
             </div>
           </div>
         </div>
+        </form>
         <div class="divide"></div>
         <div class="popup-footer-container">
           <div class="popup-footer">
@@ -336,8 +344,30 @@ export default {
   name: "DetailEmployee",
   props: ["employeeId", "editMode"],
   data: () => ({
-    employee: {},
+    employee: {
+      EmployeeCode: "",
+      EmployeeName: "",
+      DepartmentId: "",
+      EmployeePosition: "",
+      DateOfBirth: "",
+      Gender: "",
+      IdentityNumber: "",
+      IdentityDate: "",
+      IdentityPlace: "",
+      Address: "",
+      TelephoneNumber: "",
+      PhoneNumber: "",
+      Email: "",
+      BankAccountNumber: "",
+      BankName: "",
+      BankBranchName: "",
+    },
     checkLoad: false,
+    errors: {
+      employeeCode: "",
+      employeeName: "",
+      departmentId: ""
+    }
   }),
   watch: {
     employeeId: function (value) {
@@ -348,8 +378,8 @@ export default {
           .then(function (res) {
             console.log(res);
             me.employee = res.data;
-            me.employee.DateOfBirth = me.FormatDate(res.data.DateOfBirth);
-            me.employee.IdentityDate = me.FormatDate(res.data.IdentityDate);
+            me.employee.DateOfBirth = me.formatDate(res.data.DateOfBirth);
+            me.employee.IdentityDate = me.formatDate(res.data.IdentityDate);
           })
           .catch(function (err) {
             console.log(err);
@@ -363,8 +393,33 @@ export default {
     /* Lưu dữ liệu
         Author: LQTrung(7/1/2022) 
     */
+    validate(){
+      let isValid = true
+      this.errors=  {
+          employeeCode: "",
+          employeeName: "",
+          departmentId: ""
+      }
+
+      if(!this.employee.EmployeeCode){
+          this.errors.employeeCode = "Mã không được để trống."
+          isValid = false
+      }
+
+      if(!this.employee.EmployeeName){
+          this.errors.employeeName = "Tên không được để trống."
+          isValid = false
+      }
+
+      if(!this.employee.DepartmentId){
+          this.errors.departmentId = "Đơn vị không được để trống."
+          isValid = false
+      }
+      return isValid
+    },
     btnSaveOnClick() {
-      var me = this;
+      if(this.validate()){
+        var me = this;
       switch (this.editMode) {
         case 1:
           //gọi API thực hiện thêm nhân viên
@@ -404,14 +459,16 @@ export default {
         default:
           break;
       }
+      }
     },
+
     //Ẩn form chi tiết
     btnCancelOnClick() {
       document.getElementById("dialogEmployee").style.display = "none";
       this.employee = null;
     },
     //định dạng ngày tháng
-    FormatDate(dob) {
+    formatDate(dob) {
       const date = new Date(dob);
       const y = date.getFullYear().toString();
       const m = (date.getMonth() + 1).toString().padStart(2, "0");
@@ -487,6 +544,9 @@ export default {
   padding: 0 32px 20px;
   margin-bottom: 16px;
 }
+.form-control:focus{
+  box-shadow: none;
+}
 .top-e-ip-1 {
   display: flex;
 }
@@ -556,4 +616,6 @@ export default {
 .btn-default:active {
   background-color: #bbbcbc;
 }
+
+
 </style>

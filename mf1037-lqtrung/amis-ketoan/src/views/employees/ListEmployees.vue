@@ -88,19 +88,6 @@
                     >
                       <div class="mi-icon-item mi-arrow-up"></div>
                     </button>
-                    <!-- <div class="contextMenu">
-                                            <ul>
-                                                <li>
-                                                    Nhân bản
-                                                </li>
-                                                <li>
-                                                    Xóa
-                                                </li>
-                                                <li>
-                                                    Ngừng sử dụng
-                                                </li>
-                                            </ul>
-                                        </div> -->
                   </div>
                 </div>
               </td>
@@ -131,11 +118,30 @@
         </div>
       </div>
     </div>
+
+    <!-- dialog chi tiết nhân viên  -->
     <detail-employee
       :employeeId="employeeId"
       :editMode="editMode"
       @LoadData="loadData"
     />
+
+    <!-- contextMenu -->
+     <div class="contextMenu">
+        <ul>
+            <li>
+                Nhân bản
+            </li>
+            <li>
+                Xóa
+            </li>
+            <li>
+                Ngừng sử dụng
+            </li>
+        </ul>
+    </div>
+
+    <!-- popup xác nhận xóa nhân viên  -->
     <div class="dialog" id="dialog-delete">
       <div class="dialog-content">
         <div class="title-delete">
@@ -416,10 +422,19 @@ export default {
 
 /* context-Menu */
 .contextMenu {
+  display: none;
   position: absolute;
   width: 200px;
-  top: 0;
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  border-radius: 5px;
+  list-style: none;
+  box-shadow: 0 15px 35px rgba(50,50,90,0.1),  0 5px 15px rgba(0,0,0,0.07);
+  overflow: hidden;
+  z-index: 999999;
 }
+
 
 /* popup xóa  */
 #dialog-delete .dialog-content {
@@ -438,7 +453,6 @@ export default {
   min-height: 48px;
 }
 .title-confirm{
-  overflow: auto;
     max-height: 400px;
     margin-bottom: 32px;
     padding-left: 16px;
@@ -464,4 +478,5 @@ export default {
   border-radius: 4px;
   padding: 6px 16px;
 }
+
 </style>
