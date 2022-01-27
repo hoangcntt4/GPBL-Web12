@@ -7,11 +7,11 @@
     <div class="main-content">
       <div class="tool-bar">
         <m-input
-          @input="loadEmployees($event.target.value)"
+          v-model="searchText"
           placeholder="Tìm theo mã, tên nhân viên"
           icon="search"
         />
-        <m-icon icon="refresh" @click="loadEmployees" />
+        <m-icon icon="refresh" @click="handleResetData" />
         <m-icon icon="settings" @click="showCustomizerPopup = true" />
       </div>
       <m-table
@@ -134,6 +134,7 @@ import MSpinner from "../components/bases/MSpinner.vue";
 import EmployeePopup from "./EmployeePopup.vue";
 import MMessageDialog from "../components/bases/MMessageDialog.vue";
 import MPopup from "../components/bases/MPopup.vue";
+import ApiConfig from "../api-config";
 export default {
   components: {
     Layout,
@@ -155,8 +156,13 @@ export default {
     // tat ca header cua table employee
     const EMPLOYEE_HEADERS = [
       { text: "Mã nhân viên", propName: "EmployeeCode", width: 120 },
-      { text: "Tên nhân viên", propName: "EmployeeName", width: 174 },
-      { text: "Giới tính", propName: "GenderName", width: 64 },
+      { text: "Tên nhân viên", propName: "FullName", width: 174 },
+      {
+        text: "Giới tính",
+        propName: "Gender",
+        width: 80,
+        format: "gender",
+      },
       {
         text: "Ngày sinh",
         propName: "DateOfBirth",
@@ -179,7 +185,6 @@ export default {
         propName: "BankBranchName",
         width: 200,
       },
-      { text: "Tỉnh/TP Ngân hàng", propName: "BankProvinceName", width: 180 },
       { text: "Địa chỉ", propName: "Address", width: 200 },
       { text: "ĐT di động", propName: "PhoneNumber", width: 150 },
       { text: "ĐT cố định", propName: "TelephoneNumber", width: 150 },
@@ -195,7 +200,6 @@ export default {
         width: 150,
       },
       { text: "Người sửa", propName: "ModifiedBy", width: 150 },
-      { text: "Mã số thuế", propName: "PersonalTaxCode", width: 150 },
     ];
     //header cua table tuy chinh giao dien
     const CUSTOMIZER_TABLE_HEADERS = [
@@ -214,6 +218,11 @@ export default {
     this.loadEmployees();
   },
   methods: {
+    handleResetData() {
+      this.searchText = "";
+      this.page = 1;
+      this.perPage = 10;
+    },
     //reset tuy chinh giao dien ve mac dinh
     handleResetCustomizer() {
       this.selectedEmployeePropNames = this.DEFAULT_EMPLOYEE_HEADERS.map(
@@ -244,23 +253,22 @@ export default {
      * @param {String} search - search keyword
      * ham load employee co phan trang va loc du lieu
      */
-    async loadEmployees(search) {
+    async loadEmployees() {
       this.appLoading = true; //bat spinner
       try {
-        const { data, status } = await this.$axios.get(
-          "http://amis.manhnv.net/api/v1/Employees/filter",
+        const { data } = await this.$axios.get(
+          `${ApiConfig.EMPLOYEES_API}/Filter`,
           {
             params: {
               pageSize: this.perPage, //so ban ghi tren trang
               pageNumber: this.page, //trang hien tai
-              employeeFilter: search, //search keyword
+              search: this.searchText, //search keyword
             },
           }
         );
-        this.employees = status == 204 ? [] : data.Data; //neu ko co ban ghi nao set []
-        this.pageCount = data.TotalPage; //tong so trang
-        this.page = 1; //set lai trang hien tai
-        this.employeeCount = data.TotalRecord; //tong so record
+        this.employees = data.Data;
+        this.pageCount = data.TotalPages; //tong so trang
+        this.employeeCount = data.TotalRecords; //tong so record
       } catch {
         this.error = "Có lỗi xảy ra"; //hien popup loi
       } finally {
@@ -275,7 +283,7 @@ export default {
     //ham hien xac nhan xoa
     delEmp(emp) {
       this.currentDeleteEmpId = emp.EmployeeId; //gan id cua employee duoc chon de xoa
-      this.confirmText = `Bạn có thực sự muốn xóa nhân viên ${emp.EmployeeName} không?`;
+      this.confirmText = `Bạn có thực sự muốn xóa nhân viên ${emp.FullName} không?`;
       this.showConfirm = true; //hien xac nhan xoa
     },
     //ham xoa employee
@@ -285,7 +293,7 @@ export default {
       try {
         //thuc hien xoa va load lai du lieu
         await this.$axios.delete(
-          `http://amis.manhnv.net/api/v1/Employees/${this.currentDeleteEmpId}`
+          `${ApiConfig.EMPLOYEES_API}/${this.currentDeleteEmpId}`
         );
         this.loadEmployees();
       } catch {
@@ -307,6 +315,7 @@ export default {
   },
   data() {
     return {
+      searchText: "",
       selectedEmployeeHeaders: this.DEFAULT_EMPLOYEE_HEADERS, //cac header duoc chon cua bang employee
       pages: [
         { text: "10 bản ghi trên 1 trang", value: 10 },
@@ -333,6 +342,12 @@ export default {
       ), //cac thuoc tinh duoc chon tren tuy chinh popup
       selectedEmployeeIds: [], //cac id eployee duoc chon
     };
+  },
+  watch: {
+    searchText() {
+      this.page = 1;
+      this.loadEmployees();
+    },
   },
 };
 </script>

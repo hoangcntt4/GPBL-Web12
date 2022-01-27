@@ -17,4 +17,8 @@ export default {
     }
     return `${y}${delim}${m}${delim}${d}`;
   },
+  formatGender(gender) {
+    if (gender == 0) return "Nữ";
+    return gender == 1 ? "Nam" : "Khác";
+  },
 };

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Vd14om/b1EfNQ8k6MPWjpDofvx9p0YIAeksZRabXyIsSuhRKzKTv/eOPvXxgmDBZ9Lz7N/2MoLuD2P8+M7t5lQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\chung\\Documents\\VisualStudio\\Misa.Amis.Api\\Misa.Amis.Infrustructure\\Misa.Amis.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\chung\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\chung\\.nuget\\packages\\mysqlconnector\\2.1.2\\mysqlconnector.2.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
