@@ -112,6 +112,9 @@ export default {
     perPage() {
       this.setPage(1);
     },
+    page(val) {
+      this.setPage(val);
+    },
   },
 };
 </script>

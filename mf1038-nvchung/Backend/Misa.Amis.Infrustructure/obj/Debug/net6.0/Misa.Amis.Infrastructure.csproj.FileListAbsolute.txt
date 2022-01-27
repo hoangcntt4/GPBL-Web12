@@ -1,0 +1,15 @@
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\bin\Debug\net6.0\Misa.Amis.Infrastructure.deps.json
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\bin\Debug\net6.0\Misa.Amis.Infrastructure.dll
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\bin\Debug\net6.0\ref\Misa.Amis.Infrastructure.dll
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\bin\Debug\net6.0\Misa.Amis.Infrastructure.pdb
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\bin\Debug\net6.0\Misa.Amis.Core.dll
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\bin\Debug\net6.0\Misa.Amis.Core.pdb
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\obj\Debug\net6.0\Misa.Amis.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\obj\Debug\net6.0\Misa.Amis.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\obj\Debug\net6.0\Misa.Amis.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\obj\Debug\net6.0\Misa.Amis.Infrastructure.AssemblyInfo.cs
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\obj\Debug\net6.0\Misa.Amis.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\obj\Debug\net6.0\Misa.Amis.Infrastructure.csproj.CopyComplete
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\obj\Debug\net6.0\Misa.Amis.Infrastructure.dll
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\obj\Debug\net6.0\ref\Misa.Amis.Infrastructure.dll
+C:\Users\chung\Documents\VisualStudio\Misa.Amis.Api\Misa.Amis.Infrustructure\obj\Debug\net6.0\Misa.Amis.Infrastructure.pdb

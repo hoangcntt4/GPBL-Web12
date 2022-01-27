@@ -122,6 +122,10 @@ export default {
                 newItem[propName]
               );
               break;
+            case "gender":
+              newItem[propName] = this.$formatters.formatGender(
+                newItem[propName]
+              );
           }
         }
         return newItem;
