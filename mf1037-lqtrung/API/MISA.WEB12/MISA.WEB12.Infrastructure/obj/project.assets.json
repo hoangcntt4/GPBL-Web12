@@ -1,0 +1,167 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Dapper/2.0.123": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {}
+        }
+      },
+      "MySqlConnector/2.1.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MySqlConnector.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/MySqlConnector.dll": {}
+        }
+      },
+      "MISA.WEB12.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/MISA.WEB12.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MISA.WEB12.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dapper/2.0.123": {
+      "sha512": "RDFF4rBLLmbpi6pwkY7q/M6UXHRJEOerplDGE5jwEkP/JGJnBauAClYavNKJPW1yOTWRPIyfj4is3EaJxQXILQ==",
+      "type": "package",
+      "path": "dapper/2.0.123",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.0.123.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
+    "MySqlConnector/2.1.3": {
+      "sha512": "ADYyRsHj1MfdEOzQUyObxG5DaCbmb6AxPNyScPd/3xHSjFg3YKtiwZfmjerHv6WHQvwgiSbq/Om5GZwNGnGwaA==",
+      "type": "package",
+      "path": "mysqlconnector/2.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net45/MySqlConnector.dll",
+        "lib/net45/MySqlConnector.xml",
+        "lib/net461/MySqlConnector.dll",
+        "lib/net461/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net5.0/MySqlConnector.dll",
+        "lib/net5.0/MySqlConnector.xml",
+        "lib/net6.0/MySqlConnector.dll",
+        "lib/net6.0/MySqlConnector.xml",
+        "lib/netcoreapp3.1/MySqlConnector.dll",
+        "lib/netcoreapp3.1/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.2.1.3.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    },
+    "MISA.WEB12.Core/1.0.0": {
+      "type": "project",
+      "path": "../MISA.WEB12.Core/MISA.WEB12.Core.csproj",
+      "msbuildProject": "../MISA.WEB12.Core/MISA.WEB12.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Dapper >= 2.0.123",
+      "MISA.WEB12.Core >= 1.0.0",
+      "MySqlConnector >= 2.1.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\HeLo\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\Misa.Web2021_12\\BaiTap\\GPBL\\GIT_GPBL\\GPBL-Web12\\mf1037-lqtrung\\API\\MISA.WEB12\\MISA.WEB12.Infrastructure\\MISA.WEB12.Infrastructure.csproj",
+      "projectName": "MISA.WEB12.Infrastructure",
+      "projectPath": "E:\\Misa.Web2021_12\\BaiTap\\GPBL\\GIT_GPBL\\GPBL-Web12\\mf1037-lqtrung\\API\\MISA.WEB12\\MISA.WEB12.Infrastructure\\MISA.WEB12.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\HeLo\\.nuget\\packages\\",
+      "outputPath": "E:\\Misa.Web2021_12\\BaiTap\\GPBL\\GIT_GPBL\\GPBL-Web12\\mf1037-lqtrung\\API\\MISA.WEB12\\MISA.WEB12.Infrastructure\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\HeLo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "E:\\Misa.Web2021_12\\BaiTap\\GPBL\\GIT_GPBL\\GPBL-Web12\\mf1037-lqtrung\\API\\MISA.WEB12\\MISA.WEB12.Core\\MISA.WEB12.Core.csproj": {
+              "projectPath": "E:\\Misa.Web2021_12\\BaiTap\\GPBL\\GIT_GPBL\\GPBL-Web12\\mf1037-lqtrung\\API\\MISA.WEB12\\MISA.WEB12.Core\\MISA.WEB12.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.0.123, )"
+          },
+          "MySqlConnector": {
+            "target": "Package",
+            "version": "[2.1.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

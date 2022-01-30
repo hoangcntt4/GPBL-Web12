@@ -1,0 +1,14 @@
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\bin\Debug\net6.0\MISA.WEB12.Core.deps.json
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\bin\Debug\net6.0\MISA.WEB12.Core.dll
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\bin\Debug\net6.0\ref\MISA.WEB12.Core.dll
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\bin\Debug\net6.0\MISA.WEB12.Core.pdb
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\obj\Debug\net6.0\MISA.WEB12.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\obj\Debug\net6.0\MISA.WEB12.Core.AssemblyInfoInputs.cache
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\obj\Debug\net6.0\MISA.WEB12.Core.AssemblyInfo.cs
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\obj\Debug\net6.0\MISA.WEB12.Core.csproj.CoreCompileInputs.cache
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\obj\Debug\net6.0\MISA.WEB12.Core.dll
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\obj\Debug\net6.0\ref\MISA.WEB12.Core.dll
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\obj\Debug\net6.0\MISA.WEB12.Core.pdb
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\obj\Debug\net6.0\MISA.WEB12.Core.csproj.AssemblyReference.cache
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\obj\Debug\net6.0\MISA.WEB12.Core.Resources.MISAResourceVN.resources
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Core\obj\Debug\net6.0\MISA.WEB12.Core.csproj.GenerateResource.cache
