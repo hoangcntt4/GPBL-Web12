@@ -1,0 +1,34 @@
+.message-dialog {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1002;
+}
+.message-dialog__line {
+  margin: 20px 0;
+}
+.message-dialog__inner {
+  min-width: 400px;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 32px;
+}
+.message-dialog__body {
+  display: flex;
+  align-items: center;
+}
+.message-dialog__text {
+  flex-grow: 1;
+  margin-left: 16px;
+}
+.message-dialog__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.message-dialog__footer--confirm {
+  justify-content: space-between;
+}

@@ -1,0 +1,14 @@
+.field__label {
+  padding-bottom: 4px;
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.field__label-title {
+  font-weight: bold;
+  white-space: nowrap;
+}
+.field__label-required {
+  color: red;
+  margin-left: 3px;
+}

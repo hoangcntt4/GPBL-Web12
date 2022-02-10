@@ -1,0 +1,16 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--gray);
+}
+.checkbox input:checked {
+  background: url(../../../assets/imgs/sprites.svg) no-repeat;
+  background-position: -1224px -360px;
+  border-color: var(--green);
+}
