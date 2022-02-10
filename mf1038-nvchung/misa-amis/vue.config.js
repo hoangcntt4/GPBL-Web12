@@ -9,6 +9,7 @@ const config = {
         "@": path.resolve(__dirname, "src"),
       },
     },
+    devtool: "source-map",
   },
 };
 module.exports = config;

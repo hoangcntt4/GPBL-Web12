@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z3xodX+neFccXGB9ED0Gq446Nm/x4obU2uypk3jeBh16ulva7N+3NoIo34Gaoc/07eagO7Gdt0umoscaQzAxvw==",
+  "dgSpecHash": "TceRZWcL0/donnGahYcN3gKwSzioOFgA7+3Rah5LOZx9OwzZmCek+TTWzPa8Pn8wLoFd1p2WQnWa2oiIc+6LtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\chung\\Documents\\VisualStudio\\Misa.Amis.Api\\Misa.Amis.Api\\Misa.Amis.Api.csproj",
+  "projectFilePath": "C:\\Users\\chung\\Documents\\VSCode\\GPBL-Web12\\mf1038-nvchung\\Backend\\Misa.Amis.Api\\Misa.Amis.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chung\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\chung\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

@@ -1,5 +1,5 @@
 <template>
-  <div class="message-dialog">
+  <div class="message-dialog" v-if="show">
     <div class="message-dialog__inner">
       <div class="message-dialog__body">
         <m-icon :size="48" :icon="icon" />
@@ -8,19 +8,22 @@
       <hr class="message-dialog__line" />
       <div
         :class="[
-          'message-dialog__footer',
-          confirm && 'message-dialog__footer--confirm',
+          'message-dialog__footer gap-10',
+          isConfirm && 'message-dialog__footer--confirm',
         ]"
       >
-        <m-button v-if="confirm" color="primary" @click="$emit('yes')"
-          >Có</m-button
+        <m-button v-if="showCancel" color="secondary" @click="$emit('cancel')"
+          >Hủy</m-button
         >
-        <m-button v-if="confirm" color="secondary" @click="$emit('no')"
+        <m-button
+          v-if="isConfirm"
+          :class="showCancel && 'ml-auto'"
+          color="secondary"
+          @click="$emit('no')"
           >Không</m-button
         >
-        <m-button v-if="info" color="primary" @click="$emit('close')"
-          >Đóng</m-button
-        >
+        <m-button v-if="isConfirm" @click="$emit('yes')">Có</m-button>
+        <m-button v-if="isInfo" @click="$emit('close')">Đóng</m-button>
       </div>
     </div>
   </div>
@@ -39,16 +42,19 @@ export default {
      * noi dung
      */
     text: String,
-    /**
-     * dang confirm
-     */
-    confirm: Boolean,
-    /**
-     * dang info
-     */
-    info: Boolean,
+    variant: String,
+    show: Boolean,
+    showCancel: Boolean,
   },
-  emits: ["yes", "no", "close"],
+  emits: ["yes", "no", "close", "cancel"],
+  computed: {
+    isConfirm() {
+      return this.variant == "confirm";
+    },
+    isInfo() {
+      return this.variant == "info";
+    },
+  },
 };
 </script>
 <style scoped src="../../styles/components/bases/message-dialog.css"></style>
