@@ -12,10 +12,12 @@
             <m-field required label="Mã">
               <m-input
                 v-model="employee.EmployeeCode"
-                :error="errorMessages.EmployeeCode"
-                @touch="handleFieldTouch('EmployeeCode')"
-                @input="isFormChanged = true"
+                name="EmployeeCode"
+                :error="getInputError('EmployeeCode')"
+                @blur="handleBlur"
+                @input="handleInput"
                 autoFocus
+                maxlength="25"
               />
             </m-field>
           </m-col>
@@ -23,14 +25,20 @@
             ><m-field required label="Tên">
               <m-input
                 v-model="employee.FullName"
-                :error="errorMessages.FullName"
-                @touch="handleFieldTouch('FullName')"
-                @input="isFormChanged = true"
+                name="FullName"
+                :error="getInputError('FullName')"
+                @blur="handleBlur"
+                @input="handleInput"
+                maxlength="200"
               /> </m-field
           ></m-col>
           <m-col :span="12">
             <m-field required label="Đơn vị">
               <m-combobox
+                name="DepartmentId"
+                @blur="handleBlur"
+                @input="handleInput"
+                :error="getInputError('DepartmentId')"
                 style="width: 100%"
                 :items="departments"
                 :loading="departmentLoading"
@@ -41,8 +49,6 @@
                 @select="handleDepartmentSelect"
                 @open="loadDepartments"
                 labelMember="DepartmentName"
-                :error="errorMessages.DepartmentId"
-                @touch="handleFieldTouch('DepartmentId')"
               />
             </m-field>
           </m-col>
@@ -50,7 +56,8 @@
             <m-field label="Chức danh">
               <m-input
                 v-model="employee.EmployeePosition"
-                @input="isFormChanged = true"
+                @input="handleInput"
+                maxlength="128"
               />
             </m-field>
           </m-col>
@@ -63,9 +70,10 @@
               <m-input
                 type="date"
                 v-model="employee.DateOfBirth"
-                :error="errorMessages.DateOfBirth"
-                @touch="handleFieldTouch('DateOfBirth')"
-                @input="isFormChanged = true"
+                name="DateOfBirth"
+                :error="getInputError('DateOfBirth')"
+                @blur="handleBlur"
+                @input="handleInput"
               />
             </m-field>
           </m-col>
@@ -82,7 +90,11 @@
             <m-field label="Số CMND">
               <m-input
                 v-model="employee.IdentityNumber"
-                @input="isFormChanged = true"
+                name="IdentityNumber"
+                :error="getInputError('IdentityNumber')"
+                @blur="handleBlur"
+                @input="handleInput"
+                maxlength="20"
               />
             </m-field>
           </m-col>
@@ -91,7 +103,10 @@
               <m-input
                 type="date"
                 v-model="employee.IdentityDate"
-                @input="isFormChanged = true"
+                name="IdentityDate"
+                :error="getInputError('IdentityDate')"
+                @blur="handleBlur"
+                @input="handleInput"
               />
             </m-field>
           </m-col>
@@ -99,7 +114,8 @@
             <m-field label="Nơi cấp">
               <m-input
                 v-model="employee.IdentityPlace"
-                @input="isFormChanged = true"
+                @input="handleInput"
+                maxlength="255"
               />
             </m-field>
           </m-col>
@@ -109,16 +125,22 @@
     <m-row style="margin-top: 56px" :gx="6" :gy="12">
       <m-col :span="12">
         <m-field label="Địa chỉ">
-          <m-input v-model="employee.Address" @input="isFormChanged = true" />
+          <m-input
+            v-model="employee.Address"
+            @input="handleInput"
+            maxlength="255"
+          />
         </m-field>
       </m-col>
       <m-col :span="3">
         <m-field label="ĐT di động">
           <m-input
             v-model="employee.PhoneNumber"
-            :error="errorMessages.PhoneNumber"
-            @touch="handleFieldTouch('PhoneNumber')"
-            @input="isFormChanged = true"
+            name="PhoneNumber"
+            :error="getInputError('PhoneNumber')"
+            @blur="handleBlur"
+            @input="handleInput"
+            maxlength="12"
           />
         </m-field>
       </m-col>
@@ -126,9 +148,11 @@
         <m-field label="ĐT cố định">
           <m-input
             v-model="employee.TelephoneNumber"
-            :error="errorMessages.TelephoneNumber"
-            @touch="handleFieldTouch('TelephoneNumber')"
-            @input="isFormChanged = true"
+            name="TelephoneNumber"
+            :error="getInputError('TelephoneNumber')"
+            @blur="handleBlur"
+            @input="handleInput"
+            maxlength="12"
           />
         </m-field>
       </m-col>
@@ -136,9 +160,11 @@
         <m-field label="Email">
           <m-input
             v-model="employee.Email"
-            :error="errorMessages.Email"
-            @touch="handleFieldTouch('Email')"
-            @input="isFormChanged = true"
+            name="Email"
+            :error="getInputError('Email')"
+            @blur="handleBlur"
+            @input="handleInput"
+            maxlength="255"
           />
         </m-field>
       </m-col>
@@ -147,21 +173,26 @@
         <m-field label="Số tài khoản">
           <m-input
             v-model="employee.BankAccountNumber"
-            @input="isFormChanged = true"
+            name="BankAccountNumber"
+            :error="getInputError('BankAccountNumber')"
+            @blur="handleBlur"
+            @input="handleInput"
+            maxlength="50"
           />
         </m-field>
       </m-col>
       <m-col :span="3">
         <m-field label="Tên ngân hàng">
-          <m-input v-model="employee.BankName" @input="isFormChanged = true" />
+          <m-input
+            v-model="employee.BankName"
+            @input="handleInput"
+            maxlength="120"
+          />
         </m-field>
       </m-col>
       <m-col :span="3">
         <m-field label="Chi nhánh">
-          <m-input
-            v-model="employee.BankBranchName"
-            @input="isFormChanged = true"
-          />
+          <m-input v-model="employee.BankBranchName" @input="handleInput" maxlength="255"/>
         </m-field>
       </m-col>
     </m-row>
@@ -170,31 +201,14 @@
         <m-button color="secondary" @click="$emit('close')">Hủy</m-button>
       </div>
       <div>
-        <m-button color="secondary" @click="handleSave">Cất</m-button>
+        <m-button color="secondary" @click="handleSave()">Cất</m-button>
         &nbsp;
         <m-button @click="handleSaveAndAdd">Cất và thêm</m-button>
       </div>
     </template>
   </m-popup>
   <m-spinner v-if="popupLoading" />
-  <m-message-dialog
-    info
-    :text="commonError"
-    v-if="showErrorMessage"
-    icon="error"
-    @close="handleCloseErrorDialog"
-  />
-  <m-message-dialog
-    confirm
-    text="Dữ liệu đã thay đổi. Bạn có muốn cất không?"
-    v-if="showCloseConfirm"
-    icon="warning"
-    @yes="
-      showCloseConfirm = false;
-      handleSave();
-    "
-    @no="$emit('close')"
-  />
+  <m-message-dialog v-bind="messageProps" v-on="messageEvents" />
 </template>
 <script>
 import MPopup from "../components/bases/MPopup.vue";
@@ -209,6 +223,15 @@ import MRadio from "../components/bases/MRadio.vue";
 import MSpinner from "../components/bases/MSpinner.vue";
 import MMessageDialog from "../components/bases/MMessageDialog.vue";
 import ApiConfig from "../api-config";
+import useForm from "../composables/useForm";
+import useMessageDialog from "../composables/useMessageDialog";
+import {
+  isDateLessThan,
+  isEmail,
+  isNumber,
+  isPhoneNumber,
+  isRequired,
+} from "../utils/validators";
 export default {
   components: {
     MPopup,
@@ -226,10 +249,49 @@ export default {
   emits: ["close", "saveAndAdd"],
   props: {
     employeeId: String, //id cua employee duoc chon de sua
+    mode: {
+      type: String,
+      default: "add",
+    },
+  },
+  setup() {
+    const validateDepartment = (dpmId, emp) => {
+      if (dpmId) return true;
+      return emp.DepartmentName
+        ? "Đơn vị không có trong danh sách"
+        : "Không được để trống đơn vị";
+    };
+    const validateEmployeeCode = (code) => {
+      return /^NV-\d{1,22}$/.test(code)
+        ? true
+        : "Mã nhân viên phải theo định dạng NV-X (X là số)";
+    };
+    const { values: employee, ...rest } = useForm({
+      EmployeeCode: [
+        isRequired("Không được để trống mã nhân viên"),
+        validateEmployeeCode,
+      ],
+      FullName: [isRequired("Không được để trống họ tên nhân viên")],
+      DepartmentId: [validateDepartment],
+      DateOfBirth: [
+        isDateLessThan(
+          "Ngày sinh không được lớn hơn ngày hiện tại",
+          new Date()
+        ),
+      ],
+      Email: [isEmail()],
+      PhoneNumber: [isPhoneNumber("Số điện thoại di động không hợp lệ")],
+      TelephoneNumber: [isPhoneNumber("Số điện thoại cố định không hợp lệ")],
+      IdentityDate: [
+        isDateLessThan("Ngày cấp không được lớn hơn ngày hiện tại", new Date()),
+      ],
+      IdentityNumber: [isNumber("Số CMND phải là các chữ số")],
+      BankAccountNumber: [isNumber("Số tài khoản phải là các chữ số")],
+    });
+    return { employee, ...rest, ...useMessageDialog() };
   },
   data() {
     return {
-      employee: this.getInitialEmployee(),
       departments: undefined, //danh sach don vi
       departmentHeaders: [
         { text: "Mã đơn vị", value: "DepartmentCode" },
@@ -237,70 +299,44 @@ export default {
       ], //header cua table don vi trong combobox
       departmentLoading: false, //combobox loading
       popupLoading: false, //co hien spinner ko
-      errors: Object.keys(this.getInitialEmployee()).reduce((errs, empProp) => {
-        errs[empProp] = { message: "", touched: false };
-        return errs;
-      }, {}),
-      showErrorMessage: false, //co hien thong bao loi ko
-      commonError: undefined, //loi chung
-      isFormChanged: false, //du lieu tren form da thay doi?
-      showCloseConfirm: false, //co hien thong bao de xuat cat khi du lieu tren form thay doi?
     };
   },
   created() {
-    if (this.employeeId) {
-      //neu la form sua thi load employee
-      this.loadEmployee();
-    } else {
-      //la form them thi lay employee code moi
-      this.getNewEmployeeCode();
+    switch (this.mode) {
+      case "add":
+        this.getNewEmployeeCode();
+        break;
+      case "edit":
+        this.loadEmployee();
+        break;
+      case "clone":
+        this.loadEmployee().then(() => this.getNewEmployeeCode());
     }
   },
   methods: {
     closeForm() {
       if (this.isFormChanged) {
-        this.showCloseConfirm = true;
+        this.showConfirm({
+          text: "Dữ liệu đã bị thay đổi. Bạn có muốn cất không?",
+          icon: "question",
+          showCancel: true,
+          onYes: () => this.handleSave(),
+          onNo: () => this.$emit("close"),
+        });
       } else {
         this.$emit("close");
       }
-    },
-    //tra ve employee khoi tao cho form them moi
-    getInitialEmployee() {
-      return {
-        //employee khoi tao
-        EmployeeCode: "",
-        FullName: "",
-        DepartmentId: "",
-        Gender: 2,
-        DateOfBirth: "",
-        PhoneNumber: "",
-        Email: "",
-        Address: "",
-        IdentityNumber: "",
-        IdentityPlace: "",
-        TelephoneNumber: "",
-        EmployeePosition: "",
-        DepartmentName: "",
-        BankName: "",
-        BankAccountNumber: "",
-        BankBranchName: "",
-      };
     },
     //lay ma nv moi
     async getNewEmployeeCode() {
       try {
         const { data: code } = await this.$axios.get(
-          `${ApiConfig.EMPLOYEES_API}/NextCode`
+          ApiConfig.Employee.NEXT_CODE
         );
         this.employee.EmployeeCode = code;
       } catch (err) {
         this.handleAxiosError(err);
       }
-    },
-    handleFieldTouch(fieldName) {
-      //field duoc sua lan dau tien
-      this.errors[fieldName].touched = true;
-      this.validate();
     },
     departmentFilter(department, search) {
       //ham loc du lieu cua combobox don vi
@@ -312,7 +348,7 @@ export default {
       if (this.departments || this.departmentLoading) return; //neu da co du lieu or dang loading
       this.departmentLoading = true;
       this.$axios
-        .get(ApiConfig.DEPARTMENTS_API)
+        .get(ApiConfig.Department.BASE)
         .then(({ data }) => {
           this.departments = data;
         })
@@ -323,13 +359,14 @@ export default {
     //ham xu ly chon don vi
     handleDepartmentSelect(department) {
       this.employee.DepartmentId = department?.DepartmentId;
+      this.errors.DepartmentId = null;
     },
     //ham load nhan vien (form sua)
     async loadEmployee() {
       this.popupLoading = true;
       try {
         const { data: emp } = await this.$axios.get(
-          `${ApiConfig.EMPLOYEES_API}/${this.employeeId}`
+          `${ApiConfig.Employee.BASE}/${this.employeeId}`
         );
         //format lai ngay thang
         emp.DateOfBirth = this.$formatters.formatDate(emp.DateOfBirth, 2, "-");
@@ -339,170 +376,61 @@ export default {
           "-"
         );
         this.employee = emp;
-        console.log(emp);
       } catch (err) {
         this.handleAxiosError(err);
       } finally {
         this.popupLoading = false;
       }
-    },
-    /**
-     * ham validate form
-     * @returns {Boolean}
-     */
-    validate() {
-      //validate EmployeeCode
-      this.errors.EmployeeCode.message = this.employee.EmployeeCode
-        ? undefined
-        : "Không được để trống mã nhân viên!";
-      //validate FullName
-      this.errors.FullName.message = this.employee.FullName
-        ? undefined
-        : "Không được để trống tên nhân viên!";
-      //validate DepartmentId
-      if (!this.employee.DepartmentId) {
-        if (this.employee.DepartmentName) {
-          this.errors.DepartmentId.message = "Đơn vị không có trong danh sách!";
-        } else {
-          this.errors.DepartmentId.message = "Không được để trống đơn vị!";
-        }
-      } else {
-        this.errors.DepartmentId.message = undefined;
-      }
-      //validate Email
-      if (
-        this.employee.Email &&
-        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.employee.Email)
-      ) {
-        this.errors.Email.message = "Email không hợp lệ!";
-      } else {
-        this.errors.Email.message = undefined;
-      }
-      //validate so dien thoai di dong
-      this.errors.PhoneNumber.message =
-        this.employee.PhoneNumber &&
-        !/^\d{10,11}$/.test(this.employee.PhoneNumber)
-          ? "Số điện thoại di động không hợp lệ"
-          : undefined;
-      //validate so dien thoai co dinh
-      this.errors.TelephoneNumber.message =
-        this.employee.TelephoneNumber &&
-        !/^\d{10,11}$/.test(this.employee.TelephoneNumber)
-          ? "Số điện thoại cố định không hợp lệ"
-          : undefined;
-      //validate ngay sinh
-      this.errors.DateOfBirth.message =
-        this.employee.DateOfBirth &&
-        new Date(this.employee.DateOfBirth) > new Date()
-          ? "Ngày sinh không được lớn hơn ngày hiện tại"
-          : undefined;
-
-      return Object.keys(this.errors).every((k) => !this.errors[k].message); //kiem tra xem co loi nao ko
     },
     //ham lay loi dau tien
     getFirstError() {
-      const fk = Object.keys(this.errorMessages).find(
-        (k) => this.errorMessages[k]
-      );
-      return this.errorMessages[fk];
+      const fk = Object.keys(this.errors).find((k) => this.errors[k]);
+      return this.errors[fk];
     },
     //ham luu thong tin nv
-    handleSave() {
-      Object.keys(this.errors).forEach((k) => {
-        this.errors[k].touched = true;
-      }); //touch tat ca truong de validate
+    async handleSave(preventClose = false) {
       if (!this.validate()) {
-        this.commonError = this.getFirstError(); //hien loi dau tien len message dialog
-        this.showErrorMessage = true;
+        this.showError({ text: this.getFirstError() });
         return;
       }
-      if (this.employeeId) {
-        //neu la form sua
-        this.updateEmployee();
-      } else {
-        //form them
-        this.addEmployee();
+      this.popupLoading = true;
+      let hasError = false;
+      try {
+        if (this.mode == "edit") {
+          //neu la form sua
+          await this.$axios.put(
+            `${ApiConfig.Employee.BASE}/${this.employeeId}`,
+            this.employee
+          );
+        } else {
+          //form them
+          await this.$axios.post(ApiConfig.Employee.BASE, this.employee);
+        }
+      } catch (error) {
+        hasError = true;
+        this.handleAxiosError(error);
+      } finally {
+        this.popupLoading = false;
+      }
+      if (!preventClose && !hasError) {
+        this.$emit("close", 1);
       }
     },
     //bat su kien click nut cat va them
-    handleSaveAndAdd() {
-      this.$emit("saveAndAdd");
-      //xoa du lieu tren form
-      Object.keys(this.employee).forEach((k) => {
-        this.employee[k] = "";
-      });
-      //reset error
-      Object.keys(this.errors).forEach((k) => {
-        this.errors[k].message = "";
-        this.errors[k].touched = false;
-      });
-      this.commonError = "";
-      this.employee = this.getInitialEmployee();
+    async handleSaveAndAdd() {
+      await this.handleSave(true);
+      this.reset();
       this.getNewEmployeeCode();
-    },
-    //ham them nv
-    async addEmployee() {
-      this.popupLoading = true;
-      try {
-        await this.$axios.post(ApiConfig.EMPLOYEES_API, this.employee);
-        this.$emit("close", 1); //dong form voi status=1
-      } catch (err) {
-        this.handleAxiosError(err);
-      } finally {
-        this.popupLoading = false;
-      }
-    },
-    //ham cap nhat nv
-    async updateEmployee() {
-      this.popupLoading = true;
-      try {
-        await this.$axios.put(
-          `${ApiConfig.EMPLOYEES_API}/${this.employeeId}`,
-          this.employee
-        );
-        this.$emit("close", 1); //dong form voi status=1
-      } catch (err) {
-        this.handleAxiosError(err);
-      } finally {
-        this.popupLoading = false;
-      }
+      this.$emit("saveAndAdd");
     },
     //ham xu ly loi tu axios
     handleAxiosError(err) {
       console.log(err.response);
-      const userMsg = err.response?.data?.userMessage;
-      if (userMsg) {
-        this.commonError = userMsg;
-      } else {
-        this.commonError = "Có lỗi xảy ra!";
+      let userMsg = err.response?.data?.userMessage;
+      if (!userMsg) {
+        userMsg = "Có lỗi xảy ra. Vui lòng liên hệ Misa để được hỗ trợ.";
       }
-      this.showErrorMessage = true;
-    },
-    handleCloseErrorDialog() {
-      this.showErrorMessage = false;
-      this.commonError = undefined;
-    },
-  },
-  computed: {
-    //tra ve loi cua cac truong
-    errorMessages() {
-      return Object.keys(this.errors).reduce((msgs, fieldName) => {
-        const err = this.errors[fieldName];
-        if (err.touched && err.message) {
-          //neu da duoc touch va co loi
-          msgs[fieldName] = err.message;
-        }
-        return msgs;
-      }, {});
-    },
-  },
-  watch: {
-    employee: {
-      //employee thay doi thi validate du lieu
-      deep: true,
-      handler() {
-        this.validate();
-      },
+      this.showError({ text: userMsg });
     },
   },
 };

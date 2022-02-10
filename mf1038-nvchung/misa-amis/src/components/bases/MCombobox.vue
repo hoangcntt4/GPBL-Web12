@@ -6,6 +6,7 @@
     <div class="combobox__main">
       <div class="combobox__input">
         <input
+          :name="name"
           ref="input"
           type="text"
           autocomplete="off"
@@ -17,7 +18,7 @@
           @keydown.enter="handleEnter"
           :title="error"
           :readonly="readonly"
-          @blur.once="$emit('touch')"
+          @blur="$emit('blur', $event)"
         />
       </div>
       <div
@@ -27,7 +28,7 @@
         <m-icon icon="arrow-down-black" :size="16" />
       </div>
     </div>
-    <div class="dropdown__content" v-if="active">
+    <div class="dropdown__content dropdown__content--full" v-if="active">
       <m-list v-if="loading">
         <m-list-item> Loading... </m-list-item>
       </m-list>
@@ -85,6 +86,7 @@ import MIcon from "./MIcon.vue";
 export default {
   components: { MList, MListItem, MIcon },
   props: {
+    name: String,
     /**
      * loi
      */
@@ -133,7 +135,7 @@ export default {
      */
     top: Boolean,
   },
-  emits: ["update:modelValue", "select", "open", "close", "touch"],
+  emits: ["update:modelValue", "select", "open", "close", "blur", "input"],
   data() {
     return {
       active: false, //hien dropdown item
@@ -193,6 +195,7 @@ export default {
       if (this.showAll) {
         this.showAll = false; //tat showall
       }
+      this.$emit("input", evt);
     },
     //ham cap nhat gia tri input
     setSearch(text) {

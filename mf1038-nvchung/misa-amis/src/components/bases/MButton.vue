@@ -1,5 +1,5 @@
 <template>
-  <button :class="`btn btn--${variant} btn--${color} btn--${size}`">
+  <button :class="classes">
     <slot />
   </button>
 </template>
@@ -29,6 +29,17 @@ export default {
     size: {
       type: String,
       default: "md",
+    },
+    pill: Boolean,
+    outlined: Boolean,
+  },
+  computed: {
+    classes() {
+      return [
+        `btn btn--${this.variant} btn--${this.color} btn--${this.size}`,
+        this.pill && "btn--pill",
+        this.outlined && "btn--outlined",
+      ];
     },
   },
 };

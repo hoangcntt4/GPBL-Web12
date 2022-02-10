@@ -8,7 +8,10 @@
         <slot />
       </div>
     </teleport>
-    <div class="dropdown__content" v-else-if="active">
+    <div
+      :class="['dropdown__content', contentFull && 'dropdown__content--full']"
+      v-else-if="active"
+    >
       <slot />
     </div>
   </div>
@@ -27,6 +30,10 @@ export default {
      * teleport den body
      */
     appendToBody: Boolean,
+    contentFull: {
+      type: Boolean,
+      default: true,
+    },
   },
   methods: {
     //toggle an/hien dropdown

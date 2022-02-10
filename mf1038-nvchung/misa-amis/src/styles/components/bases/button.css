@@ -43,3 +43,9 @@
 .btn--text.btn--blue {
   color: #0075c0;
 }
+.btn--pill {
+  border-radius: 100px;
+}
+.btn--outlined {
+  outline: 1px solid #000;
+}

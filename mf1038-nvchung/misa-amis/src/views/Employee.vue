@@ -2,17 +2,37 @@
   <layout>
     <div class="title">
       <h4>Nhân viên</h4>
-      <m-button @click="showPopup = true">Thêm mới nhân viên</m-button>
+      <m-button @click="handleAdd">Thêm mới nhân viên</m-button>
     </div>
     <div class="main-content">
-      <div class="tool-bar">
-        <m-input
-          v-model="searchText"
-          placeholder="Tìm theo mã, tên nhân viên"
-          icon="search"
-        />
-        <m-icon icon="refresh" @click="handleResetData" />
-        <m-icon icon="settings" @click="showCustomizerPopup = true" />
+      <div class="flex justify-between mb-16">
+        <m-dropdown style="z-index: 103" :contentFull="false">
+          <template #trigger>
+            <m-button
+              @click="handleOpenBulkActions"
+              pill
+              outlined
+              color="secondary"
+              class="flex items-center"
+              >Thực hiện hàng loạt &nbsp;<m-icon
+                icon="arrow-down-black"
+                :size="16"
+            /></m-button>
+          </template>
+          <m-list>
+            <m-list-item @click="handleBulkDelete">Xóa</m-list-item>
+          </m-list>
+        </m-dropdown>
+        <div class="flex items-center gap-10">
+          <m-input
+            v-model="searchText"
+            placeholder="Tìm theo mã, tên nhân viên"
+            icon="search"
+          />
+          <m-icon icon="refresh" @click="handleResetData" />
+          <m-icon icon="excel" @click="handleExportExcel" />
+          <m-icon icon="settings" @click="showCustomizerPopup = true" />
+        </div>
       </div>
       <m-table
         :headers="selectedEmployeeHeaders"
@@ -22,7 +42,11 @@
         v-model="selectedEmployeeIds"
       >
         <template #actions="{ item }">
-          <m-button variant="text" color="blue" size="sm" @click="editEmp(item)"
+          <m-button
+            variant="text"
+            color="blue"
+            size="sm"
+            @click="editEmp(item.EmployeeId)"
             >Sửa</m-button
           >
           <m-dropdown appendToBody>
@@ -36,7 +60,9 @@
               </m-button>
             </template>
             <m-list>
-              <m-list-item>Nhân bản</m-list-item>
+              <m-list-item @click="clone(item.EmployeeId)"
+                >Nhân bản</m-list-item
+              >
               <m-list-item @click="delEmp(item)">Xóa</m-list-item>
               <m-list-item>Ngừng sử dụng</m-list-item>
             </m-list>
@@ -54,7 +80,7 @@
         <div>
           Tổng số: <b>{{ employeeCount }}</b> bản ghi
         </div>
-        <div class="row items-center">
+        <div class="flex items-center">
           <m-combo-box
             :items="pages"
             labelMember="text"
@@ -77,24 +103,11 @@
   <employee-popup
     @close="handlePopupClose"
     v-if="showPopup"
-    :employeeId="currentEditEmpId"
+    :employeeId="currentEmployeeId"
+    :mode="popupMode"
     @saveAndAdd="handleSaveAndAdd"
   />
-  <m-message-dialog
-    v-if="showConfirm"
-    icon="warning"
-    confirm
-    :text="confirmText"
-    @no="showConfirm = false"
-    @yes="doDelEmp"
-  />
-  <m-message-dialog
-    v-if="error"
-    icon="error"
-    :text="error"
-    info
-    @close="error = undefined"
-  />
+  <m-message-dialog v-bind="messageProps" v-on="messageEvents" />
   <m-popup @close="showCustomizerPopup = false" v-if="showCustomizerPopup">
     <template #title>
       <h2>Tùy chỉnh giao diện</h2>
@@ -135,6 +148,7 @@ import EmployeePopup from "./EmployeePopup.vue";
 import MMessageDialog from "../components/bases/MMessageDialog.vue";
 import MPopup from "../components/bases/MPopup.vue";
 import ApiConfig from "../api-config";
+import useMessageDialog from "../composables/useMessageDialog";
 export default {
   components: {
     Layout,
@@ -211,6 +225,7 @@ export default {
       EMPLOYEE_HEADERS,
       CUSTOMIZER_TABLE_HEADERS,
       DEFAULT_EMPLOYEE_HEADERS,
+      ...useMessageDialog(),
     };
   },
   created() {
@@ -218,6 +233,41 @@ export default {
     this.loadEmployees();
   },
   methods: {
+    handleAdd() {
+      this.currentEmployeeId = undefined;
+      this.popupMode = "add";
+      this.showPopup = true;
+    },
+    handleBulkDelete() {
+      this.showConfirm({
+        text: "Bạn có thực sự muốn xóa những nhân viên đã chọn không?",
+        icon: "warning",
+        onYes: async () => {
+          this.appLoading = true;
+          try {
+            await this.$axios.post(
+              ApiConfig.Employee.BULK,
+              this.selectedEmployeeIds
+            );
+            await this.loadEmployees();
+          } catch {
+            this.showError({
+              text: "Có lỗi xảy ra. Vui lòng liên hệ Misa để được hỗ trợ.",
+            });
+          } finally {
+            this.appLoading = false;
+          }
+        },
+      });
+    },
+    handleExportExcel() {
+      location.href = ApiConfig.Employee.EXCEL_FILE;
+    },
+    handleOpenBulkActions(evt) {
+      if (this.selectedEmployeeIds.length == 0) {
+        evt.stopPropagation();
+      }
+    },
     handleResetData() {
       this.searchText = "";
       this.page = 1;
@@ -239,14 +289,14 @@ export default {
     //dong popup thong tin nhan vien
     handlePopupClose(status) {
       this.showPopup = false;
-      this.currentEditEmpId = undefined; //gan employee id dang chinh sua ve undefined
       if (status == 1) {
         this.loadEmployees(); //neu status tra ve tu popup=1 reload table
       }
     },
     //bat su kien cat va them
     handleSaveAndAdd() {
-      this.currentEditEmpId = undefined;
+      this.currentEmployeeId = undefined;
+      this.popupMode = "add";
       this.loadEmployees();
     },
     /**
@@ -256,51 +306,57 @@ export default {
     async loadEmployees() {
       this.appLoading = true; //bat spinner
       try {
-        const { data } = await this.$axios.get(
-          `${ApiConfig.EMPLOYEES_API}/Filter`,
-          {
-            params: {
-              pageSize: this.perPage, //so ban ghi tren trang
-              pageNumber: this.page, //trang hien tai
-              search: this.searchText, //search keyword
-            },
-          }
-        );
+        const { data } = await this.$axios.get(ApiConfig.Employee.FILTER, {
+          params: {
+            pageSize: this.perPage, //so ban ghi tren trang
+            pageNumber: this.page, //trang hien tai
+            search: this.searchText, //search keyword
+          },
+        });
         this.employees = data.Data;
         this.pageCount = data.TotalPages; //tong so trang
         this.employeeCount = data.TotalRecords; //tong so record
       } catch {
-        this.error = "Có lỗi xảy ra"; //hien popup loi
+        this.showError({
+          text: "Có lỗi xảy ra. Vui lòng liên hệ Misa để được hỗ trợ.",
+        });
       } finally {
         this.appLoading = false; //tat spinner
       }
     },
     //ham sua employee
-    editEmp(emp) {
-      this.currentEditEmpId = emp.EmployeeId; //gan id cua employee duoc chon de sua
+    editEmp(empId) {
+      this.popupMode = "edit";
+      this.currentEmployeeId = empId; //gan id cua employee duoc chon de sua
       this.showPopup = true; //show popup chinh sua
     },
-    //ham hien xac nhan xoa
-    delEmp(emp) {
-      this.currentDeleteEmpId = emp.EmployeeId; //gan id cua employee duoc chon de xoa
-      this.confirmText = `Bạn có thực sự muốn xóa nhân viên ${emp.FullName} không?`;
-      this.showConfirm = true; //hien xac nhan xoa
+    clone(empId) {
+      this.popupMode = "clone";
+      this.currentEmployeeId = empId;
+      this.showPopup = true;
     },
     //ham xoa employee
-    async doDelEmp() {
-      this.showConfirm = false; //tat xac nhan xoa
-      this.appLoading = true;
-      try {
-        //thuc hien xoa va load lai du lieu
-        await this.$axios.delete(
-          `${ApiConfig.EMPLOYEES_API}/${this.currentDeleteEmpId}`
-        );
-        this.loadEmployees();
-      } catch {
-        this.error = "Có lỗi xảy ra";
-      } finally {
-        this.appLoading = false;
-      }
+    async delEmp(emp) {
+      this.showConfirm({
+        text: `Bạn có thực sự muốn xóa nhân viên ${emp.EmployeeCode} không?`,
+        icon: "warning",
+        onYes: async () => {
+          this.appLoading = true;
+          try {
+            //thuc hien xoa va load lai du lieu
+            await this.$axios.delete(
+              `${ApiConfig.Employee.BASE}/${emp.EmployeeId}`
+            );
+            this.loadEmployees();
+          } catch {
+            this.showError({
+              text: "Có lỗi xảy ra. Vui lòng liên hệ Misa để được hỗ trợ.",
+            });
+          } finally {
+            this.appLoading = false;
+          }
+        },
+      });
     },
     //neu so ban ghi tren trang thay doi
     handlePerPageChange(perPage) {
@@ -325,17 +381,14 @@ export default {
         { text: "100 bản ghi trên 1 trang", value: 100 },
       ], //cac lua chon cua combobox ban ghi /trang
       employees: [], //du lieu cua table
-      currentEditEmpId: undefined, //id duoc chon de sua
-      currentDeleteEmpId: undefined, //id duoc chon de xoa
+      currentEmployeeId: undefined, //id duoc chon de sua
+      popupMode: "add",
       perPage: 10, //so ban ghi /trang
       page: 1, //trang hien tai
       pageCount: 0, //tong so trang
       employeeCount: 0, //tong so ban ghi
       showPopup: false, //co hien popup tt nv khong
       appLoading: false, //co hien spinner ko
-      showConfirm: false, //co hien xac nhan ko
-      confirmText: "", //xac nhan text
-      error: undefined, //loi
       showCustomizerPopup: false, //co hien popup tuy chinh ko
       selectedEmployeePropNames: this.DEFAULT_EMPLOYEE_HEADERS.map(
         ({ propName }) => propName

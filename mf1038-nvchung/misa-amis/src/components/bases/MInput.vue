@@ -1,12 +1,6 @@
 <template>
   <div :class="['input', icon && 'input--icon', error && 'input--error']">
-    <input
-      v-bind="$attrs"
-      :title="error"
-      v-model="model"
-      @blur.once="$emit('touch')"
-      ref="input"
-    />
+    <input v-bind="$attrs" :title="error" v-model="model" ref="input" />
     <m-icon class="input__icon" v-if="icon" :icon="icon" :size="16" />
   </div>
 </template>
@@ -38,7 +32,7 @@ export default {
      */
     autoFocus: Boolean,
   },
-  emits: ["update:modelValue", "touch"],
+  emits: ["update:modelValue"],
   computed: {
     model: {
       get() {

@@ -82,8 +82,23 @@ body {
 .justify-center {
   justify-content: center;
 }
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-10 {
+  gap: 10px;
+}
 .mt-16 {
   margin-top: 16px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.ml-auto {
+  margin-left: auto;
 }
 @keyframes shake {
   25% {
