@@ -1,0 +1,18 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown__content {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  padding: 3px 0;
+  z-index: 100;
+}
+.dropdown--top .dropdown__content {
+  top: 0;
+  transform: translateY(-100%);
+}
+.dropdown__content--full {
+  min-width: 100%;
+}

@@ -1,0 +1,118 @@
+@font-face {
+  font-family: notosans-bold;
+  font-weight: bolder;
+  src: url(~@/assets/fonts/notosans-bold.woff2);
+}
+@font-face {
+  font-family: notosans-italic;
+  font-style: italic;
+  font-weight: normal;
+  src: url(~@/assets/fonts/notosans-italic.woff2);
+}
+@font-face {
+  font-family: notosans;
+  font-weight: normal;
+  src: url(~@/assets/fonts/notosans-regular.woff2);
+}
+@font-face {
+  font-family: notosans-semibold;
+  font-weight: bold;
+  src: url(~@/assets/fonts/notosans-semibold.woff2);
+}
+:root {
+  --green: #2ca01c;
+  --green-light: #35bf22;
+  --green-dark: #248b15;
+  --black: #393a3d;
+  --black-light: #5d5d61;
+  --gray: #babec5;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h2 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ececec;
+  border-radius: 10px;
+}
+body {
+  font-family: notosans;
+  font-weight: normal;
+  font-size: 13px;
+  background-color: #f4f5f8;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-10 {
+  gap: 10px;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.ml-auto {
+  margin-left: auto;
+}
+@keyframes shake {
+  25% {
+    transform: rotateZ(-20deg);
+  }
+  50% {
+    transform: rotateZ(20deg);
+  }
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

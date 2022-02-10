@@ -1,0 +1,51 @@
+.btn {
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 13px;
+  transition: 0.2s;
+}
+.btn--primary {
+  background-color: var(--green);
+  color: #fff;
+}
+.btn--primary:hover {
+  background-color: var(--green-light);
+}
+.btn--primary:active {
+  background-color: var(--green-dark);
+}
+.btn--secondary {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid var(--gray);
+}
+.btn--secondary:hover {
+  background-color: #e0e0e0;
+}
+.btn--icon,
+.btn--text,
+.btn--icon:hover,
+.btn--text:hover {
+  background-color: transparent;
+}
+.btn--md {
+  height: 38px;
+  padding: 6px 16px;
+}
+.btn--sm {
+  height: 38px;
+  padding: 8px 10px;
+}
+.btn--text.btn--blue {
+  color: #0075c0;
+}
+.btn--pill {
+  border-radius: 100px;
+}
+.btn--outlined {
+  outline: 1px solid #000;
+}

@@ -1,0 +1,54 @@
+.table-container {
+  overflow: auto;
+  position: relative;
+}
+.table {
+  width: 100%;
+  border-spacing: 0;
+  background-color: #fff;
+}
+.table th {
+  text-transform: uppercase;
+  height: 34px;
+  background-color: #eceef1;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+}
+.table td {
+  height: 44px;
+  background-color: #fff;
+}
+.table td,
+.table th {
+  padding: 0 10px;
+  border-bottom: 1px solid #c7c7c7;
+  text-align: left;
+  min-width: 0;
+}
+.table td:not(:last-child),
+.table th:not(:last-child) {
+  border-right: 1px dotted #c7c7c7;
+}
+.table tbody tr:hover td {
+  background-color: #f8f8f8;
+}
+.table .th-check-all {
+  width: 40px;
+  z-index: 102;
+  left: 0;
+}
+.table .actions {
+  display: flex;
+  align-items: center;
+}
+.table .td-actions,
+.table .td-check {
+  position: sticky;
+}
+.table .td-actions {
+  right: 0;
+}
+.table .td-check {
+  left: 0;
+}
