@@ -12,12 +12,18 @@ namespace MISA.WEB12.Core.Services
 {
     public class CustomerService : BaseService<Customer>, ICustomerService
     {
+        #region Fields
         ICustomerRepository _customerRepository;
+        #endregion
+
+        #region Constructor
         public CustomerService(ICustomerRepository customerRepository) : base(customerRepository)
         {
             _customerRepository = customerRepository;
         }
+        #endregion
 
+        #region Methods
         /// <summary>
         /// Validate dữ liệu riêng
         /// </summary>
@@ -26,16 +32,8 @@ namespace MISA.WEB12.Core.Services
         /// Created by LQTrung(26/01/2022)
         protected override void ValidateEntity(Customer customer)
         {
-            //Ngày sinh không được lớn hơn ngày hiện tại:
-            if(customer.DateOfBirth > DateTime.Now)
-            {
-                throw new MISAValidateException("Ngày sinh không được lớn hơn ngày hiện tại");
-            }
-        }
 
-        public int MultiUpdateService(List<Customer> customers)
-        {
-            throw new NotImplementedException();
         }
+        #endregion
     }
 }

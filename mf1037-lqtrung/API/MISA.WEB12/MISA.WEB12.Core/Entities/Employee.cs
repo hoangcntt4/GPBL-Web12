@@ -35,11 +35,13 @@ namespace MISA.WEB12.Core.Entities
         /// <summary>
         /// Họ
         /// </summary>
+        [PropertyName("Họ")]
         public string? FirstName { get; set; }
 
         /// <summary>
         /// Tên
         /// </summary>
+        [PropertyName("Tên")]
         public string? LastName { get; set; }
 
         /// <summary>
@@ -52,76 +54,10 @@ namespace MISA.WEB12.Core.Entities
         /// <summary>
         /// Giới tính
         /// </summary>
+        
         public Gender? Gender { get; set; }
-
-        /// <summary>
-        /// Số điện thoại
-        /// </summary>
-        public string? PhoneNumber { get; set; }
-
-        /// <summary>
-        /// Email
-        /// </summary>
-        public string? Email { get; set; }
-
-        /// <summary>
-        /// Địa chỉ
-        /// </summary>
-        public string? Address { get; set; }
-        /// <summary>
-        /// Ngày sinh
-        /// </summary>
-        public DateTime? DateOfBirth { get; set; }
-
-        /// <summary>
-        /// Mã đơn vị
-        /// </summary>
-        public Guid DepartmentId { get; set; }
-
-        /// <summary>
-        /// Chức danh
-        /// </summary>
-        public string? EmployeePosition { get; set; }
-
-        /// <summary>
-        /// Số CMND
-        /// </summary>
-        public string? IdentityNumber { get; set; }
-
-        /// <summary>
-        /// Ngày cấp
-        /// </summary>
-        public DateTime? IdentityDate { get; set; }
-
-        /// <summary>
-        /// Nơi cấp
-        /// </summary>
-        public string? IdentityPlace { get; set; }
-
-        /// <summary>
-        /// Điện thoại di động
-        /// </summary>
-        public string? TelephoneNumber { get; set; }
-
-        /// <summary>
-        /// Số tài khoản ngân hàng
-        /// </summary>
-        public string? BankAccountNumber { get; set; }
-
-        /// <summary>
-        /// Tên ngân hàng
-        /// </summary>
-        public string? BankName { get; set; }
-
-        /// <summary>
-        /// Chi nhánh ngân hàng
-        /// </summary>
-        public string? BankBranchName { get; set; }
-
-        /// <summary>
-        /// Giới tính
-        /// </summary>
-        [MISAInserQuery]
+        [PropertyName("Giới tính")]
+        [MISAInsertQuery]
         public string? GenderName
         {
             get
@@ -139,6 +75,114 @@ namespace MISA.WEB12.Core.Entities
                 }
             }
         }
+
+        /// <summary>
+        /// Số điện thoại cố định
+        /// </summary>
+        [PropertyName("Điện thoại cố định")]
+        [Number]
+        public string? PhoneNumber { get; set; }
+
+        /// <summary>
+        /// Email
+        /// </summary>
+        [PropertyName("Địa chỉ Email")]
+        [Email]
+        public string? Email { get; set; }
+
+        /// <summary>
+        /// Địa chỉ
+        /// </summary>
+        [PropertyName("Địa chỉ")]
+        public string? Address { get; set; }
+        /// <summary>
+        /// Ngày sinh
+        /// </summary>
+        [PropertyName("Ngày sinh")]
+        public DateTime? DateOfBirth { get; set; }
+
+        /// <summary>
+        /// Mã đơn vị
+        /// </summary>
+        [PropertyName("Mã đơn vị")]
+        [NotEmpty]
+        public Guid? DepartmentId { get; set; }
+
+        /// <summary>
+        /// Chức danh
+        /// </summary>
+        /// 
+        [PropertyName("Chức vụ")]
+        public string? PositionName{ get; set; }
+
+        /// <summary>
+        /// Số CMND
+        /// </summary>
+        [PropertyName("Số CMND")]
+        [Number]
+        public string? IdentityNumber { get; set; }
+
+        /// <summary>
+        /// Ngày cấp
+        /// </summary>
+        [PropertyName("Ngày cấp")]
+        public DateTime? IdentityDate { get; set; }
+
+        /// <summary>
+        /// Nơi cấp
+        /// </summary>
+        [PropertyName("Nơi cấp")]
+        public string? IdentityPlace { get; set; }
+
+        /// <summary>
+        /// Điện thoại di động
+        /// </summary>
+        [PropertyName("Điện thoại di động")]
+        public string? TelephoneNumber { get; set; }
+
+        /// <summary>
+        /// Số tài khoản ngân hàng
+        /// </summary>
+        [PropertyName("Số tài khoản ngân hàng")]
+        [Number]
+        public string? BankAccountNumber { get; set; }
+
+        /// <summary>
+        /// Tên ngân hàng
+        /// </summary>
+        [PropertyName("Tên ngân hàng")]
+        public string? BankName { get; set; }
+
+        /// <summary>
+        /// Chi nhánh ngân hàng
+        /// </summary>
+        [PropertyName("Chi nhánh ngân hàng")]
+        public string? BankBranchName { get; set; }
+
+        /// <summary>
+        /// Thời gian tạo mới
+        /// </summary>
+        [PropertyName("Thời gian tạo mới")]
+        public DateTime? CreatedDate => DateTime.Now;
+
+        /// <summary>
+        /// Người tạo
+        /// </summary>
+        [PropertyName("Người tạo")]
+        public string? CreatedBy { get; set; }
+
+        /// <summary>
+        /// Thời gian chỉnh sửa
+        /// </summary>
+        [PropertyName("Thời gian chỉnh sửa")]
+        public DateTime? ModifiedDate { get; set; }
+
+        /// <summary>
+        /// Người chỉnh sửa
+        /// </summary>
+        [PropertyName("Người chỉnh sửa")]
+        public string? ModifiedBy { get; set; }
+
         #endregion
     }
 }

@@ -1,0 +1,51 @@
+.m-menu{
+    width: auto;
+    background-color: #393a3d;
+}
+.m-menu-logo{
+    display: flex;
+    padding: 24px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+}
+.toggle{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: url('../../img/Sprites.svg') no-repeat -424px -86px;
+}
+.logo{
+    height: 32px;
+    display: block;
+}
+.logo img{
+    height: 32px;
+}
+.menu-item-list{
+    height: calc(100vh - 48px);
+    padding-top: 14px;
+    overflow: auto;
+}
+.menu-item:hover{
+    background-color: #b8bcc3;
+}
+.menu-item a{
+    text-decoration: none;
+}
+.item-link{
+    height: 42px;
+    line-height: 42px;
+    display: flex;
+    cursor: pointer;
+    border-left: 6px solid transparent;
+    padding-right: 14px;
+    color: #fff;
+    padding-left: 8px;
+}
+
+.menu-item-icon{
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}

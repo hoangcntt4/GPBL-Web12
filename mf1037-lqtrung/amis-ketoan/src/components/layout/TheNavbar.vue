@@ -8,23 +8,23 @@
                 <div class="menu-item">
                     <router-link to="/content" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-dashboard"></div>
+                            <base-icon icon="dashboard"></base-icon>
                         </div>
                         <div class="menu-item-title">Tổng quan</div>
                     </router-link>
                 </div>
                 <div class="menu-item">
-                    <a href="" class="item-link">
+                    <router-link to="/listEmployee" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-cash"></div>
+                            <base-icon icon="cash"></base-icon>
                         </div>
                         <div class="menu-item-title">Tiền mặt</div>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-bank"></div>
+                            <base-icon icon="bank"></base-icon>
                         </div>
                         <div class="menu-item-title">Tiền gửi</div>
                     </a>
@@ -32,7 +32,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-pu"></div>
+                            <base-icon icon="pu"></base-icon>
                         </div>
                         <div class="menu-item-title">Mua hàng</div>
                     </a>
@@ -40,7 +40,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-sale"></div>
+                            <base-icon icon="sale"></base-icon>
                         </div>
                         <div class="menu-item-title">Bán hàng</div>
                     </a>
@@ -48,7 +48,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-invoice"></div>
+                            <base-icon icon="invoice"></base-icon>
                         </div>
                         <div class="menu-item-title">Quản lý hóa đơn</div>
                     </a>
@@ -56,7 +56,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-stock"></div>
+                            <base-icon icon="stock"></base-icon>
                         </div>
                         <div class="menu-item-title">Kho</div>
                     </a>
@@ -64,7 +64,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-tools"></div>
+                            <base-icon icon="tools"></base-icon>
                         </div>
                         <div class="menu-item-title">Công cụ dụng cụ</div>
                     </a>
@@ -72,7 +72,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-fixed-assets"></div>
+                            <base-icon icon="fixed-assets"></base-icon>
                         </div>
                         <div class="menu-item-title">Tài sản cố định</div>
                     </a>
@@ -80,7 +80,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-tax"></div>
+                            <base-icon icon="tax"></base-icon>
                         </div>
                         <div class="menu-item-title">Thuế</div>
                     </a>
@@ -88,7 +88,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-price"></div>
+                            <base-icon icon="price"></base-icon>
                         </div>
                         <div class="menu-item-title">Giá thành</div>
                     </a>
@@ -96,7 +96,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-general"></div>
+                            <base-icon icon="general"></base-icon>
                         </div>
                         <div class="menu-item-title">Tổng hợp</div>
                     </a>
@@ -104,7 +104,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-budget"></div>
+                            <base-icon icon="budget"></base-icon>
                         </div>
                         <div class="menu-item-title">Ngân sách</div>
                     </a>
@@ -112,7 +112,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-report"></div>
+                            <base-icon icon="report"></base-icon>
                         </div>
                         <div class="menu-item-title">Báo cáo</div>
                     </a>
@@ -120,7 +120,7 @@
                 <div class="menu-item">
                     <a href="" class="item-link">
                         <div class="menu-item-icon">
-                            <div class="mi-icon-item mi-finance"></div>
+                            <base-icon icon="finance"></base-icon>
                         </div>
                         <div class="menu-item-title">Phân tích tài chính</div>
                     </a>
@@ -128,100 +128,12 @@
             </div>
         </div>
 </template>
-
-<style scoped>
-.m-menu{
-    width: auto;
-    background-color: #38393d;
+<script>
+import BaseIcon from '../base/BaseIcon.vue';
+export default {
+  components: { BaseIcon },
+    
 }
-.m-menu-logo{
-    display: flex;
-    padding: 24px;
-    height: 48px;
-    align-items: center;
-    justify-content: center;
-}
-.toggle{
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    background: url('../../assets/img/Sprites.svg') no-repeat -424px -86px;
-}
-.logo{
-    height: 32px;
-    display: block;
-}
-.logo img{
-    height: 32px;
-}
-.menu-item-list{
-    height: calc(100vh - 48px);
-    padding-top: 14px;
-    overflow: auto;
-}
-.menu-item:hover{
-    background-color: #bbb;
-}
-.item-link{
-    height: 42px;
-    line-height: 42px;
-    display: flex;
-    cursor: pointer;
-    border-left: 6px solid transparent;
-    padding-right: 14px;
-    color: #fff;
-    padding-left: 8px;
-}
-
-.menu-item-icon{
-    margin-right: 8px;
-    display: flex;
-    align-items: center;
-}
-
-.mi-dashboard{
-    background-position: -30px -1628px;
-}
-.mi-cash{
-    background-position: -73px -1628px;
-}
-.mi-bank{
-    background-position: -117px -1628px;
-}
-.mi-pu{
-    background-position: -161px -1628px;
-}
-.mi-sale{
-    background-position: -204px -1628px;
-}
-.mi-invoice{
-    background-position: -249px -1628px;
-}
-.mi-stock{
-    background-position: -291px -1628px;
-}
-.mi-tools{
-    background-position: -336px -1628px;
-}
-.mi-fixed-assets{
-    background-position: -378px -1630px;
-}
-.mi-tax{
-    background-position: -423px -1630px;
-}
-.mi-price{
-    background-position: -467px -1628px;
-}
-.mi-general{
-    background-position: -510px -1628px;
-}
-.mi-budget{
-    background-position: -378px -1659px;
-}
-.mi-report{
-    background-position: -547px -1628px;
-}
-.mi-finance{
-    background-position: -204px -1664px;
-}
+</script>
+<style scoped src="../../assets/css/components/theNavbar.css">
 </style>

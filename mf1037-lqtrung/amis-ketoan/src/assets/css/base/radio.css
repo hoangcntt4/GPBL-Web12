@@ -1,0 +1,18 @@
+.m-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 16px;
+  margin-top: 6px;
+}
+.m-radio input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--gray);
+  border-radius: 50%;
+  appearance: none;
+}
+.m-radio input:checked {
+  background: url(../../img/radio.svg) no-repeat center;
+  border: none;
+}

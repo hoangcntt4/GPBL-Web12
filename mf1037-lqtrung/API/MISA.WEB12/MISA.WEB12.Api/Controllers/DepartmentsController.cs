@@ -8,9 +8,11 @@ namespace MISA.WEB12.Api.Controllers
 {
     public class DepartmentsController : MISABaseController<Department>
     {
-        public DepartmentsController(IBaseService<Department> baseService, IBaseRepository<Department> baseRepository):base(baseService, baseRepository)
+        #region Constructor
+        public DepartmentsController(IBaseService<Department> baseService, IBaseRepository<Department> baseRepository) : base(baseService, baseRepository)
         {
-            
+
         }
+        #endregion
     }
 }

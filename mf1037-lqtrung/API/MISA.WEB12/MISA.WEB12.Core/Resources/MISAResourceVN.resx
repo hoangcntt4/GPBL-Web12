@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ErrorDoB" xml:space="preserve">
+    <value>Ngày sinh không được lớn hơn ngày hiện tại.</value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>Địa chỉ Email không hợp lệ.</value>
+  </data>
   <data name="ErrorException" xml:space="preserve">
     <value>Có lỗi xảy ra, vui lòng liên hệ MISA để được trợ giúp.</value>
+  </data>
+  <data name="ErrorIdentityDate" xml:space="preserve">
+    <value>Ngày cấp không được lớn hơn ngày hiện tại.</value>
+  </data>
+  <data name="ErrorNumber" xml:space="preserve">
+    <value>Thông tin {0} phải là số.</value>
   </data>
   <data name="Gender_Female" xml:space="preserve">
     <value>Nữ</value>
@@ -131,5 +143,8 @@
   </data>
   <data name="Property_NotEmpty" xml:space="preserve">
     <value>Thông tin {0} không được phép để trống.</value>
+  </data>
+  <data name="Property_Unique" xml:space="preserve">
+    <value>Thông tin {0} không được trùng lặp với {0} khác.</value>
   </data>
 </root>

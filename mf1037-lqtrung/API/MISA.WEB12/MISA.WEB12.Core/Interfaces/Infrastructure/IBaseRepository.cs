@@ -41,15 +41,6 @@ namespace MISA.WEB12.Core.Interfaces.Infrastructure
         int Update(TypeEntity entity, Guid entityId);
 
         /// <summary>
-        /// Phân trang
-        /// </summary>
-        /// <param name="pageSize"></param>
-        /// <param name="pageIndex"></param>
-        /// <returns></returns>
-        /// Created By LQTrung(25/01/2022)
-        IEnumerable<TypeEntity> GetPaging(int pageSize, int pageIndex);
-
-        /// <summary>
         /// Xóa dữ liệu
         /// </summary>
         /// <param name="entityId"></param>

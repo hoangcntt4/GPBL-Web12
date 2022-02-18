@@ -11,12 +11,17 @@ namespace MISA.WEB12.Api.Controllers
     [ApiController]
     public class CustomersController : MISABaseController<Customer>
     {
+        #region Fields
         ICustomerRepository _customerRepository;
         ICustomerService _customerServices;
-        public CustomersController(ICustomerRepository customerRepository, ICustomerService customerService):base(customerService, customerRepository)
+        #endregion
+
+        #region Constructor
+        public CustomersController(ICustomerRepository customerRepository, ICustomerService customerService) : base(customerService, customerRepository)
         {
             _customerRepository = customerRepository;
             _customerServices = customerService;
         }
+        #endregion
     }
 }

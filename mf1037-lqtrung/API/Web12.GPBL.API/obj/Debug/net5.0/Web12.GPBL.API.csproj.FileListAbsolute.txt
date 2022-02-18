@@ -19,7 +19,6 @@ E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL
 E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL.API\obj\Debug\net5.0\Web12.GPBL.API.MvcApplicationPartsAssemblyInfo.cs
 E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL.API\obj\Debug\net5.0\Web12.GPBL.API.MvcApplicationPartsAssemblyInfo.cache
 E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL.API\obj\Debug\net5.0\staticwebassets\Web12.GPBL.API.StaticWebAssets.Manifest.cache
-E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL.API\obj\Debug\net5.0\staticwebassets\Web12.GPBL.API.StaticWebAssets.xml
 E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL.API\obj\Debug\net5.0\scopedcss\bundle\Web12.GPBL.API.styles.css
 E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL.API\obj\Debug\net5.0\Web12.GPBL.API.RazorTargetAssemblyInfo.cache
 E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL.API\obj\Debug\net5.0\Web12.GPBL.API.csproj.CopyComplete
@@ -29,3 +28,4 @@ E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL
 E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL.API\obj\Debug\net5.0\Web12.GPBL.API.genruntimeconfig.cache
 E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL.API\bin\Debug\net5.0\Dapper.dll
 E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL.API\bin\Debug\net5.0\MySqlConnector.dll
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\Web12.GPBL.API\bin\Debug\net5.0\Web12.GPBL.API.StaticWebAssets.xml

@@ -1,16 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 /* import Home from '../views/Home.vue' */
-import ListEmployees from '../views/employees/ListEmployees.vue'
 import TheContent from '../components/layout/TheContent.vue'
+import Employee from '../views/employees/Employee.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'ListEmployees',
-    component: ListEmployees
+    name: 'Employee',
+    component: Employee
   },
   {
     path: '/about',
@@ -25,7 +25,6 @@ const routes = [
     name: 'TheContent',
     component: TheContent
   },
-  
 ]
 
 const router = new VueRouter({

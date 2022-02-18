@@ -20,7 +20,7 @@ namespace MISA.WEB12.Api.Controllers
         /// <param name="ex"></param>
         /// <param name="userMessage"></param>
         /// <returns></returns>
-        private Object CatchMISAValidateException(Exception ex, string userMessage)
+        protected object CatchMISAValidateException(Exception ex, string userMessage)
         {
             var response = new
             {

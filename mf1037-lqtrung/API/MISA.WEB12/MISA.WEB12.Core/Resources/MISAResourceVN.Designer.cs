@@ -61,11 +61,47 @@ namespace MISA.WEB12.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ngày sinh không được lớn hơn ngày hiện tại..
+        /// </summary>
+        public static string ErrorDoB {
+            get {
+                return ResourceManager.GetString("ErrorDoB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Địa chỉ Email không hợp lệ..
+        /// </summary>
+        public static string ErrorEmail {
+            get {
+                return ResourceManager.GetString("ErrorEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Có lỗi xảy ra, vui lòng liên hệ MISA để được trợ giúp..
         /// </summary>
         public static string ErrorException {
             get {
                 return ResourceManager.GetString("ErrorException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ngày cấp không được lớn hơn ngày hiện tại..
+        /// </summary>
+        public static string ErrorIdentityDate {
+            get {
+                return ResourceManager.GetString("ErrorIdentityDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thông tin {0} phải là số..
+        /// </summary>
+        public static string ErrorNumber {
+            get {
+                return ResourceManager.GetString("ErrorNumber", resourceCulture);
             }
         }
         
@@ -102,6 +138,15 @@ namespace MISA.WEB12.Core.Resources {
         public static string Property_NotEmpty {
             get {
                 return ResourceManager.GetString("Property_NotEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thông tin {0} không được trùng lặp với {0} khác..
+        /// </summary>
+        public static string Property_Unique {
+            get {
+                return ResourceManager.GetString("Property_Unique", resourceCulture);
             }
         }
     }

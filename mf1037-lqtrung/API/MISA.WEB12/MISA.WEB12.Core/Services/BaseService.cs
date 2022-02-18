@@ -2,11 +2,13 @@
 using MISA.WEB12.Core.Exceptions;
 using MISA.WEB12.Core.Interfaces.Infrastructure;
 using MISA.WEB12.Core.Interfaces.Service;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace MISA.WEB12.Core.Services
@@ -14,13 +16,18 @@ namespace MISA.WEB12.Core.Services
     public class BaseService<TypeEntity> : IBaseService<TypeEntity>
     {
 
+        #region Fields
         IBaseRepository<TypeEntity> _baseRepository;
+        #endregion
 
+        #region Constructor
         public BaseService(IBaseRepository<TypeEntity> baseRepository)
         {
             _baseRepository = baseRepository;
         }
+        #endregion
 
+        #region Methods
         /// <summary>
         /// Xử lí nghiệp vụ thêm mới dữ liệu
         /// </summary>
@@ -59,14 +66,16 @@ namespace MISA.WEB12.Core.Services
             //Thực hiện thêm mới vào database:
             var res = _baseRepository.Update(entity, entityId);
             return res;
-        }
+        } 
+        #endregion
 
+        #region Methods Support
         /// <summary>
         /// Lấy ra tên hiển thị của thuộc tính
         /// </summary>
         /// <param name="property"></param>
         /// <returns></returns>
-        private string GetDisplayName(PropertyInfo property)
+        protected string GetDisplayName(PropertyInfo property)
         {
             var nameDisplay = string.Empty;
             //Lấy ra tên của property:
@@ -77,6 +86,25 @@ namespace MISA.WEB12.Core.Services
             }
             return nameDisplay;
         }
+
+        /// <summary>
+        /// Kiểm tra định dạng email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        protected static bool IsValidEmail(string? email)
+        {
+            email = email ?? string.Empty;
+            string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+                  @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+                  @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(email))
+                return (true);
+            else
+                return (false);
+        }
+
 
 
         /// <summary>
@@ -89,9 +117,10 @@ namespace MISA.WEB12.Core.Services
         private void ValidateData(TypeEntity entity, Guid? entityId)
         {
             //Lấy ra tất cả các property
-            var properties = entity.GetType().GetProperties();
+            var properties = typeof(TypeEntity).GetProperties();
+
             //Lấy ra các property được đánh dấu không được phép để trống - có Attribute là NotEmpty:
-            var propNotEmpties = entity.GetType().GetProperties().Where(p => System.Attribute.IsDefined(p, typeof(NotEmpty)));
+            var propNotEmpties = typeof(TypeEntity).GetProperties().Where(p => System.Attribute.IsDefined(p, typeof(NotEmpty)));
             foreach (var property in propNotEmpties)
             {
                 var propValue = property.GetValue(entity);
@@ -105,8 +134,9 @@ namespace MISA.WEB12.Core.Services
                     throw new MISAValidateException(String.Format(Core.Resources.MISAResourceVN.Property_NotEmpty, nameDisplay));
                 }
             }
+
             //Lấy ra các property được đánh dấu không được trùng lặp - có Attribute là Unique:
-            var propUnique = entity.GetType().GetProperties().Where(p => System.Attribute.IsDefined(p, typeof(Unique)));
+            var propUnique = typeof(TypeEntity).GetProperties().Where(p => System.Attribute.IsDefined(p, typeof(Unique)));
             foreach (var property in propUnique)
             {
                 var propValue = property.GetValue(entity);
@@ -118,7 +148,40 @@ namespace MISA.WEB12.Core.Services
                 if (isDuplicate)
                 {
                     nameDisplay = nameDisplay == string.Empty ? propName : nameDisplay;
-                    throw new MISAValidateException(String.Format(Core.Resources.MISAResourceVN.Property_NotEmpty, nameDisplay));
+                    throw new MISAValidateException(String.Format(Core.Resources.MISAResourceVN.Property_Unique, nameDisplay));
+                }
+            }
+
+            //Kiểm tra định dạng Email
+            var propEmail = typeof(TypeEntity).GetProperties().Where(p => System.Attribute.IsDefined(p, typeof(Email)));
+            foreach (var property in propEmail)
+            {
+                var propValue = property.GetValue(entity);
+                if (propValue != null)
+                {
+                    if (!IsValidEmail(propValue.ToString()))
+                    {
+                        throw new MISAValidateException(Core.Resources.MISAResourceVN.ErrorEmail);
+                    }
+                }
+
+            }
+
+            //Kiểm tra định dạng số
+            var propNumber = typeof(TypeEntity).GetProperties().Where(p => System.Attribute.IsDefined(p, typeof(Number)));
+            foreach (var property in propNumber)
+            {
+                var propValue = property.GetValue(entity);
+                var propName = property.Name;
+                //Lấy ra tên của thuộc tính
+                var nameDisplay = GetDisplayName(property);
+                if(propValue != null)
+                {
+                    if (!long.TryParse(propValue.ToString(), out long num))
+                    {
+                        nameDisplay = nameDisplay == string.Empty ? propName : nameDisplay;
+                        throw new MISAValidateException(String.Format(Core.Resources.MISAResourceVN.ErrorNumber, nameDisplay));
+                    }
                 }
             }
         }
@@ -132,5 +195,7 @@ namespace MISA.WEB12.Core.Services
         {
 
         }
+        #endregion
+        
     }
 }
