@@ -1,0 +1,13 @@
+.m-toast-msg{
+    padding: 8px;
+    position: fixed;
+    right: 16px;
+    bottom: -10px;
+    z-index: 9999;
+}
+.theme--dark.v-sheet{
+    background-color: #4caf50;
+    font-family: Notosans;
+    font-size: 13px;
+    padding: 8px 36px 8px 8px;
+}

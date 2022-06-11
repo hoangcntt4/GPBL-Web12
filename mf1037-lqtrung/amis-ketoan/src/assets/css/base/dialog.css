@@ -1,0 +1,53 @@
+.m-dialog .dialog-content {
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.m-dialog {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+.hr-line {
+  height: 1px;
+  background: #b8bcc3;
+  margin: 20px 0;
+}
+.m-dialog-inner {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 32px;
+}
+.m-dialog-body {
+  display: flex;
+}
+.m-dialog-text {
+  overflow: auto;
+  width: 320px;
+  margin-bottom: 8px;
+  padding-left: 16px;
+  padding-top: 12px;
+}
+.m-dialog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.m-dialog-footer-confirm {
+  justify-content: space-between;
+}
+.m-dialog-footer-ok{
+  justify-content: right;
+}
+
+.m-dialog-footer-change .btn-no{
+  position: absolute;
+  right: 56px;
+}

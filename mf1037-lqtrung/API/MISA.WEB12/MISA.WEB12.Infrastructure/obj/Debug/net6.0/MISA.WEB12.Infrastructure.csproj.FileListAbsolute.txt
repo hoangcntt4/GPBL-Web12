@@ -1,0 +1,15 @@
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\bin\Debug\net6.0\MISA.WEB12.Infrastructure.deps.json
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\bin\Debug\net6.0\MISA.WEB12.Infrastructure.dll
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\bin\Debug\net6.0\ref\MISA.WEB12.Infrastructure.dll
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\bin\Debug\net6.0\MISA.WEB12.Infrastructure.pdb
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\obj\Debug\net6.0\MISA.WEB12.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\obj\Debug\net6.0\MISA.WEB12.Infrastructure.AssemblyInfoInputs.cache
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\obj\Debug\net6.0\MISA.WEB12.Infrastructure.AssemblyInfo.cs
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\obj\Debug\net6.0\MISA.WEB12.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\obj\Debug\net6.0\MISA.WEB12.Infrastructure.dll
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\obj\Debug\net6.0\ref\MISA.WEB12.Infrastructure.dll
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\obj\Debug\net6.0\MISA.WEB12.Infrastructure.pdb
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\obj\Debug\net6.0\MISA.WEB12.Infrastructure.csproj.AssemblyReference.cache
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\bin\Debug\net6.0\MISA.WEB12.Core.dll
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\bin\Debug\net6.0\MISA.WEB12.Core.pdb
+E:\Misa.Web2021_12\BaiTap\GPBL\GIT_GPBL\GPBL-Web12\mf1037-lqtrung\API\MISA.WEB12\MISA.WEB12.Infrastructure\obj\Debug\net6.0\MISA.WEB12.Infrastructure.csproj.CopyComplete

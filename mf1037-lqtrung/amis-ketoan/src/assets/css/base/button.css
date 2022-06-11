@@ -1,0 +1,54 @@
+.m-button {
+  font-family: Notosans-Semibold;
+  font-size: 13px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/* màu */
+.m-btn-primary {
+  color: #fff;
+  background-color: #2ca01c;
+}
+.m-btn-primary:hover {
+  background-color: #35bf22;
+}
+
+.m-btn-primary:active {
+  background-color: #248b15;
+}
+
+.m-btn-secondary {
+  border: 1px solid #8d9096;
+  color: #111;
+  background-color: transparent;
+}
+.m-btn-secondary:hover {
+  background-color: #d2d3d6;
+}
+.m-btn-secondary:active {
+  background-color: #bbbcbc;
+}
+
+.m-btn-high{
+  border: 2px solid #3b3c3f;
+  padding: 0 16px!important;
+  border-radius: 30px;
+  color: #111;
+}
+.m-btn-high:hover {
+  background-color: #d2d3d6;
+}
+.m-btn-high:active{
+  background-color: #bbbcbc;
+}
+/* kích thước */
+.m-btn-md {
+  height: 36px;
+  padding: 8px 16px 8px 20px;
+}
+.m-btn-sm {
+  padding: 6px 16px;
+  height: 34px;
+}

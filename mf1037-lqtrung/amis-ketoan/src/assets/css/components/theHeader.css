@@ -1,0 +1,53 @@
+.navbar-custom{
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left,.right{
+    display: flex;
+}
+.right{
+    padding: 0 20px 0 0;
+}
+.mi-stripes{
+    margin: 0 10px;
+}
+.mi-chevron{
+    transform: rotate(90deg);
+    margin: 5px 10px;
+}
+.mi-chevron2{
+    margin-left: 10px; 
+}
+.header-branch{
+    display: flex;
+}
+.header-branch-name{
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #111;
+    line-height: 24px;
+}
+.mi-bell{
+    margin: 10px;
+}
+
+.user-dropdown{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    padding-left: 24px
+}
+.user-avatar{
+    background: #e2e2e2;
+    margin-right: 6px;
+    border-radius: 15px;
+}
+.mi-avatar{
+    background-position: -352px -894px;
+    border-radius: 50%;
+}

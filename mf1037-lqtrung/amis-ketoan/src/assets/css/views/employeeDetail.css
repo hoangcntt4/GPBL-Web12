@@ -1,0 +1,143 @@
+/* popup-header */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+}
+/* popup-title */
+.popup-title {
+  width: 100%;
+  padding: 20px 32px;
+  padding-right: 12px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+
+.popup-title .popup-title-container {
+  display: flex;
+}
+.title__popup {
+  font-size: 24px;
+  color: #111;
+  font-weight: 700;
+}
+.cbo {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+.cbo .checkbox {
+  display: flex;
+  padding: 0 20px;
+}
+.cbo .checkbox div {
+  padding-left: 10px;
+}
+
+/* support */
+.popup-support {
+  display: flex;
+  padding: 12px;
+}
+.popup-support div:first-child {
+  margin-right: 6px;
+}
+/* popup-content */
+.popup-content-container {
+  flex-direction: column;
+  display: flex;
+  overflow: auto;
+  overflow-y: visible;
+  padding: 0 32px 20px;
+  margin-bottom: 16px;
+}
+
+/* input form  */
+.require-field{
+  color: red;
+}
+.top-e-ip-1 {
+  display: flex;
+}
+.e-left {
+  padding-right: 26px;
+}
+.e-left > div {
+  padding: 0 0 12px;
+}
+.e-right > div {
+  padding: 0 0 12px;
+}
+.pop-top {
+  display: flex;
+}
+.gender-radio {
+  display: flex;
+}
+.ip-text {
+  padding-bottom: 3px;
+}
+.ip-text span {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* pop-bot-info */
+.pop-bot-info {
+  height: 194px;
+  width: 836px;
+}
+.info-detail {
+  margin: 24px 0;
+}
+.info-contact {
+  display: flex;
+  padding-top: 12px;
+}
+.info-contact > div {
+  padding-right: 6px;
+}
+
+.divide {
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+  margin: 32px 0 20px;
+}
+
+/* popup-footer */
+.popup-footer {
+  display: flex;
+  justify-content: space-between;
+  height: 34px;
+}
+.footer-btn-right {
+  display: flex;
+}
+
+
+.ip-e-employeeCode{
+  width: 150px;
+}
+.ip-e-fullname{
+  width: 235px;
+}
+.ip-e-identityNumber{
+  width: 245px;
+}
+.date-input{
+  font-size: 13px;
+  height: var(--input-height);
+  color: inherit;
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid #babec5;
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0px 12px 0px 10px;
+}
+.date-input:focus{
+  outline: none;
+  border: 1px solid #2ca01c;
+}
+
+/* @import url("../base/combobox.css"); */

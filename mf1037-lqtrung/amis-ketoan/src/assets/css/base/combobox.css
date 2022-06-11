@@ -1,0 +1,100 @@
+.multiselect {
+  max-width: 392px;
+  position: relative;
+}
+.multiselect__tags {
+  min-height: 32px;
+  display: block;
+  border-radius: 2px;
+  border: 1px solid #babec5;
+  background: #fff;
+  padding: 6px 36px 0 10px;
+}
+.multiselect__select {
+  position: absolute;
+  width: 32px;
+  height: 30px;
+  right: 1px;
+  top: 1px;
+  padding: 4px 8px;
+  text-align: center;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+.multiselect__select:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+.multiselect__select:before {
+  position: relative;
+  right: 0;
+  top: 65%;
+  color: black;
+  margin-top: 4px;
+  border-color: black transparent transparent;
+  border-style: solid;
+  border-width: 6px 4px 0;
+  content: "";
+}
+.multiselect__input {
+  width: 350px;
+}
+.multiselect__content {
+  position: absolute;
+  top: 34px;
+  z-index: 2;
+  background-color: #fff;
+  border: 1px solid #babec5;
+  border-radius: 1px;
+  overflow: hidden;
+  box-shadow: 0 -8px 34px 0 rgb(0 0 0 / 5%);
+  max-width: 391px;
+}
+.pagesize .multiselect__content{
+  position: absolute;
+  top: -164px;
+  z-index: 2;
+  background-color: #fff;
+  border: 1px solid #babec5;
+  border-radius: 1px;
+  overflow: hidden;
+  box-shadow: 0 -8px 34px 0 rgb(0 0 0 / 5%);
+  max-width: 200px;
+}
+.multiselect__option {
+  width: 392px;
+  height: 32px;
+  display: block;
+  line-height: 32px;
+  padding-left: 10px;
+}
+.multiselect__option:hover {
+  background-color: #ebedf0;
+  cursor: pointer;
+}
+.multiselect__option--selected {
+  color: #35bf22;
+  background-color: #ebedf0;
+  font-weight: 700;
+}
+.pagesize .multiselect__option--selected{
+  color: #fff;
+    background-color: #2ca01c;
+}
+.multiselect__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 32px;
+  max-width: 392px;
+  padding: 0 36px 0 10px;
+}
+.multiselect__input:focus {
+  border: 1px solid #2ca01c;
+  border-radius: 2px;
+}
+.multiselect.is-invalid .multiselect__input{
+  border: 1px solid red;
+  width: 391px !important;
+  border-radius: 2px;
+}

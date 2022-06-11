@@ -1,0 +1,50 @@
+.m-input{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+.m-input input{
+    font-size: 13px;
+    height: var(--input-height);
+    color: inherit;
+    position: relative;
+    border-radius: 2px;
+    border: 1px solid #babec5;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0px 12px 0px 10px;
+    width: 100%;
+}
+.m-input input:focus{
+    outline: none;
+    border: 1px solid #2ca01c;
+}
+::placeholder{
+    font-style: italic;
+    font-size: 12px;
+    color: #BBBBBB;
+}
+.m-input input:hover {
+    outline: 1px solid #e2e2e2;
+}
+.m-input-error input {
+    border: 1px solid red;
+  }
+.m-input-icon input{
+    width: 240px;
+    height: 32px;
+    padding: 6px 40px 6px 10px;
+}
+.m-input .m-icon-input{
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+}
+.m-input .is-invalid{
+    border: 1px solid red;
+}
+.m-input .is-invalid:focus{
+    border: 1px solid red;
+}

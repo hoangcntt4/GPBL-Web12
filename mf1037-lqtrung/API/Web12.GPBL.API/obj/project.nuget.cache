@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "LQkOMFdbJmg0Wg05lmhHN6yNJtmdYyjoyQiRVnuiM0H7EHLyPMW+QXhQvM+0/wpNGZy436K+7tk+HIo1rSqwAw==",
+  "success": true,
+  "projectFilePath": "E:\\Misa.Web2021_12\\BaiTap\\GPBL\\GIT_GPBL\\GPBL-Web12\\mf1037-lqtrung\\API\\Web12.GPBL.API\\Web12.GPBL.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HeLo\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\HeLo\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\HeLo\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\HeLo\\.nuget\\packages\\mysqlconnector\\2.1.2\\mysqlconnector.2.1.2.nupkg.sha512",
+    "C:\\Users\\HeLo\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\HeLo\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\HeLo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\HeLo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,123 @@
+.m-icon {
+  background: url("../../../assets/img/Sprites.svg") no-repeat;
+  cursor: pointer;
+}
+.mi-14 {
+  width: 14px;
+  height: 14px;
+}
+.mi-16 {
+  width: 16px;
+  height: 16px;
+}
+.mi-24 {
+  width: 24px;
+  height: 24px;
+}
+.mi-32 {
+  width: 32px;
+  height: 32px;
+}
+.mi-48 {
+  width: 48px;
+  height: 48px;
+}
+/* header */
+.mi-stripes {
+  background-position: -843px -30px;
+}
+.mi-chevron {
+  background-position: -80px -360px;
+}
+.mi-chevron2 {
+  background-position: -1076px -32px;
+}
+.mi-bell {
+  background-position: -788px -30px;
+}
+.mi-avatar {
+  background-position: -352px -894px;
+}
+/* navbar */
+.mi-dashboard {
+  background-position: -30px -1628px;
+}
+.mi-cash {
+  background-position: -73px -1628px;
+}
+.mi-bank {
+  background-position: -117px -1628px;
+}
+.mi-pu {
+  background-position: -161px -1628px;
+}
+.mi-sale {
+  background-position: -204px -1628px;
+}
+.mi-invoice {
+  background-position: -249px -1628px;
+}
+.mi-stock {
+  background-position: -291px -1628px;
+}
+.mi-tools {
+  background-position: -336px -1628px;
+}
+.mi-fixed-assets {
+  background-position: -378px -1630px;
+}
+.mi-tax {
+  background-position: -423px -1630px;
+}
+.mi-price {
+  background-position: -467px -1628px;
+}
+.mi-general {
+  background-position: -510px -1628px;
+}
+.mi-budget {
+  background-position: -378px -1659px;
+}
+.mi-report {
+  background-position: -547px -1628px;
+}
+.mi-finance {
+  background-position: -204px -1664px;
+}
+/* lstEmployee */
+.mi-search {
+  background-position: -992px -360px;
+}
+.mi-refresh {
+  background-position: -423px -201px;
+}
+.mi-warning {
+  background-position: -592px -456px;
+}
+.mi-arrow-up {
+    background-position: -896px -359px;
+  }
+.mi-arrow-up-black{
+  background-position: -560px -359px;
+}
+.mi-excel {
+  background-position: -704px -200px;
+}
+
+/* detailEmployee */
+.mi-help {
+  background-position: -89px -144px;
+}
+.mi-close {
+  background-position: -144px -144px;
+}
+.mi-error {
+    background-position: -24px -954px;
+  }
+.mi-arrow-dropdown {
+    background-position: -560px -359px;
+}
+
+.mi-question {
+  background-position: -826px -456px;
+}
